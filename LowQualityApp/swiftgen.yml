@@ -1,0 +1,8 @@
+strings:
+  inputs: 
+    - LowQualityApp/Resources/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: LowQualityApp/Resources/Generated/Strings.swift
+      params:
+        enumName: Localization

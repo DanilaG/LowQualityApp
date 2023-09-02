@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  LowQualityApp
+
+  Created by Danila on 13.08.2023.
+  
+*/
+
+"list.title" = "Нарушения качества";
+"list.section.functionalSuitability" = "Функциональная пригодность";
+"list.section.performanceEfficiency" = "Эффективность работы";
+"list.section.compatibility" = "Совместимость";
+"list.section.usability" = "Удобство использования";
+"list.section.reliability" = "Надежность";
+
+
+"functionalCompleteness.title" = "Завершенность";
+
+"functionalCorrectness.title" = "Корректность";
+
+"functionalAppropriateness.title" = "Уместность";
+
+
+"timeBehaviour.title" = "Производительность";
+
+"resourceUtilization.title" = "Потребляемость ресурсов";
+
+"capacity.title" = "Ёмкость";
+
+
+"coExistence.title" = "Сосуществование";
+
+"interoperability.title" = "Функциональная совместимость";
+
+
+"appropriatenessRecognizability.title" = "Узнаваемость назначения";
+
+"learnability.title" = "Обучаемость";
+
+"operability.title" = "Эксплуатации пригодность";
+
+"userErrorProtection.title" = "Защита от ошибок";
+
+"userInterfaceAesthetics.title" = "Эстетичность";
+
+"accessibility.title" = "Доступность интерфейса";
+
+
+"maturity.title" = "Зрелость";
+
+"availability.title" = "Доступность функциональности";
+
+"faultTolerance.title" = "Отказоустойчивость";
+
+"recoverability.title" = "Восстанавливаемость";

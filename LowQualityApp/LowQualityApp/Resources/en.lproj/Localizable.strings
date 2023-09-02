@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  LowQualityApp
+
+  Created by Danila on 13.08.2023.
+  
+*/
+
+"list.title" = "Quality Violations";
+"list.section.functionalSuitability" = "Functional suitability";
+"list.section.performanceEfficiency" = "Performance efficiency";
+"list.section.compatibility" = "Compatibility";
+"list.section.usability" = "Usability";
+"list.section.reliability" = "Reliability";
+
+
+"functionalCompleteness.title" = "Completeness";
+
+"functionalCorrectness.title" = "Correctness";
+
+"functionalAppropriateness.title" = "Appropriateness";
+
+
+"timeBehaviour.title" = "Time behaviour";
+
+"resourceUtilization.title" = "Resource utilization";
+
+"capacity.title" = "Capacity";
+
+
+"coExistence.title" = "Co-existence";
+
+"interoperability.title" = "Interoperability";
+
+
+"appropriatenessRecognizability.title" = "Appropriateness recognizability";
+
+"learnability.title" = "Learnability";
+
+"operability.title" = "Operability";
+
+"userErrorProtection.title" = "User error protection";
+
+"userInterfaceAesthetics.title" = "User interface aesthetics";
+
+"accessibility.title" = "Accessibility";
+
+
+"maturity.title" = "Maturity";
+
+"availability.title" = "Availability";
+
+"faultTolerance.title" = "Fault tolerance";
+
+"recoverability.title" = "Recoverability";
