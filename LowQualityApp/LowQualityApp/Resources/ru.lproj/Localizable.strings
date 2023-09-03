@@ -13,8 +13,18 @@
 "list.section.usability" = "Удобство использования";
 "list.section.reliability" = "Надежность";
 
+"description.description" = "Описание";
+"description.example" = "Пример";
+"description.application" = "Приложение";
+"description.task" = "Задача";
+"description.task.hint" = "Постарайтесь выполнить указанные шаги чтобы заметить дефект";
+"description.whatIsWrong" = "Что не так?";
+"description.try" = "Попробовать";
 
 "functionalCompleteness.title" = "Завершенность";
+"functionalCompleteness.description" = "степень, в которой набор функций охватывает все указанные задачи и цели пользователя";
+"functionalCompleteness.task" = "Уменьшите количество сбережений";
+"functionalCompleteness.task.hint" = "В данной версии приложения вы не можете уменьшить баланс, так как данный функционал не реализован";
 
 "functionalCorrectness.title" = "Корректность";
 
@@ -53,3 +63,6 @@
 "faultTolerance.title" = "Отказоустойчивость";
 
 "recoverability.title" = "Восстанавливаемость";
+
+"sampleApp.moneyBox.title" = "Копилка";
+"sampleApp.moneyBox.description" = "Приложение для учёта накоплений";

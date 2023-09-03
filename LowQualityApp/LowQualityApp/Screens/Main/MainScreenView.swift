@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Главный экран приложения
 struct MainScreenView: View {
     private typealias Strings = Localization.List
     
@@ -44,12 +45,12 @@ struct MainScreenView: View {
             }
             .navigationTitle(Strings.title)
             .navigationDestination(for: QualityCharacteristics.self) {
-                Text($0.title)
+                DescriptionScreenView(viewData: $0.descriptionViewData)
             }
         }
     }
     
-    func makeItem(for sample: QualityCharacteristics) -> some View {
+    private func makeItem(for sample: QualityCharacteristics) -> some View {
         NavigationLink(sample.title, value: sample)
     }
 }
@@ -57,6 +58,5 @@ struct MainScreenView: View {
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
         MainScreenView()
-        .environment(\.locale, .init(identifier: "ru"))
     }
 }

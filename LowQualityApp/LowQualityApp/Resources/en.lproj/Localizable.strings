@@ -13,8 +13,18 @@
 "list.section.usability" = "Usability";
 "list.section.reliability" = "Reliability";
 
+"description.description" = "Description";
+"description.example" = "Example";
+"description.application" = "Application";
+"description.task" = "Task";
+"description.task.hint" = "Follow the steps in order to notice the defect";
+"description.whatIsWrong" = "What's wrong?";
+"description.try" = "Try";
 
 "functionalCompleteness.title" = "Completeness";
+"functionalCompleteness.description" = "degree to which the set of functions covers all the specified tasks and user objectives";
+"functionalCompleteness.task" = "Reduce the amount of savings";
+"functionalCompleteness.task.hint" = "In this version of the application, you cannot reduce the balance because the functionality didn't implemented";
 
 "functionalCorrectness.title" = "Correctness";
 
@@ -53,3 +63,6 @@
 "faultTolerance.title" = "Fault tolerance";
 
 "recoverability.title" = "Recoverability";
+
+"sampleApp.moneyBox.title" = "MoneyBox";
+"sampleApp.moneyBox.description" = "Savings accounting application";

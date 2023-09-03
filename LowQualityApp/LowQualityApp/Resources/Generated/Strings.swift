@@ -30,21 +30,47 @@ internal enum Localization {
     /// Co-existence
     internal static let title = Localization.tr("Localizable", "coExistence.title", fallback: "Co-existence")
   }
+  internal enum Description {
+    /// Application
+    internal static let application = Localization.tr("Localizable", "description.application", fallback: "Application")
+    /// Description
+    internal static let description = Localization.tr("Localizable", "description.description", fallback: "Description")
+    /// Example
+    internal static let example = Localization.tr("Localizable", "description.example", fallback: "Example")
+    /// Task
+    internal static let task = Localization.tr("Localizable", "description.task", fallback: "Task")
+    /// Try
+    internal static let `try` = Localization.tr("Localizable", "description.try", fallback: "Try")
+    /// What's wrong?
+    internal static let whatIsWrong = Localization.tr("Localizable", "description.whatIsWrong", fallback: "What's wrong?")
+    internal enum Task {
+      /// Follow the steps in order to notice the defect
+      internal static let hint = Localization.tr("Localizable", "description.task.hint", fallback: "Follow the steps in order to notice the defect")
+    }
+  }
   internal enum FaultTolerance {
     /// Fault tolerance
     internal static let title = Localization.tr("Localizable", "faultTolerance.title", fallback: "Fault tolerance")
   }
   internal enum FunctionalAppropriateness {
-    /// Functional appropriateness
-    internal static let title = Localization.tr("Localizable", "functionalAppropriateness.title", fallback: "Functional appropriateness")
+    /// Appropriateness
+    internal static let title = Localization.tr("Localizable", "functionalAppropriateness.title", fallback: "Appropriateness")
   }
   internal enum FunctionalCompleteness {
-    /// Functional completeness
-    internal static let title = Localization.tr("Localizable", "functionalCompleteness.title", fallback: "Functional completeness")
+    /// degree to which the set of functions covers all the specified tasks and user objectives
+    internal static let description = Localization.tr("Localizable", "functionalCompleteness.description", fallback: "degree to which the set of functions covers all the specified tasks and user objectives")
+    /// Reduce the amount of savings
+    internal static let task = Localization.tr("Localizable", "functionalCompleteness.task", fallback: "Reduce the amount of savings")
+    /// Completeness
+    internal static let title = Localization.tr("Localizable", "functionalCompleteness.title", fallback: "Completeness")
+    internal enum Task {
+      /// In this version of the application, you cannot reduce the balance because the functionality didn't implemented
+      internal static let hint = Localization.tr("Localizable", "functionalCompleteness.task.hint", fallback: "In this version of the application, you cannot reduce the balance because the functionality didn't implemented")
+    }
   }
   internal enum FunctionalCorrectness {
-    /// Functional correctness
-    internal static let title = Localization.tr("Localizable", "functionalCorrectness.title", fallback: "Functional correctness")
+    /// Correctness
+    internal static let title = Localization.tr("Localizable", "functionalCorrectness.title", fallback: "Correctness")
   }
   internal enum Interoperability {
     /// Interoperability
@@ -59,7 +85,7 @@ internal enum Localization {
     ///   LowQualityApp
     /// 
     ///   Created by Danila on 13.08.2023.
-    internal static let title = Localization.tr("Localizable", "list.title", fallback: "Violations")
+    internal static let title = Localization.tr("Localizable", "list.title", fallback: "Quality Violations")
     internal enum Section {
       /// Compatibility
       internal static let compatibility = Localization.tr("Localizable", "list.section.compatibility", fallback: "Compatibility")
@@ -88,6 +114,14 @@ internal enum Localization {
   internal enum ResourceUtilization {
     /// Resource utilization
     internal static let title = Localization.tr("Localizable", "resourceUtilization.title", fallback: "Resource utilization")
+  }
+  internal enum SampleApp {
+    internal enum MoneyBox {
+      /// Savings Accounting Application
+      internal static let description = Localization.tr("Localizable", "sampleApp.moneyBox.description", fallback: "Savings Accounting Application")
+      /// MoneyBox
+      internal static let title = Localization.tr("Localizable", "sampleApp.moneyBox.title", fallback: "MoneyBox")
+    }
   }
   internal enum TimeBehaviour {
     /// Time behaviour

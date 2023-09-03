@@ -13,6 +13,9 @@
 		836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3A62A894E8300C4C00A /* QualityCharacteristics.swift */; };
 		836CE3AC2A89546000C4C00A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 836CE3AE2A89546000C4C00A /* Localizable.strings */; };
 		836CE3B32A89582000C4C00A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3B22A89582000C4C00A /* Strings.swift */; };
+		83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */; };
+		83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */; };
+		83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		836CE3AD2A89546000C4C00A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		836CE3AF2A89546600C4C00A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		836CE3B22A89582000C4C00A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreenView.swift; sourceTree = "<group>"; };
+		83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppViewWrapper.swift; sourceTree = "<group>"; };
+		83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityCharacteristics+DescriptionViewData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,7 @@
 			children = (
 				836CE3B02A8956EE00C4C00A /* Resources */,
 				836CE3982A89496900C4C00A /* LowQualityAppApp.swift */,
-				836CE39A2A89496900C4C00A /* MainScreenView.swift */,
-				836CE3A62A894E8300C4C00A /* QualityCharacteristics.swift */,
+				83CC6AD62AA42C740023C38B /* Screens */,
 			);
 			path = LowQualityApp;
 			sourceTree = "<group>";
@@ -80,6 +85,34 @@
 				836CE3B22A89582000C4C00A /* Strings.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		83CC6AD62AA42C740023C38B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AD82AA42C8E0023C38B /* Description */,
+				83CC6AD72AA42C830023C38B /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		83CC6AD72AA42C830023C38B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				836CE3A62A894E8300C4C00A /* QualityCharacteristics.swift */,
+				836CE39A2A89496900C4C00A /* MainScreenView.swift */,
+				83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		83CC6AD82AA42C8E0023C38B /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */,
+				83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */,
+			);
+			path = Description;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */,
+				83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */,
 				836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */,
 				836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */,
+				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,
 				836CE3B32A89582000C4C00A /* Strings.swift in Sources */,
 				836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */,
 			);
