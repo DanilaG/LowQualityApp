@@ -128,7 +128,7 @@ final class MBSumAndDateFormViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .cancel, target: self, action: #selector(dismissForm)
         )
-        view.backgroundColor = UIColor.secondarySystemBackground
+        view.backgroundColor = UIColor.systemGroupedBackground
         
         keyboardSubscription()
         addKeyboardHiding()
