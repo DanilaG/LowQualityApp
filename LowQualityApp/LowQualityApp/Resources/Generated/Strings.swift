@@ -117,10 +117,58 @@ internal enum Localization {
   }
   internal enum SampleApp {
     internal enum MoneyBox {
-      /// Savings Accounting Application
-      internal static let description = Localization.tr("Localizable", "sampleApp.moneyBox.description", fallback: "Savings Accounting Application")
+      /// Actions
+      internal static let actions = Localization.tr("Localizable", "sampleApp.moneyBox.actions", fallback: "Actions")
+      /// Date
+      internal static let date = Localization.tr("Localizable", "sampleApp.moneyBox.date", fallback: "Date")
+      /// Savings accounting application
+      internal static let description = Localization.tr("Localizable", "sampleApp.moneyBox.description", fallback: "Savings accounting application")
+      /// History
+      internal static let history = Localization.tr("Localizable", "sampleApp.moneyBox.history", fallback: "History")
+      /// Savings
+      internal static let savings = Localization.tr("Localizable", "sampleApp.moneyBox.savings", fallback: "Savings")
+      /// Amount
+      internal static let sum = Localization.tr("Localizable", "sampleApp.moneyBox.sum", fallback: "Amount")
       /// MoneyBox
       internal static let title = Localization.tr("Localizable", "sampleApp.moneyBox.title", fallback: "MoneyBox")
+      internal enum Error {
+        /// Invalid Amount
+        internal static let invalidAmount = Localization.tr("Localizable", "sampleApp.moneyBox.error.invalidAmount", fallback: "Invalid Amount")
+        /// Failed to get the value
+        internal static let stringToDecimal = Localization.tr("Localizable", "sampleApp.moneyBox.error.stringToDecimal", fallback: "Failed to get the value")
+        internal enum TopUp {
+          /// The top up amount must be greater than zero
+          internal static let lessOrEqualZero = Localization.tr("Localizable", "sampleApp.moneyBox.error.topUp.lessOrEqualZero", fallback: "The top up amount must be greater than zero")
+        }
+        internal enum Withdraw {
+          /// The withdraw amount must be greater than zero
+          internal static let lessOrEqualZero = Localization.tr("Localizable", "sampleApp.moneyBox.error.withdraw.lessOrEqualZero", fallback: "The withdraw amount must be greater than zero")
+          /// The withdraw amount must not exceed the amount on the account
+          internal static let moreThenTotalSum = Localization.tr("Localizable", "sampleApp.moneyBox.error.withdraw.moreThenTotalSum", fallback: "The withdraw amount must not exceed the amount on the account")
+        }
+      }
+      internal enum SumForm {
+        internal enum Alert {
+          /// Ok
+          internal static let ok = Localization.tr("Localizable", "sampleApp.moneyBox.sumForm.alert.ok", fallback: "Ok")
+        }
+      }
+      internal enum TopUp {
+        /// Top Up
+        internal static let action = Localization.tr("Localizable", "sampleApp.moneyBox.topUp.action", fallback: "Top Up")
+        /// Specify the amount (in USD) and the date of enrollment
+        internal static let hint = Localization.tr("Localizable", "sampleApp.moneyBox.topUp.hint", fallback: "Specify the amount (in USD) and the date of enrollment")
+        /// Top Up
+        internal static let title = Localization.tr("Localizable", "sampleApp.moneyBox.topUp.title", fallback: "Top Up")
+      }
+      internal enum Withdraw {
+        /// Withdraw
+        internal static let action = Localization.tr("Localizable", "sampleApp.moneyBox.withdraw.action", fallback: "Withdraw")
+        /// Specify the amount (in USD) and the date of withdrawal
+        internal static let hint = Localization.tr("Localizable", "sampleApp.moneyBox.withdraw.hint", fallback: "Specify the amount (in USD) and the date of withdrawal")
+        /// Withdraw
+        internal static let title = Localization.tr("Localizable", "sampleApp.moneyBox.withdraw.title", fallback: "Withdraw")
+      }
     }
   }
   internal enum TimeBehaviour {

@@ -11,19 +11,20 @@ import SwiftUI
 struct SampleAppViewWrapper<Content: View>: View  {
     @Environment(\.dismiss) var dismiss
     
-    let content: () -> Content
+    let content: @MainActor () -> Content
         
     var body: some View {
         NavigationStack {
             content()
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(
-                        action: { dismiss() },
-                        label: { Image(systemName: "xmark.app") }
-                    )
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(
+                            action: { dismiss() },
+                            label: { Image(systemName: "xmark.circle") }
+                        )
+                    }
                 }
-            }
         }
     }
 }

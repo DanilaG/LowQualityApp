@@ -16,6 +16,16 @@
 		83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */; };
 		83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */; };
 		83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */; };
+		83CC6ADE2AA440D90023C38B /* MBMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6ADD2AA440D90023C38B /* MBMainScreenView.swift */; };
+		83CC6AE02AA447B20023C38B /* MBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6ADF2AA447B20023C38B /* MBModel.swift */; };
+		83CC6AE22AA4553C0023C38B /* MBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AE12AA4553C0023C38B /* MBViewModel.swift */; };
+		83CC6AE42AA4649A0023C38B /* MBModelWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AE32AA4649A0023C38B /* MBModelWithData.swift */; };
+		83CC6AE72AA49B580023C38B /* MBSumAndDateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AE62AA49B580023C38B /* MBSumAndDateForm.swift */; };
+		83CC6AF32AA72C920023C38B /* MBDateInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AF22AA72C920023C38B /* MBDateInputCell.swift */; };
+		83CC6AF52AA72CBB0023C38B /* MBCurrencyInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AF42AA72CBB0023C38B /* MBCurrencyInputCell.swift */; };
+		83CC6AF82AA731B60023C38B /* NumberFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AF72AA731B60023C38B /* NumberFormatters.swift */; };
+		83CC6AFF2AA846FB0023C38B /* MBDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AFE2AA846FB0023C38B /* MBDefaultModel.swift */; };
+		83CC6B012AA84B390023C38B /* MBDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +40,16 @@
 		83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreenView.swift; sourceTree = "<group>"; };
 		83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppViewWrapper.swift; sourceTree = "<group>"; };
 		83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityCharacteristics+DescriptionViewData.swift"; sourceTree = "<group>"; };
+		83CC6ADD2AA440D90023C38B /* MBMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMainScreenView.swift; sourceTree = "<group>"; };
+		83CC6ADF2AA447B20023C38B /* MBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBModel.swift; sourceTree = "<group>"; };
+		83CC6AE12AA4553C0023C38B /* MBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBViewModel.swift; sourceTree = "<group>"; };
+		83CC6AE32AA4649A0023C38B /* MBModelWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBModelWithData.swift; sourceTree = "<group>"; };
+		83CC6AE62AA49B580023C38B /* MBSumAndDateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBSumAndDateForm.swift; sourceTree = "<group>"; };
+		83CC6AF22AA72C920023C38B /* MBDateInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDateInputCell.swift; sourceTree = "<group>"; };
+		83CC6AF42AA72CBB0023C38B /* MBCurrencyInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCurrencyInputCell.swift; sourceTree = "<group>"; };
+		83CC6AF72AA731B60023C38B /* NumberFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatters.swift; sourceTree = "<group>"; };
+		83CC6AFE2AA846FB0023C38B /* MBDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDefaultModel.swift; sourceTree = "<group>"; };
+		83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDefaultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,8 @@
 		836CE3972A89496900C4C00A /* LowQualityApp */ = {
 			isa = PBXGroup;
 			children = (
+				83CC6AF62AA731900023C38B /* Helpers */,
+				83CC6ADB2AA440930023C38B /* SampleApps */,
 				836CE3B02A8956EE00C4C00A /* Resources */,
 				836CE3982A89496900C4C00A /* LowQualityAppApp.swift */,
 				83CC6AD62AA42C740023C38B /* Screens */,
@@ -113,6 +135,78 @@
 				83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */,
 			);
 			path = Description;
+			sourceTree = "<group>";
+		};
+		83CC6ADB2AA440930023C38B /* SampleApps */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6ADC2AA440B70023C38B /* MoneyBox */,
+			);
+			path = SampleApps;
+			sourceTree = "<group>";
+		};
+		83CC6ADC2AA440B70023C38B /* MoneyBox */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AFC2AA845F10023C38B /* Models */,
+				83CC6AFD2AA846010023C38B /* ViewModels */,
+				83CC6AE52AA499530023C38B /* Views */,
+			);
+			path = MoneyBox;
+			sourceTree = "<group>";
+		};
+		83CC6AE52AA499530023C38B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AF02AA72C650023C38B /* SumAndDateForm */,
+				83CC6ADD2AA440D90023C38B /* MBMainScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83CC6AF02AA72C650023C38B /* SumAndDateForm */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AF12AA72C700023C38B /* Cells */,
+				83CC6AE62AA49B580023C38B /* MBSumAndDateForm.swift */,
+			);
+			path = SumAndDateForm;
+			sourceTree = "<group>";
+		};
+		83CC6AF12AA72C700023C38B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AF22AA72C920023C38B /* MBDateInputCell.swift */,
+				83CC6AF42AA72CBB0023C38B /* MBCurrencyInputCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		83CC6AF62AA731900023C38B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AF72AA731B60023C38B /* NumberFormatters.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83CC6AFC2AA845F10023C38B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6ADF2AA447B20023C38B /* MBModel.swift */,
+				83CC6AFE2AA846FB0023C38B /* MBDefaultModel.swift */,
+				83CC6AE32AA4649A0023C38B /* MBModelWithData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83CC6AFD2AA846010023C38B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				83CC6AE12AA4553C0023C38B /* MBViewModel.swift */,
+				83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,13 +280,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CC6ADE2AA440D90023C38B /* MBMainScreenView.swift in Sources */,
 				83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */,
+				83CC6AE72AA49B580023C38B /* MBSumAndDateForm.swift in Sources */,
 				83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */,
+				83CC6AFF2AA846FB0023C38B /* MBDefaultModel.swift in Sources */,
+				83CC6AE22AA4553C0023C38B /* MBViewModel.swift in Sources */,
+				83CC6B012AA84B390023C38B /* MBDefaultViewModel.swift in Sources */,
+				83CC6AF52AA72CBB0023C38B /* MBCurrencyInputCell.swift in Sources */,
 				836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */,
 				836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */,
+				83CC6AF32AA72C920023C38B /* MBDateInputCell.swift in Sources */,
 				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,
+				83CC6AE02AA447B20023C38B /* MBModel.swift in Sources */,
 				836CE3B32A89582000C4C00A /* Strings.swift in Sources */,
+				83CC6AE42AA4649A0023C38B /* MBModelWithData.swift in Sources */,
 				836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */,
+				83CC6AF82AA731B60023C38B /* NumberFormatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

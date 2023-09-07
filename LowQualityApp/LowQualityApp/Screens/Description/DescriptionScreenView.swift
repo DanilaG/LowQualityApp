@@ -87,7 +87,7 @@ struct DescriptionScreenView: View {
         .navigationTitle(viewData.qualityCharacteristic.title)
         .fullScreenCover(isPresented: $showingApp) {
             SampleAppViewWrapper {
-                Text("123")
+                MBMainScreenView(MBDefaultViewModel(model: MBModelWithData()))
             }
         }
     }

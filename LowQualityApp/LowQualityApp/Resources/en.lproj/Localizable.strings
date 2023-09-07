@@ -66,3 +66,20 @@
 
 "sampleApp.moneyBox.title" = "MoneyBox";
 "sampleApp.moneyBox.description" = "Savings accounting application";
+"sampleApp.moneyBox.savings" = "Savings";
+"sampleApp.moneyBox.actions" = "Actions";
+"sampleApp.moneyBox.topUp.title" = "Top Up";
+"sampleApp.moneyBox.topUp.hint" = "Specify the amount (in USD) and the date of enrollment";
+"sampleApp.moneyBox.topUp.action" = "Top Up";
+"sampleApp.moneyBox.withdraw.title" = "Withdraw";
+"sampleApp.moneyBox.withdraw.hint" = "Specify the amount (in USD) and the date of withdrawal";
+"sampleApp.moneyBox.withdraw.action" = "Withdraw";
+"sampleApp.moneyBox.history" = "History";
+"sampleApp.moneyBox.sum" = "Amount";
+"sampleApp.moneyBox.date" = "Date";
+"sampleApp.moneyBox.sumForm.alert.ok" = "Ok";
+"sampleApp.moneyBox.error.invalidAmount" = "Invalid Amount";
+"sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "The top up amount must be greater than zero";
+"sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "The withdraw amount must be greater than zero";
+"sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "The withdraw amount must not exceed the amount on the account";
+"sampleApp.moneyBox.error.stringToDecimal" = "Failed to get the value";
