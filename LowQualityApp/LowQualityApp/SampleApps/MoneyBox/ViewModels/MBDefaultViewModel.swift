@@ -27,6 +27,8 @@ class MBDefaultViewModel: MBViewModel {
             }
     }
     
+    var withoutWithdraw: Bool { false }
+    
     private let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()
         formatter.currencyCode = "USD"

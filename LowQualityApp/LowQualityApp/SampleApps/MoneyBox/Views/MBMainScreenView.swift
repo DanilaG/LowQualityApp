@@ -44,8 +44,13 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                 .listRowBackground(Color.clear)
             Section(header: Text(Strings.actions)) {
                 Button(Strings.TopUp.title, action: { showingSheet = .topUp })
-                Button(Strings.Withdraw.title, action: { showingSheet = .withdraw })
-                    .foregroundColor(.red)
+                if !viewModel.withoutWithdraw {
+                    Button(Strings.Withdraw.title, action: {
+                        showingSheet = .withdraw
+                        
+                    })
+                        .foregroundColor(.red)
+                }
             }
             if !viewModel.history.isEmpty {
                 Section(header: Text(Strings.history)) {

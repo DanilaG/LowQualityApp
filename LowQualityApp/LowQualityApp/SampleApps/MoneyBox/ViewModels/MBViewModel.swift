@@ -8,22 +8,26 @@
 import Foundation
 
 /// View model для приложения "Копилка"
-@MainActor protocol MBViewModel: ObservableObject {
+protocol MBViewModel: ObservableObject {
     /// Сумма на счёте
     var sum: String { get }
     /// История
     var history: [MBTransactionViewModel] { get }
+    /// Функционал без изъятия
+    var withoutWithdraw: Bool { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения
     ///  - date: дата пополнения
     /// - Returns ошибка пополнения
+    @MainActor
     func topUp(sum: Decimal, date: Date) -> ValidationErrorViewModel?
     /// Изъять
     /// - Parameters:
     ///  - sum: сумма изъятия
     ///  - date: дата изъятия
     /// - Returns ошибка изъятия
+    @MainActor
     func withdraw(sum: Decimal, date: Date) -> ValidationErrorViewModel?
 }
 

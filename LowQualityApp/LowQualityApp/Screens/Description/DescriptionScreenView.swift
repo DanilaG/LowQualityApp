@@ -20,15 +20,17 @@ struct DescriptionScreenView: View {
         }
         /// Описание примера
         struct Example {
-            /// Описание приложения
+            /// Приложения
             struct App {
                 /// Название приложения
                 let name: String
                 /// Описание приложения
                 let description: String
+                /// Сборщик экрана тестового приложения
+                let screenFactory: @MainActor () -> AnyView
             }
             
-            /// Описание приложения
+            /// Приложения
             let app: App
             /// Описание задачи
             let task: String
@@ -87,7 +89,7 @@ struct DescriptionScreenView: View {
         .navigationTitle(viewData.qualityCharacteristic.title)
         .fullScreenCover(isPresented: $showingApp) {
             SampleAppViewWrapper {
-                MBMainScreenView(MBDefaultViewModel(model: MBModelWithData()))
+                viewData.example.app.screenFactory()
             }
         }
     }
@@ -103,7 +105,8 @@ struct DescriptionScreenView_Previews: PreviewProvider {
             example: .init(
                 app: .init(
                     name: "Копилка",
-                    description: "Приложение для учёта накопленных денег"
+                    description: "Приложение для учёта накопленных денег",
+                    screenFactory: { AnyView(Text("Test")) }
                 ),
                 task: "Уменьшить баланс накопленных средств в приложении",
                 hint: "В данной версии приложения вы не сможете уменьшить баланс, так как такой функционал отсутсвует"
