@@ -27,6 +27,9 @@
 "functionalCompleteness.task.hint" = "В данной версии приложения вы не можете уменьшить баланс, так как данный функционал не реализован";
 
 "functionalCorrectness.title" = "Корректность";
+"functionalCorrectness.description" = "степень, в которой продукт или система обеспечивают правильные результаты с необходимой точностью";
+"functionalCorrectness.task" = "Сверить историю операций с итоговой суммой накоплений";
+"functionalCorrectness.task.hint" = "В данной версии приложения итоговая сумма накоплений рассчитывается с ошибкой";
 
 "functionalAppropriateness.title" = "Уместность";
 

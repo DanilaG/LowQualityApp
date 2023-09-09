@@ -11,6 +11,7 @@ extension QualityCharacteristics {
     /// View data для описания  quality characteristics
     var descriptionViewData: DescriptionScreenView.ViewData {
         switch self {
+            
         case .functionalCompleteness:
             return .init(
                 qualityCharacteristic: .init(
@@ -23,6 +24,21 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.FunctionalCompleteness.task,
                     hint: Localization.FunctionalCompleteness.Task.hint
+                )
+            )
+            
+        case .functionalCorrectness:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.FunctionalCorrectness.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        model: MBFunctionalCorrectnessModel()
+                    ),
+                    task: Localization.FunctionalCorrectness.task,
+                    hint: Localization.FunctionalCorrectness.Task.hint
                 )
             )
             

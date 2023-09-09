@@ -27,6 +27,9 @@
 "functionalCompleteness.task.hint" = "In this version of the application, you cannot reduce the balance because the functionality didn't implemented";
 
 "functionalCorrectness.title" = "Correctness";
+"functionalCorrectness.description" = "degree to which a product or system provides the correct results with the needed degree of precision";
+"functionalCorrectness.task" = "Check the history of operations with the total amount of savings";
+"functionalCorrectness.task.hint" = "In this version of the application, the total amount of savings is calculated with an error";
 
 "functionalAppropriateness.title" = "Appropriateness";
 
