@@ -28,8 +28,8 @@ class MBDefaultViewModel: MBViewModel {
     }
     
     var loading: Bool { false }
-    
     var withoutWithdraw: Bool { false }
+    var actionResponseDelay: Duration? { nil }
     
     private let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()

@@ -62,12 +62,17 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                 .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 .listRowBackground(Color.clear)
             Section(header: Text(Strings.actions)) {
-                Button(Strings.TopUp.title, action: { showingSheet = .topUp })
+                ButtonWitActionDelay(
+                    Strings.TopUp.title,
+                    delay: viewModel.actionResponseDelay,
+                    action: { showingSheet = .topUp }
+                )
                 if !viewModel.withoutWithdraw {
-                    Button(Strings.Withdraw.title, action: {
-                        showingSheet = .withdraw
-                        
-                    })
+                    ButtonWitActionDelay(
+                        Strings.Withdraw.title,
+                        delay: viewModel.actionResponseDelay,
+                        action: { showingSheet = .withdraw }
+                    )
                         .foregroundColor(.red)
                 }
             }
@@ -94,6 +99,9 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                     title: sheet.title,
                     hint: sheet.hint,
                     actionTitle: sheet.actionTitle
+                ),
+                badQualityConfiguration: .init(
+                    actionDelay: { viewModel.actionResponseDelay }
                 ),
                 action: { sheet.action(for: viewModel, with: $0) }
             )
@@ -163,6 +171,43 @@ fileprivate extension ValidationErrorViewModel {
     /// Представление в виде ошибок валидации формы
     var asFormValidationError: MBSumAndDateForm.ValidationError {
         .init(title: title, message: message)
+    }
+}
+
+/// Кнопка с задержкой по времени на действие
+struct ButtonWitActionDelay: View {
+    
+    private let title: String
+    private let delay: Duration?
+    private let action: () -> Void
+    
+    /// Инициализатор кнопки с задержкой по времени на действие
+    /// - Parameters:
+    ///  - title: заголовок
+    ///  - delay: время задержки
+    ///  - action: действие по клику
+    init(
+        _ title: String,
+        delay: Duration?,
+        action: @escaping () -> Void
+    ) {
+        self.title = title
+        self.delay = delay
+        self.action = action
+    }
+    
+    var body: some View {
+        Button(title) {
+            guard let delay else {
+                action()
+                return
+            }
+            
+            Task { @MainActor in
+                try? await Task.sleep(for: delay)
+                action()
+            }
+        }
     }
 }
 

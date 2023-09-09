@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Реализация view model для приложения "Копилка" с проблемой в функциональной уместности
+/// Реализация view model для приложения "Копилка" с проблемой в функциональной уместности
 final class MBFunctionalAppropriatenessViewModel: MBDefaultViewModel {
     
     override var sum: String {
@@ -32,6 +32,10 @@ final class MBFunctionalAppropriatenessViewModel: MBDefaultViewModel {
     private let repository: MBExchangeRatesRepository
     private var exchangeRate: Decimal?
     
+    /// Инициализатор реализация view model для приложения "Копилка" с проблемой в функциональной уместности
+    /// - Parameters:
+    ///  - model: модель
+    ///  - repository: репозиторий
     init(
         model: MBModel,
         repository: MBExchangeRatesRepository

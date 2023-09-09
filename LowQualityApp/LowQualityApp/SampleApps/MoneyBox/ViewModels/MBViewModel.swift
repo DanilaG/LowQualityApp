@@ -17,6 +17,8 @@ protocol MBViewModel: ObservableObject {
     var loading: Bool { get }
     /// Функционал без изъятия
     var withoutWithdraw: Bool { get }
+    /// Задержка отклика при нажатии на кнопки действий
+    var actionResponseDelay: Duration? { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

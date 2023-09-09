@@ -15,6 +15,8 @@ struct MBSumAndDateForm: UIViewControllerRepresentable {
     typealias UIViewControllerType = UINavigationController
     /// View данные
     typealias ViewData = MBSumAndDateFormViewController.ViewData
+    /// Конфигурация для ухудшения качества
+    typealias BadQualityConfiguration = MBSumAndDateFormViewController.BadQualityConfiguration
     /// Результат работы формы
     typealias Result = MBSumAndDateFormViewController.Result
     /// Ошибка валидации
@@ -25,22 +27,32 @@ struct MBSumAndDateForm: UIViewControllerRepresentable {
     typealias Action = MBSumAndDateFormViewController.Action
     
     private let viewData: ViewData
+    private let badQualityConfiguration: BadQualityConfiguration
     private let action: Action
     
     /// Инициализатор форма ввода суммы и даты
     /// - Parameters:
     ///   - viewData: view данные
+    ///   - badQualityConfiguration: конфигурации для ухудшения качества
     ///   - action: callback для завершения формы
     init(
         viewData: ViewData,
+        badQualityConfiguration: BadQualityConfiguration,
         action: @escaping Action
     ) {
         self.viewData = viewData
+        self.badQualityConfiguration = badQualityConfiguration
         self.action = action
     }
     
     func makeUIViewController(context: Context) -> UINavigationController {
-        let vc = UINavigationController(rootViewController: MBSumAndDateFormViewController(viewData: viewData, action: action))
+        let vc = UINavigationController(
+            rootViewController: MBSumAndDateFormViewController(
+                viewData: viewData,
+                badQualityConfiguration: badQualityConfiguration,
+                action: action
+            )
+        )
         return vc
     }
     
@@ -58,6 +70,12 @@ final class MBSumAndDateFormViewController: UIViewController {
         var hint: String
         /// Название кнопки завершения
         var actionTitle: String
+    }
+    
+    /// Конфигурация для ухудшения качества
+    struct BadQualityConfiguration {
+        /// Время задержки ответа кнопок
+        var actionDelay: () -> Duration?
     }
     
     /// Результат работы формы
@@ -93,6 +111,8 @@ final class MBSumAndDateFormViewController: UIViewController {
     
     /// View данные
     private let viewData: ViewData
+    /// Конфигурация для ухудшения качества
+    private let badQualityConfiguration: BadQualityConfiguration
     /// Действие по нажатию на кнопку
     private let action: Action
     
@@ -102,16 +122,21 @@ final class MBSumAndDateFormViewController: UIViewController {
     private var isKeyboardHidden = true
     /// True если закрыть view после клавиатуры
     private var dismissViewAfterHideKeyboard = false
+    /// Таска для задержки действия
+    private var actionDelayTask: Task<Void, Never>?
     
     /// Инициализатор view controller-а
     /// - Parameters:
     ///  - viewData: view данные
+    ///  - badQualityConfiguration: конфигурации для ухудшения качества
     ///  - action: действие по нажатию на кнопку
     init(
         viewData: ViewData,
+        badQualityConfiguration: BadQualityConfiguration,
         action: @escaping Action
     ) {
         self.viewData = viewData
+        self.badQualityConfiguration = badQualityConfiguration
         self.action = action
         super.init(nibName: nil, bundle: nil)
     }
@@ -163,6 +188,19 @@ final class MBSumAndDateFormViewController: UIViewController {
     }
     
     @objc private func didButtonTab() {
+        guard actionDelayTask == nil else { return }
+        guard let delay = badQualityConfiguration.actionDelay() else {
+            buttonAction()
+            return
+        }
+        actionDelayTask = Task { @MainActor in
+            try? await Task.sleep(for: delay)
+            buttonAction()
+        }
+    }
+    
+    private func buttonAction() {
+        actionDelayTask = nil
         if let error = action(
             .init(sum: sumCell.value, date: dateCell.value)
         ) {
@@ -173,6 +211,7 @@ final class MBSumAndDateFormViewController: UIViewController {
     }
     
     @objc private func dismissForm() {
+        guard actionDelayTask == nil else { return }
         guard isKeyboardHidden else {
             dismissViewAfterHideKeyboard = true
             hideKeyboard()

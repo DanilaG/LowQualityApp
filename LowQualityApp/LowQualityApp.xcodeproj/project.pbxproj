@@ -18,6 +18,7 @@
 		83BE341F2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BE341E2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift */; };
 		83BE34222AAC729F009ECEC8 /* MBExchangeRatesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BE34212AAC729F009ECEC8 /* MBExchangeRatesRepository.swift */; };
 		83BE34252AAC7483009ECEC8 /* MBExchangeRatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BE34242AAC7483009ECEC8 /* MBExchangeRatesDto.swift */; };
+		83BE34272AACAA30009ECEC8 /* MBTimeBehaviourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BE34262AACAA2F009ECEC8 /* MBTimeBehaviourViewModel.swift */; };
 		83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */; };
 		83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */; };
 		83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */; };
@@ -47,6 +48,7 @@
 		83BE341E2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBFunctionalAppropriatenessViewModel.swift; sourceTree = "<group>"; };
 		83BE34212AAC729F009ECEC8 /* MBExchangeRatesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBExchangeRatesRepository.swift; sourceTree = "<group>"; };
 		83BE34242AAC7483009ECEC8 /* MBExchangeRatesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBExchangeRatesDto.swift; sourceTree = "<group>"; };
+		83BE34262AACAA2F009ECEC8 /* MBTimeBehaviourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTimeBehaviourViewModel.swift; sourceTree = "<group>"; };
 		83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreenView.swift; sourceTree = "<group>"; };
 		83CC6AD42AA427570023C38B /* SampleAppViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppViewWrapper.swift; sourceTree = "<group>"; };
 		83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityCharacteristics+DescriptionViewData.swift"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */,
 				83BE341A2AABA706009ECEC8 /* MBFunctionalCompletenessViewModel.swift */,
 				83BE341E2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift */,
+				83BE34262AACAA2F009ECEC8 /* MBTimeBehaviourViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				83CC6AE42AA4649A0023C38B /* MBModelWithData.swift in Sources */,
 				83BE341D2AAC64C6009ECEC8 /* MBFunctionalCorrectnessModel.swift in Sources */,
 				836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */,
+				83BE34272AACAA30009ECEC8 /* MBTimeBehaviourViewModel.swift in Sources */,
 				83CC6AF82AA731B60023C38B /* NumberFormatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

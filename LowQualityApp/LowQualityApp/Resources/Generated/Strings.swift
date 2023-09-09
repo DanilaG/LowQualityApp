@@ -188,8 +188,16 @@ internal enum Localization {
     }
   }
   internal enum TimeBehaviour {
+    /// degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements
+    internal static let description = Localization.tr("Localizable", "timeBehaviour.description", fallback: "degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements")
+    /// Top up or withdraw money
+    internal static let task = Localization.tr("Localizable", "timeBehaviour.task", fallback: "Top up or withdraw money")
     /// Time behaviour
     internal static let title = Localization.tr("Localizable", "timeBehaviour.title", fallback: "Time behaviour")
+    internal enum Task {
+      /// In this version of the application, there may be a delay in the initial screen loading time, and certain button taps may also experience a processing delay.
+      internal static let hint = Localization.tr("Localizable", "timeBehaviour.task.hint", fallback: "In this version of the application, there may be a delay in the initial screen loading time, and certain button taps may also experience a processing delay.")
+    }
   }
   internal enum UserErrorProtection {
     /// User error protection

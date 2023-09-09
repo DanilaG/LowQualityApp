@@ -60,6 +60,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .timeBehaviour:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.TimeBehaviour.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBTimeBehaviourViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.TimeBehaviour.task,
+                    hint: Localization.TimeBehaviour.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

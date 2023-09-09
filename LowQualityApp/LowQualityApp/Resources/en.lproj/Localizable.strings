@@ -36,7 +36,11 @@
 "functionalAppropriateness.task" = "Check the history of operations with the total amount of savings";
 "functionalAppropriateness.task.hint" = "In this version of the application, the total amount of savings is calculated in yuan. While this feature may be highly valuable to a limited number of users, it may have little relevance to the majority of users";
 
+
 "timeBehaviour.title" = "Time behaviour";
+"timeBehaviour.description" = "degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements";
+"timeBehaviour.task" = "Top up or withdraw money";
+"timeBehaviour.task.hint" = "In this version of the application, there may be a delay in the initial screen loading time, and certain button taps may also experience a processing delay.";
 
 "resourceUtilization.title" = "Resource utilization";
 
