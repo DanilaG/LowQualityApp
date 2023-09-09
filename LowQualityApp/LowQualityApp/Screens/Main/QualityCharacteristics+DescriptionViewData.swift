@@ -41,6 +41,24 @@ extension QualityCharacteristics {
                     hint: Localization.FunctionalCorrectness.Task.hint
                 )
             )
+           
+        case .functionalAppropriateness:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.FunctionalAppropriateness.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBFunctionalAppropriatenessViewModel(
+                            model: MBModelWithData(),
+                            repository: MBExchangeRatesRepositoryImpl()
+                        )
+                    ),
+                    task: Localization.FunctionalAppropriateness.task,
+                    hint: Localization.FunctionalAppropriateness.Task.hint
+                )
+            )
             
         default:
             return .init(
@@ -58,18 +76,18 @@ extension QualityCharacteristics {
     }
     
     fileprivate static func moneyBoxApp(
-        model: MBModel = MBModelWithData()
+        model: @escaping @autoclosure () -> MBModel = MBModelWithData()
     ) -> DescriptionScreenView.ViewData.Example.App {
-        moneyBoxApp(viewModel: MBDefaultViewModel(model: model))
+        moneyBoxApp(viewModel: MBDefaultViewModel(model: model()))
     }
     
     fileprivate static func moneyBoxApp<ViewModel: MBViewModel>(
-        viewModel: ViewModel
+        viewModel: @escaping @autoclosure () -> ViewModel
     ) -> DescriptionScreenView.ViewData.Example.App {
         return .init(
             name: Localization.SampleApp.MoneyBox.title,
             description: Localization.SampleApp.MoneyBox.description,
-            screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel)) }
+            screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel())) }
         )
     }
 }

@@ -13,6 +13,8 @@ protocol MBViewModel: ObservableObject {
     var sum: String { get }
     /// История
     var history: [MBTransactionViewModel] { get }
+    /// Сигнализирует о загрузке данных
+    var loading: Bool { get }
     /// Функционал без изъятия
     var withoutWithdraw: Bool { get }
     /// Пополнить

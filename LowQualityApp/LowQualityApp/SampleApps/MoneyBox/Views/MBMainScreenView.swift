@@ -25,6 +25,25 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
     }
     
     var body: some View {
+        ZStack {
+            if viewModel.loading {
+                launchScreen
+            } else {
+                form
+            }
+        }
+        .navigationTitle(Strings.title)
+    }
+    
+    private var launchScreen: some View {
+        ZStack {
+            Color(UIColor.systemGroupedBackground)
+                .ignoresSafeArea()
+            ProgressView()
+        }
+    }
+        
+    private var form: some View {
         Form {
             Group {
                 HStack(spacing: 0) {
@@ -69,7 +88,6 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                 }
             }
         }
-        .navigationTitle(Strings.title)
         .sheet(item: $showingSheet) { sheet in
             MBSumAndDateForm(
                 viewData: .init(

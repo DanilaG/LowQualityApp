@@ -53,8 +53,16 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "faultTolerance.title", fallback: "Fault tolerance")
   }
   internal enum FunctionalAppropriateness {
+    /// degree to which the functions facilitate the accomplishment of specified tasks and objectives
+    internal static let description = Localization.tr("Localizable", "functionalAppropriateness.description", fallback: "degree to which the functions facilitate the accomplishment of specified tasks and objectives")
+    /// Check the history of operations with the total amount of savings
+    internal static let task = Localization.tr("Localizable", "functionalAppropriateness.task", fallback: "Check the history of operations with the total amount of savings")
     /// Appropriateness
     internal static let title = Localization.tr("Localizable", "functionalAppropriateness.title", fallback: "Appropriateness")
+    internal enum Task {
+      /// In this version of the application, the total amount of savings is calculated in yuan. While this feature may be highly valuable to a limited number of users, it may have little relevance to the majority of users
+      internal static let hint = Localization.tr("Localizable", "functionalAppropriateness.task.hint", fallback: "In this version of the application, the total amount of savings is calculated in yuan. While this feature may be highly valuable to a limited number of users, it may have little relevance to the majority of users")
+    }
   }
   internal enum FunctionalCompleteness {
     /// degree to which the set of functions covers all the specified tasks and user objectives
@@ -71,8 +79,8 @@ internal enum Localization {
   internal enum FunctionalCorrectness {
     /// degree to which a product or system provides the correct results with the needed degree of precision
     internal static let description = Localization.tr("Localizable", "functionalCorrectness.description", fallback: "degree to which a product or system provides the correct results with the needed degree of precision")
-    /// Check the history with the total amount of savings
-    internal static let task = Localization.tr("Localizable", "functionalCorrectness.task", fallback: "Check the history with the total amount of savings")
+    /// Check the history of operations with the total amount of savings
+    internal static let task = Localization.tr("Localizable", "functionalCorrectness.task", fallback: "Check the history of operations with the total amount of savings")
     /// Correctness
     internal static let title = Localization.tr("Localizable", "functionalCorrectness.title", fallback: "Correctness")
     internal enum Task {

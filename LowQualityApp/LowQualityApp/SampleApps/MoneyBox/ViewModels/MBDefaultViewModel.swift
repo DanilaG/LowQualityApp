@@ -27,6 +27,8 @@ class MBDefaultViewModel: MBViewModel {
             }
     }
     
+    var loading: Bool { false }
+    
     var withoutWithdraw: Bool { false }
     
     private let moneyFormatter = {
