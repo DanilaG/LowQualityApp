@@ -8,7 +8,7 @@
 import Foundation
 
 /// Дефолтная (полностью рабочая) модель для приложения "Копилка"
-class MBDefaultModel: MBModel {
+class MBDefaultModel: NSObject, MBModel {
     
     var sum: Decimal {
         history.reduce(0, {

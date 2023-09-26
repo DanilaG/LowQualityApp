@@ -75,6 +75,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .resourceUtilization:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.ResourceUtilization.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        model: MBResourceUtilizationModel()
+                    ),
+                    task: Localization.ResourceUtilization.task,
+                    hint: Localization.ResourceUtilization.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

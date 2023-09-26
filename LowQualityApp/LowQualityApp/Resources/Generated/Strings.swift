@@ -128,8 +128,16 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "recoverability.title", fallback: "Recoverability")
   }
   internal enum ResourceUtilization {
+    /// degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements
+    internal static let description = Localization.tr("Localizable", "resourceUtilization.description", fallback: "degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements")
+    /// Use the app for 5 minutes
+    internal static let task = Localization.tr("Localizable", "resourceUtilization.task", fallback: "Use the app for 5 minutes")
     /// Resource utilization
     internal static let title = Localization.tr("Localizable", "resourceUtilization.title", fallback: "Resource utilization")
+    internal enum Task {
+      /// In this version of the application, information about the location will be collected. And also excessive calculations are made, which can lead to heating of the device
+      internal static let hint = Localization.tr("Localizable", "resourceUtilization.task.hint", fallback: "In this version of the application, information about the location will be collected. And also excessive calculations are made, which can lead to heating of the device")
+    }
   }
   internal enum SampleApp {
     internal enum MoneyBox {

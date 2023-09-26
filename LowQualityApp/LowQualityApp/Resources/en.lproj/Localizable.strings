@@ -43,6 +43,9 @@
 "timeBehaviour.task.hint" = "In this version of the application, there may be a delay in the initial screen loading time, and certain button taps may also experience a processing delay.";
 
 "resourceUtilization.title" = "Resource utilization";
+"resourceUtilization.description" = "degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements";
+"resourceUtilization.task" = "Use the app for 5 minutes";
+"resourceUtilization.task.hint" = "In this version of the application, information about the location will be collected. And also excessive calculations are made, which can lead to heating of the device";
 
 "capacity.title" = "Capacity";
 
