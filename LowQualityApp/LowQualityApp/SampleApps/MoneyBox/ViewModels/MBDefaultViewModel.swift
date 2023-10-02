@@ -29,6 +29,7 @@ class MBDefaultViewModel: MBViewModel {
     
     var loading: Bool { false }
     var withoutWithdraw: Bool { false }
+    var withoutCells: Bool { false }
     var actionResponseDelay: Duration? { nil }
     
     private let moneyFormatter = {

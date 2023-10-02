@@ -23,8 +23,16 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "availability.title", fallback: "Availability")
   }
   internal enum Capacity {
+    /// degree to which the maximum limits of a product or system parameter meet requirements
+    internal static let description = Localization.tr("Localizable", "capacity.description", fallback: "degree to which the maximum limits of a product or system parameter meet requirements")
+    /// Find out the date of the first deposit
+    internal static let task = Localization.tr("Localizable", "capacity.task", fallback: "Find out the date of the first deposit")
     /// Capacity
     internal static let title = Localization.tr("Localizable", "capacity.title", fallback: "Capacity")
+    internal enum Task {
+      /// In this version of the application, there are twitches when scrolling the history due to the large number of entries
+      internal static let hint = Localization.tr("Localizable", "capacity.task.hint", fallback: "In this version of the application, there are twitches when scrolling the history due to the large number of entries")
+    }
   }
   internal enum CoExistence {
     /// Co-existence

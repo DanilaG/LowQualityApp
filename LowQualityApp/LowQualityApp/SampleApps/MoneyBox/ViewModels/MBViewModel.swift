@@ -19,6 +19,8 @@ protocol MBViewModel: ObservableObject {
     var withoutWithdraw: Bool { get }
     /// Задержка отклика при нажатии на кнопки действий
     var actionResponseDelay: Duration? { get }
+    /// True если не использовать преиспользование ячеек
+    var withoutCells: Bool { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

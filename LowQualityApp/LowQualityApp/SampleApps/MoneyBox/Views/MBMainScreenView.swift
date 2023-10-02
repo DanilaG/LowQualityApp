@@ -78,17 +78,10 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             }
             if !viewModel.history.isEmpty {
                 Section(header: Text(Strings.history)) {
-                    ForEach(viewModel.history) { item in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(item.type)
-                                Text(item.date)
-                                    .foregroundColor(Color(UIColor.secondaryLabel))
-                            }
-                            Spacer()
-                            Text(item.sum)
-                                .font(.title2)
-                        }
+                    if viewModel.withoutCells {
+                        noEffectiveHistory()
+                    } else {
+                        history()
                     }
                 }
             }
@@ -107,6 +100,35 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             )
                 .ignoresSafeArea()
                 .interactiveDismissDisabled()
+        }
+    }
+    
+    private func history() -> some View {
+        ForEach(viewModel.history) { item in
+            history(for: item)
+        }
+    }
+    
+    private func noEffectiveHistory() -> some View {
+            ForEach(0..<viewModel.history.count, id: \.self) { index in
+                Group {
+                    history(for: viewModel.history[index])
+                        .padding(.trailing, 20)
+                }
+                .padding(.trailing, -20)
+            }
+    }
+    
+    private func history(for item: MBTransactionViewModel) -> some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.type)
+                Text(item.date)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+            }
+            Spacer()
+            Text(item.sum)
+                .font(.title2)
         }
     }
 }

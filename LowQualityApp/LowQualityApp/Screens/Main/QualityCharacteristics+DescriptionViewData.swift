@@ -90,6 +90,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .capacity:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Capacity.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBCapacityViewModel(model: MBCapacityModel())
+                    ),
+                    task: Localization.Capacity.task,
+                    hint: Localization.Capacity.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

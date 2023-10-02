@@ -48,7 +48,9 @@
 "resourceUtilization.task.hint" = "In this version of the application, information about the location will be collected. And also excessive calculations are made, which can lead to heating of the device";
 
 "capacity.title" = "Capacity";
-
+"capacity.description" = "degree to which the maximum limits of a product or system parameter meet requirements";
+"capacity.task" = "Find out the date of the first deposit";
+"capacity.task.hint" = "In this version of the application, there are twitches when scrolling the history due to the large number of entries";
 
 "coExistence.title" = "Co-existence";
 
