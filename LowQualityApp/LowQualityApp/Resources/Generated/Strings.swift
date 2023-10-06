@@ -35,8 +35,16 @@ internal enum Localization {
     }
   }
   internal enum CoExistence {
+    /// degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.
+    internal static let description = Localization.tr("Localizable", "coExistence.description", fallback: "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.")
+    /// Top up or withdraw money
+    internal static let task = Localization.tr("Localizable", "coExistence.task", fallback: "Top up or withdraw money")
     /// Co-existence
     internal static let title = Localization.tr("Localizable", "coExistence.title", fallback: "Co-existence")
+    internal enum Task {
+      /// In this version of the application, when entering the amount, there is an overlap of keyboard with a button
+      internal static let hint = Localization.tr("Localizable", "coExistence.task.hint", fallback: "In this version of the application, when entering the amount, there is an overlap of keyboard with a button")
+    }
   }
   internal enum Description {
     /// Application

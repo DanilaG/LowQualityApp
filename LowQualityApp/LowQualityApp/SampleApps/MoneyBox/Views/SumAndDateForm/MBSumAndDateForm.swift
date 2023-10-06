@@ -76,6 +76,8 @@ final class MBSumAndDateFormViewController: UIViewController {
     struct BadQualityConfiguration {
         /// Время задержки ответа кнопок
         var actionDelay: () -> Duration?
+        /// Нарушено сосуществование виртуальной клавиатуры и кнопки
+        var buttonAndKeyboardCoExistingFailure: Bool
     }
     
     /// Результат работы формы
@@ -181,8 +183,12 @@ final class MBSumAndDateFormViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.topAnchor.constraint(equalTo: tableView.bottomAnchor).isActive = true
         bottomConstraint = button.bottomAnchor
-            .constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -Const.bottomOffset)
+            .constraint(
+                equalTo: view.keyboardLayoutGuide.topAnchor,
+                constant: (badQualityConfiguration.buttonAndKeyboardCoExistingFailure ? 2 : -1)  * Const.bottomOffset
+            )
         bottomConstraint?.isActive = true
+        button.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
     }
@@ -218,7 +224,7 @@ final class MBSumAndDateFormViewController: UIViewController {
             return
         }
         bottomConstraint?.isActive = false
-        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Const.bottomOffset)
             .isActive = true
         dismiss(animated: true)
     }

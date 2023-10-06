@@ -94,7 +94,8 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                     actionTitle: sheet.actionTitle
                 ),
                 badQualityConfiguration: .init(
-                    actionDelay: { viewModel.actionResponseDelay }
+                    actionDelay: { viewModel.actionResponseDelay },
+                    buttonAndKeyboardCoExistingFailure: viewModel.withKeyboardSafeAreaOffset
                 ),
                 action: { sheet.action(for: viewModel, with: $0) }
             )

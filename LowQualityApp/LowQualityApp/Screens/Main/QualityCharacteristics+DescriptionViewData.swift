@@ -105,6 +105,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .coExistence:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.CoExistence.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBCoExistenceViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.CoExistence.task,
+                    hint: Localization.CoExistence.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

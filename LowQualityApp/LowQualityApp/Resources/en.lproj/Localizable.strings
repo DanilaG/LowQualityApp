@@ -53,6 +53,9 @@
 "capacity.task.hint" = "In this version of the application, there are twitches when scrolling the history due to the large number of entries";
 
 "coExistence.title" = "Co-existence";
+"coExistence.description" = "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.";
+"coExistence.task" = "Top up or withdraw money";
+"coExistence.task.hint" = "In this version of the application, when entering the amount, there is an overlap of keyboard with a button";
 
 "interoperability.title" = "Interoperability";
 

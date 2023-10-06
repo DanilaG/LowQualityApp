@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */; };
 		836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3982A89496900C4C00A /* LowQualityAppApp.swift */; };
 		836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE39A2A89496900C4C00A /* MainScreenView.swift */; };
 		836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836CE39C2A89496E00C4C00A /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCoExistenceViewModel.swift; sourceTree = "<group>"; };
 		836CE3952A89496900C4C00A /* LowQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836CE3982A89496900C4C00A /* LowQualityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowQualityAppApp.swift; sourceTree = "<group>"; };
 		836CE39A2A89496900C4C00A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				83BE341E2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift */,
 				83BE34262AACAA2F009ECEC8 /* MBTimeBehaviourViewModel.swift */,
 				838E4F7D2ACB3D780001F9EC /* MBCapacityViewModel.swift */,
+				8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				838E4F802ACB3E150001F9EC /* MBCapacityModel.swift in Sources */,
 				836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */,
 				83CC6AF32AA72C920023C38B /* MBDateInputCell.swift in Sources */,
+				8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */,
 				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,
 				83BE341B2AABA706009ECEC8 /* MBFunctionalCompletenessViewModel.swift in Sources */,
 				83CC6AE02AA447B20023C38B /* MBModel.swift in Sources */,

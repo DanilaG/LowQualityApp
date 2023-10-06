@@ -21,6 +21,8 @@ protocol MBViewModel: ObservableObject {
     var actionResponseDelay: Duration? { get }
     /// True если не использовать преиспользование ячеек
     var withoutCells: Bool { get }
+    /// True если нужно смешение в отступах от клавиатуры
+    var withKeyboardSafeAreaOffset: Bool { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

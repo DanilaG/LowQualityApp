@@ -31,6 +31,7 @@ class MBDefaultViewModel: MBViewModel {
     var withoutWithdraw: Bool { false }
     var withoutCells: Bool { false }
     var actionResponseDelay: Duration? { nil }
+    var withKeyboardSafeAreaOffset: Bool { false }
     
     private let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()
