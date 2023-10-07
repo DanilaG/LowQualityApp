@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */; };
+		8314B9CE2AD154660038A65B /* MBInteroperabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */; };
 		836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3982A89496900C4C00A /* LowQualityAppApp.swift */; };
 		836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE39A2A89496900C4C00A /* MainScreenView.swift */; };
 		836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836CE39C2A89496E00C4C00A /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCoExistenceViewModel.swift; sourceTree = "<group>"; };
+		8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInteroperabilityViewModel.swift; sourceTree = "<group>"; };
 		836CE3952A89496900C4C00A /* LowQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836CE3982A89496900C4C00A /* LowQualityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowQualityAppApp.swift; sourceTree = "<group>"; };
 		836CE39A2A89496900C4C00A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				83BE34262AACAA2F009ECEC8 /* MBTimeBehaviourViewModel.swift */,
 				838E4F7D2ACB3D780001F9EC /* MBCapacityViewModel.swift */,
 				8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */,
+				8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				83BE34222AAC729F009ECEC8 /* MBExchangeRatesRepository.swift in Sources */,
 				83CC6ADE2AA440D90023C38B /* MBMainScreenView.swift in Sources */,
 				83CC6AD52AA427570023C38B /* SampleAppViewWrapper.swift in Sources */,
+				8314B9CE2AD154660038A65B /* MBInteroperabilityViewModel.swift in Sources */,
 				83CC6AE72AA49B580023C38B /* MBSumAndDateForm.swift in Sources */,
 				83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */,
 				83CC6AFF2AA846FB0023C38B /* MBDefaultModel.swift in Sources */,

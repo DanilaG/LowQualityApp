@@ -53,11 +53,14 @@
 "capacity.task.hint" = "In this version of the application, there are twitches when scrolling the history due to the large number of entries";
 
 "coExistence.title" = "Co-existence";
-"coExistence.description" = "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.";
+"coExistence.description" = "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product";
 "coExistence.task" = "Top up or withdraw money";
 "coExistence.task.hint" = "In this version of the application, when entering the amount, there is an overlap of keyboard with a button";
 
 "interoperability.title" = "Interoperability";
+"interoperability.description" = "degree to which two or more systems, products or components can exchange information and use the information that has been exchanged";
+"interoperability.task" = "Top up or withdraw money";
+"interoperability.task.hint" = "In this version of the application, after top up (withdrawal), the amount will be updated, but the \"History\" section will not change";
 
 
 "appropriatenessRecognizability.title" = "Appropriateness recognizability";

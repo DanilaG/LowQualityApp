@@ -14,4 +14,3 @@ final class MBCoExistenceViewModel: MBDefaultViewModel {
     
     override var withKeyboardSafeAreaOffset: Bool { true }
 }
-

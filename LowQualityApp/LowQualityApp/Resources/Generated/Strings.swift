@@ -35,8 +35,8 @@ internal enum Localization {
     }
   }
   internal enum CoExistence {
-    /// degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.
-    internal static let description = Localization.tr("Localizable", "coExistence.description", fallback: "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.")
+    /// degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product
+    internal static let description = Localization.tr("Localizable", "coExistence.description", fallback: "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product")
     /// Top up or withdraw money
     internal static let task = Localization.tr("Localizable", "coExistence.task", fallback: "Top up or withdraw money")
     /// Co-existence
@@ -105,8 +105,16 @@ internal enum Localization {
     }
   }
   internal enum Interoperability {
+    /// degree to which two or more systems, products or components can exchange information and use the information that has been exchanged
+    internal static let description = Localization.tr("Localizable", "interoperability.description", fallback: "degree to which two or more systems, products or components can exchange information and use the information that has been exchanged")
+    /// Top up or withdraw money
+    internal static let task = Localization.tr("Localizable", "interoperability.task", fallback: "Top up or withdraw money")
     /// Interoperability
     internal static let title = Localization.tr("Localizable", "interoperability.title", fallback: "Interoperability")
+    internal enum Task {
+      /// In this version of the application, after top up (withdrawal), the amount will be updated, but the "History" section will not change
+      internal static let hint = Localization.tr("Localizable", "interoperability.task.hint", fallback: "In this version of the application, after top up (withdrawal), the amount will be updated, but the \"History\" section will not change")
+    }
   }
   internal enum Learnability {
     /// Learnability

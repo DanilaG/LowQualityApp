@@ -119,6 +119,21 @@ extension QualityCharacteristics {
                     hint: Localization.CoExistence.Task.hint
                 )
             )
+
+        case .interoperability:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Interoperability.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBInteroperabilityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Interoperability.task,
+                    hint: Localization.Interoperability.Task.hint
+                )
+            )
             
         default:
             return .init(
