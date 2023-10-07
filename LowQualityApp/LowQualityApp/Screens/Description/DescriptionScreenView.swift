@@ -25,7 +25,7 @@ struct DescriptionScreenView: View {
                 /// Название приложения
                 let name: String
                 /// Описание приложения
-                let description: String
+                let description: String?
                 /// Сборщик экрана тестового приложения
                 let screenFactory: @MainActor () -> AnyView
             }
@@ -58,7 +58,7 @@ struct DescriptionScreenView: View {
             }
             Section(
                 header: Text(Strings.example),
-                footer: Text(viewData.example.app.description)
+                footer: viewData.example.app.description.flatMap({ Text($0) }) ?? nil
             ) {
                 HStack {
                     Text(Strings.application)

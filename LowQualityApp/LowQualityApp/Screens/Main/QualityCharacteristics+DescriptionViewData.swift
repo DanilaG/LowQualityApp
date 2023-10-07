@@ -135,6 +135,19 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .appropriatenessRecognizability:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.AppropriatenessRecognizability.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.callToApp(),
+                    task: Localization.AppropriatenessRecognizability.task,
+                    hint: Localization.AppropriatenessRecognizability.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(
@@ -163,6 +176,23 @@ extension QualityCharacteristics {
             name: Localization.SampleApp.MoneyBox.title,
             description: Localization.SampleApp.MoneyBox.description,
             screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel())) }
+        )
+    }
+    
+    fileprivate static func callToApp() -> DescriptionScreenView.ViewData.Example.App {
+        return .init(
+            name: Localization.SampleApp.CallTo.MoneyBox.Title.short,
+            description: nil,
+            screenFactory: { @MainActor in
+                AnyView(CallToScreenView(
+                    viewData: .init(
+                        title: Localization.SampleApp.CallTo.MoneyBox.title,
+                        description: Localization.SampleApp.CallTo.MoneyBox.description,
+                        actionTitle: Localization.SampleApp.CallTo.MoneyBox.action,
+                        url: URL(string: "tel:\(Localization.SampleApp.CallTo.MoneyBox.phone)")
+                    )
+                ))
+            }
         )
     }
 }

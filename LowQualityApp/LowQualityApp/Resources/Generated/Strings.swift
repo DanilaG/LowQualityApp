@@ -15,8 +15,16 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "accessibility.title", fallback: "Accessibility")
   }
   internal enum AppropriatenessRecognizability {
+    /// degree to which users can recognize whether a product or system is appropriate for their needs
+    internal static let description = Localization.tr("Localizable", "appropriatenessRecognizability.description", fallback: "degree to which users can recognize whether a product or system is appropriate for their needs")
+    /// Assume from the name "MoneyBox" what functionality the application has. Then, try the application
+    internal static let task = Localization.tr("Localizable", "appropriatenessRecognizability.task", fallback: "Assume from the name \"MoneyBox\" what functionality the application has. Then, try the application")
     /// Appropriateness recognizability
     internal static let title = Localization.tr("Localizable", "appropriatenessRecognizability.title", fallback: "Appropriateness recognizability")
+    internal enum Task {
+      /// This application simplifies the dialing of the phone of the special services despite its name
+      internal static let hint = Localization.tr("Localizable", "appropriatenessRecognizability.task.hint", fallback: "This application simplifies the dialing of the phone of the special services despite its name")
+    }
   }
   internal enum Availability {
     /// Availability
@@ -164,6 +172,22 @@ internal enum Localization {
     }
   }
   internal enum SampleApp {
+    internal enum CallTo {
+      internal enum MoneyBox {
+        /// Call
+        internal static let action = Localization.tr("Localizable", "sampleApp.callTo.moneyBox.action", fallback: "Call")
+        /// application for calling special services
+        internal static let description = Localization.tr("Localizable", "sampleApp.callTo.moneyBox.description", fallback: "application for calling special services")
+        /// 911
+        internal static let phone = Localization.tr("Localizable", "sampleApp.callTo.moneyBox.phone", fallback: "911")
+        /// Money Box
+        internal static let title = Localization.tr("Localizable", "sampleApp.callTo.moneyBox.title", fallback: "Money Box")
+        internal enum Title {
+          /// MoneyBox
+          internal static let short = Localization.tr("Localizable", "sampleApp.callTo.moneyBox.title.short", fallback: "MoneyBox")
+        }
+      }
+    }
     internal enum MoneyBox {
       /// Actions
       internal static let actions = Localization.tr("Localizable", "sampleApp.moneyBox.actions", fallback: "Actions")

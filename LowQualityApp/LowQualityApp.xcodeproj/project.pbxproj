@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */; };
 		8314B9CE2AD154660038A65B /* MBInteroperabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */; };
+		8314B9D12AD16CC50038A65B /* CallToScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9D02AD16CC50038A65B /* CallToScreenView.swift */; };
 		836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3982A89496900C4C00A /* LowQualityAppApp.swift */; };
 		836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE39A2A89496900C4C00A /* MainScreenView.swift */; };
 		836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836CE39C2A89496E00C4C00A /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCoExistenceViewModel.swift; sourceTree = "<group>"; };
 		8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInteroperabilityViewModel.swift; sourceTree = "<group>"; };
+		8314B9D02AD16CC50038A65B /* CallToScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToScreenView.swift; sourceTree = "<group>"; };
 		836CE3952A89496900C4C00A /* LowQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836CE3982A89496900C4C00A /* LowQualityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowQualityAppApp.swift; sourceTree = "<group>"; };
 		836CE39A2A89496900C4C00A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8314B9CF2AD16CB00038A65B /* CallTo */ = {
+			isa = PBXGroup;
+			children = (
+				8314B9D02AD16CC50038A65B /* CallToScreenView.swift */,
+			);
+			path = CallTo;
+			sourceTree = "<group>";
+		};
 		836CE38C2A89496900C4C00A = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		83CC6ADB2AA440930023C38B /* SampleApps */ = {
 			isa = PBXGroup;
 			children = (
+				8314B9CF2AD16CB00038A65B /* CallTo */,
 				83CC6ADC2AA440B70023C38B /* MoneyBox */,
 			);
 			path = SampleApps;
@@ -344,6 +355,7 @@
 				838E4F7E2ACB3D780001F9EC /* MBCapacityViewModel.swift in Sources */,
 				838E4F802ACB3E150001F9EC /* MBCapacityModel.swift in Sources */,
 				836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */,
+				8314B9D12AD16CC50038A65B /* CallToScreenView.swift in Sources */,
 				83CC6AF32AA72C920023C38B /* MBDateInputCell.swift in Sources */,
 				8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */,
 				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,

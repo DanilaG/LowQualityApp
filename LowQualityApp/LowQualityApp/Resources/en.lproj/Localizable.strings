@@ -64,6 +64,9 @@
 
 
 "appropriatenessRecognizability.title" = "Appropriateness recognizability";
+"appropriatenessRecognizability.description" = "degree to which users can recognize whether a product or system is appropriate for their needs";
+"appropriatenessRecognizability.task" = "Assume from the name \"MoneyBox\" what functionality the application has. Then, try the application";
+"appropriatenessRecognizability.task.hint" = "This application simplifies the dialing of the phone of the special services despite its name";
 
 "learnability.title" = "Learnability";
 
@@ -103,3 +106,9 @@
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "The withdraw amount must be greater than zero";
 "sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "The withdraw amount must not exceed the amount on the account";
 "sampleApp.moneyBox.error.stringToDecimal" = "Failed to get the value";
+
+"sampleApp.callTo.moneyBox.title" = "Money Box";
+"sampleApp.callTo.moneyBox.title.short" = "MoneyBox";
+"sampleApp.callTo.moneyBox.description" = "application for calling special services";
+"sampleApp.callTo.moneyBox.action" = "Call";
+"sampleApp.callTo.moneyBox.phone" = "911";
