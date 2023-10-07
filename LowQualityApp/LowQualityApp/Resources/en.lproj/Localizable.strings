@@ -69,6 +69,9 @@
 "appropriatenessRecognizability.task.hint" = "This application simplifies the dialing of the phone of the special services despite its name";
 
 "learnability.title" = "Learnability";
+"learnability.description" = "degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use";
+"learnability.task" = "Withdraw an amount exceeding the funds in the account";
+"learnability.task.hint" = "In this version of the application, withdrawal/top up errors have no description";
 
 "operability.title" = "Operability";
 
@@ -101,6 +104,7 @@
 "sampleApp.moneyBox.sum" = "Amount";
 "sampleApp.moneyBox.date" = "Date";
 "sampleApp.moneyBox.sumForm.alert.ok" = "Ok";
+"sampleApp.moneyBox.error" = "Error";
 "sampleApp.moneyBox.error.invalidAmount" = "Invalid Amount";
 "sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "The top up amount must be greater than zero";
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "The withdraw amount must be greater than zero";

@@ -56,5 +56,5 @@ struct ValidationErrorViewModel {
     /// Заголовок
     let title: String
     /// Описание
-    let message: String
+    let message: String?
 }

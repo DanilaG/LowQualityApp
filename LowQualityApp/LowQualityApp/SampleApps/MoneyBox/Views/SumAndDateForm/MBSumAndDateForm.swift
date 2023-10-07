@@ -93,7 +93,7 @@ final class MBSumAndDateFormViewController: UIViewController {
         /// Заголовок
         let title: String
         /// Описание
-        let message: String
+        let message: String?
     }
     
     /// Действие по нажатию на кнопку. В случае возвращения `nil` форма закрывается

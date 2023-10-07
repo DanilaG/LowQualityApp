@@ -148,6 +148,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .learnability:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Learnability.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBLearnabilityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Learnability.task,
+                    hint: Localization.Learnability.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

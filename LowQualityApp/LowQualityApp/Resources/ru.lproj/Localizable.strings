@@ -70,6 +70,10 @@
 "appropriatenessRecognizability.task.hint" = "Данное приложение, не смотря на своё название, упрощает набор телефона спецслужб";
 
 "learnability.title" = "Обучаемость";
+"learnability.description" = "степень, в которой продукт или система могут использоваться определенными пользователями для достижения определенных целей обучения использованию продукта или системы с эффективностью, результативностью, свободой от риска и удовлетворением в определенном контексте использования";
+"learnability.task" = "Изъять сумму превышающую средства на счёте";
+"learnability.task.hint" = "В данной версии приложения, ошибки изъятия/пополнения не имеют описания";
+
 
 "operability.title" = "Эксплуатации пригодность";
 
@@ -102,6 +106,7 @@
 "sampleApp.moneyBox.sum" = "Сумма";
 "sampleApp.moneyBox.date" = "Дата";
 "sampleApp.moneyBox.sumForm.alert.ok" = "Ок";
+"sampleApp.moneyBox.error" = "Ошибка";
 "sampleApp.moneyBox.error.invalidAmount" = "Неверная сумма";
 "sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "Сумма пополнения должна быть больше нуля";
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "Сумма изъятия должна быть больше нуля";

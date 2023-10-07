@@ -125,8 +125,16 @@ internal enum Localization {
     }
   }
   internal enum Learnability {
+    /// degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use
+    internal static let description = Localization.tr("Localizable", "learnability.description", fallback: "degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use")
+    /// Withdraw an amount exceeding the funds in the account
+    internal static let task = Localization.tr("Localizable", "learnability.task", fallback: "Withdraw an amount exceeding the funds in the account")
     /// Learnability
     internal static let title = Localization.tr("Localizable", "learnability.title", fallback: "Learnability")
+    internal enum Task {
+      /// In this version of the application, withdrawal/top up errors have no description
+      internal static let hint = Localization.tr("Localizable", "learnability.task.hint", fallback: "In this version of the application, withdrawal/top up errors have no description")
+    }
   }
   internal enum List {
     /// Localizable.strings
@@ -195,6 +203,8 @@ internal enum Localization {
       internal static let date = Localization.tr("Localizable", "sampleApp.moneyBox.date", fallback: "Date")
       /// Savings accounting application
       internal static let description = Localization.tr("Localizable", "sampleApp.moneyBox.description", fallback: "Savings accounting application")
+      /// Error
+      internal static let error = Localization.tr("Localizable", "sampleApp.moneyBox.error", fallback: "Error")
       /// History
       internal static let history = Localization.tr("Localizable", "sampleApp.moneyBox.history", fallback: "History")
       /// Savings
