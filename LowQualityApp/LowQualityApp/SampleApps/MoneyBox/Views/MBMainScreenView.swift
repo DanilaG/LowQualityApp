@@ -108,21 +108,25 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
     
     private func history() -> some View {
         ForEach(viewModel.history) { item in
-            history(for: item)
+            if viewModel.uglyHistory {
+                unethicalHistoryItem(for: item)
+            } else {
+                historyItem(for: item)
+            }
         }
     }
     
     private func noEffectiveHistory() -> some View {
             ForEach(0..<viewModel.history.count, id: \.self) { index in
                 Group {
-                    history(for: viewModel.history[index])
+                    historyItem(for: viewModel.history[index])
                         .padding(.trailing, 20)
                 }
                 .padding(.trailing, -20)
             }
     }
     
-    private func history(for item: MBTransactionViewModel) -> some View {
+    private func historyItem(for item: MBTransactionViewModel) -> some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(item.type)
@@ -132,6 +136,29 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             Spacer()
             Text(item.sum)
                 .font(.title2)
+        }
+    }
+    
+    private func unethicalHistoryItem(for item: MBTransactionViewModel) -> some View {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Spacer()
+                    Text(item.type)
+                        .fontWeight(.bold)
+                    Spacer()
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    Spacer()
+                    Text(item.date)
+                        .fontWeight(.bold)
+                }
+            }
+            Text(item.sum)
+                .fontWeight(.bold)
+            Spacer()
         }
     }
 }

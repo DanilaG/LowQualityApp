@@ -27,6 +27,8 @@ protocol MBViewModel: ObservableObject {
     var openKeyboard: Bool { get }
     /// True если нужны уменьшенные кнопки
     var slimButtons: Bool { get }
+    /// True ели показывать изуродованную историю
+    var uglyHistory: Bool { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

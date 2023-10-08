@@ -286,8 +286,16 @@ internal enum Localization {
     }
   }
   internal enum UserInterfaceAesthetics {
+    /// degree to which a user interface enables pleasing and satisfying interaction for the user
+    internal static let description = Localization.tr("Localizable", "userInterfaceAesthetics.description", fallback: "degree to which a user interface enables pleasing and satisfying interaction for the user")
+    /// View the history of operations
+    internal static let task = Localization.tr("Localizable", "userInterfaceAesthetics.task", fallback: "View the history of operations")
     /// User interface aesthetics
     internal static let title = Localization.tr("Localizable", "userInterfaceAesthetics.title", fallback: "User interface aesthetics")
+    internal enum Task {
+      /// In this version of the application, operation history has problems with margins and fonts
+      internal static let hint = Localization.tr("Localizable", "userInterfaceAesthetics.task.hint", fallback: "In this version of the application, operation history has problems with margins and fonts")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

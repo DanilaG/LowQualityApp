@@ -85,6 +85,9 @@
 "userErrorProtection.task.hint" = "В данной версии приложения, можно изъять средства превышающие бюджет";
 
 "userInterfaceAesthetics.title" = "Эстетичность";
+"userInterfaceAesthetics.description" = "степень, в которой пользовательский интерфейс обеспечивает приятное взаимодействие для пользователя";
+"userInterfaceAesthetics.task" = "Просмотреть историю операций";
+"userInterfaceAesthetics.task.hint" = "В данной версии приложения, история операций имеет проблемы с отступами и шрифтами";
 
 "accessibility.title" = "Доступность интерфейса";
 

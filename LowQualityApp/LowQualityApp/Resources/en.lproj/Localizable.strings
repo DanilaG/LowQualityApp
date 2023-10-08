@@ -84,6 +84,9 @@
 "userErrorProtection.task.hint" = "In this version of the application, you can withdraw funds exceeding the budget";
 
 "userInterfaceAesthetics.title" = "User interface aesthetics";
+"userInterfaceAesthetics.description" = "degree to which a user interface enables pleasing and satisfying interaction for the user";
+"userInterfaceAesthetics.task" = "View the history of operations";
+"userInterfaceAesthetics.task.hint" = "In this version of the application, operation history has problems with margins and fonts";
 
 "accessibility.title" = "Accessibility";
 

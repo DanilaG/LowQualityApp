@@ -193,6 +193,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .userInterfaceAesthetics:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.UserInterfaceAesthetics.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBUserInterfaceAestheticsViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.UserInterfaceAesthetics.task,
+                    hint: Localization.UserInterfaceAesthetics.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(
