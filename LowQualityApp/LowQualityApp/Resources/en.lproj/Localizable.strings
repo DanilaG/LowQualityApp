@@ -89,6 +89,9 @@
 "userInterfaceAesthetics.task.hint" = "In this version of the application, operation history has problems with margins and fonts";
 
 "accessibility.title" = "Accessibility";
+"accessibility.description" = "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use";
+"accessibility.task" = "Find out the date of the first deposit";
+"accessibility.task.hint" = "In this version of the application, part of the history texts are poorly visible";
 
 
 "maturity.title" = "Maturity";

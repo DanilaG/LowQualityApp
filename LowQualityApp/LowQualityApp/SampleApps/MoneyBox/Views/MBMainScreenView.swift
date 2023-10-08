@@ -108,10 +108,13 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
     
     private func history() -> some View {
         ForEach(viewModel.history) { item in
-            if viewModel.uglyHistory {
-                unethicalHistoryItem(for: item)
-            } else {
+            switch viewModel.historyStyle {
+            case .default:
                 historyItem(for: item)
+            case .noAccessible:
+                noAccessibleHistoryItem(for: item)
+            case .ugly:
+                unethicalHistoryItem(for: item)
             }
         }
     }
@@ -136,6 +139,22 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             Spacer()
             Text(item.sum)
                 .font(.title2)
+        }
+    }
+    
+    private func noAccessibleHistoryItem(for item: MBTransactionViewModel) -> some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.type)
+                Text(item.date)
+                    .fontWeight(.ultraLight)
+                    .foregroundColor(Color(UIColor.quaternaryLabel))
+            }
+            Spacer()
+            Text(item.sum)
+                .font(.title2)
+                .fontWeight(.light)
+                .foregroundColor(Color(UIColor.quaternaryLabel))
         }
     }
     

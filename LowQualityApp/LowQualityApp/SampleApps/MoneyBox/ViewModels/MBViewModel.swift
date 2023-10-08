@@ -27,8 +27,8 @@ protocol MBViewModel: ObservableObject {
     var openKeyboard: Bool { get }
     /// True если нужны уменьшенные кнопки
     var slimButtons: Bool { get }
-    /// True ели показывать изуродованную историю
-    var uglyHistory: Bool { get }
+    /// Стиль истории операций
+    var historyStyle: MBViewModelHistoryStyle { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения
@@ -63,4 +63,15 @@ struct ValidationErrorViewModel {
     let title: String
     /// Описание
     let message: String?
+}
+
+
+/// Стиль истории операций
+enum MBViewModelHistoryStyle {
+    /// Обычный
+    case `default`
+    /// Уродливый
+    case ugly
+    /// Нечитаемый
+    case noAccessible
 }

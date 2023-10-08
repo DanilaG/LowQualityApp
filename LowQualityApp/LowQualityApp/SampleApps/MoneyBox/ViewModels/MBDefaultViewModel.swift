@@ -34,7 +34,7 @@ class MBDefaultViewModel: MBViewModel {
     var withKeyboardSafeAreaOffset: Bool { false }
     var openKeyboard: Bool { true }
     var slimButtons: Bool { false }
-    var uglyHistory: Bool { false }
+    var historyStyle: MBViewModelHistoryStyle { .default }
     
     private let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()

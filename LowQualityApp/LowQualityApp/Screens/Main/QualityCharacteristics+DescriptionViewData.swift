@@ -208,6 +208,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .accessibility:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Accessibility.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBAccessibilityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Accessibility.task,
+                    hint: Localization.Accessibility.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

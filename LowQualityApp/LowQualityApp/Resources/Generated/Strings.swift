@@ -11,8 +11,16 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Localization {
   internal enum Accessibility {
+    /// degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use
+    internal static let description = Localization.tr("Localizable", "accessibility.description", fallback: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use")
+    /// Find out the date of the first deposit
+    internal static let task = Localization.tr("Localizable", "accessibility.task", fallback: "Find out the date of the first deposit")
     /// Accessibility
     internal static let title = Localization.tr("Localizable", "accessibility.title", fallback: "Accessibility")
+    internal enum Task {
+      /// In this version of the application, part of the history texts are poorly visible
+      internal static let hint = Localization.tr("Localizable", "accessibility.task.hint", fallback: "In this version of the application, part of the history texts are poorly visible")
+    }
   }
   internal enum AppropriatenessRecognizability {
     /// degree to which users can recognize whether a product or system is appropriate for their needs

@@ -12,5 +12,5 @@ final class MBUserInterfaceAestheticsViewModel: MBDefaultViewModel {
     
     // MARK: - MBDefaultViewModel
     
-    override var uglyHistory: Bool { true }
+    override var historyStyle: MBViewModelHistoryStyle { .ugly }
 }
