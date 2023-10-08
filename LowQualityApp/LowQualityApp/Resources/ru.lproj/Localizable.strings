@@ -80,6 +80,9 @@
 "operability.task.hint" = "В данной версии приложения, клавиатура не открывается автоматически, а кнопки чрезмерно узкие";
 
 "userErrorProtection.title" = "Защита от ошибок";
+"userErrorProtection.description" = "степень, в которой система защищает пользователей от совершения ошибок";
+"userErrorProtection.task" = "Изъять сумму превышающую средства на счёте";
+"userErrorProtection.task.hint" = "В данной версии приложения, можно изъять средства превышающие бюджет";
 
 "userInterfaceAesthetics.title" = "Эстетичность";
 

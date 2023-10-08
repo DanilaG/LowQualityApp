@@ -274,8 +274,16 @@ internal enum Localization {
     }
   }
   internal enum UserErrorProtection {
+    /// degree to which a system protects users against making errors
+    internal static let description = Localization.tr("Localizable", "userErrorProtection.description", fallback: "degree to which a system protects users against making errors")
+    /// Withdraw an amount exceeding the funds in the account
+    internal static let task = Localization.tr("Localizable", "userErrorProtection.task", fallback: "Withdraw an amount exceeding the funds in the account")
     /// User error protection
     internal static let title = Localization.tr("Localizable", "userErrorProtection.title", fallback: "User error protection")
+    internal enum Task {
+      /// In this version of the application, you can withdraw funds exceeding the budget
+      internal static let hint = Localization.tr("Localizable", "userErrorProtection.task.hint", fallback: "In this version of the application, you can withdraw funds exceeding the budget")
+    }
   }
   internal enum UserInterfaceAesthetics {
     /// User interface aesthetics

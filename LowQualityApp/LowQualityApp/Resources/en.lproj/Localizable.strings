@@ -79,6 +79,9 @@
 "operability.task.hint" = "In this version of the application, a keyboard does not open automatically and action buttons are too low";
 
 "userErrorProtection.title" = "User error protection";
+"userErrorProtection.description" = "degree to which a system protects users against making errors";
+"userErrorProtection.task" = "Withdraw an amount exceeding the funds in the account";
+"userErrorProtection.task.hint" = "In this version of the application, you can withdraw funds exceeding the budget";
 
 "userInterfaceAesthetics.title" = "User interface aesthetics";
 

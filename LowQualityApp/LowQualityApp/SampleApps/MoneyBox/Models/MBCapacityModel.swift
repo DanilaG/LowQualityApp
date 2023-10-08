@@ -8,7 +8,7 @@
 import Foundation
 
 /// Модель для приложения "Копилка" с нарушениями в ёмкости
-class MBCapacityModel: MBDefaultModel {
+final class MBCapacityModel: MBDefaultModel {
     /// Инициализатор модели  для приложения "Копилка" с нарушениями в ёмкости
     override init() {
         super.init()

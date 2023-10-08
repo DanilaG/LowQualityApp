@@ -178,6 +178,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .userErrorProtection:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.UserErrorProtection.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        model: MBUserErrorProtectionModel()
+                    ),
+                    task: Localization.UserErrorProtection.task,
+                    hint: Localization.UserErrorProtection.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(
