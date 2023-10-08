@@ -23,6 +23,10 @@ protocol MBViewModel: ObservableObject {
     var withoutCells: Bool { get }
     /// True если нужно смешение в отступах от клавиатуры
     var withKeyboardSafeAreaOffset: Bool { get }
+    /// True если нужны открывать клавиатуру автоматически
+    var openKeyboard: Bool { get }
+    /// True если нужны уменьшенные кнопки
+    var slimButtons: Bool { get }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

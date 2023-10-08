@@ -74,6 +74,9 @@
 "learnability.task.hint" = "In this version of the application, withdrawal/top up errors have no description";
 
 "operability.title" = "Operability";
+"operability.description" = "degree to which a product or system has attributes that make it easy to operate and control";
+"operability.task" = "Top up or withdraw money";
+"operability.task.hint" = "In this version of the application, a keyboard does not open automatically and action buttons are too low";
 
 "userErrorProtection.title" = "User error protection";
 

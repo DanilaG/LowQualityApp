@@ -163,6 +163,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .operability:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Operability.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBOperabilityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Operability.task,
+                    hint: Localization.Operability.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

@@ -78,6 +78,10 @@ final class MBSumAndDateFormViewController: UIViewController {
         var actionDelay: () -> Duration?
         /// Нарушено сосуществование виртуальной клавиатуры и кнопки
         var buttonAndKeyboardCoExistingFailure: Bool
+        /// True если автоматически открывать клавиатуру
+        var allowAutoKeyboardOpen: Bool
+        /// Использовать черезмерно тонкую кнопку
+        var slimButton: Bool
     }
     
     /// Результат работы формы
@@ -164,7 +168,9 @@ final class MBSumAndDateFormViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sumCell.becomeFirstResponder()
+        if badQualityConfiguration.allowAutoKeyboardOpen {
+            sumCell.becomeFirstResponder()
+        }
     }
     
     private func setupSubviews() {
@@ -191,6 +197,9 @@ final class MBSumAndDateFormViewController: UIViewController {
         button.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        if badQualityConfiguration.slimButton {
+            button.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        }
     }
     
     @objc private func didButtonTab() {

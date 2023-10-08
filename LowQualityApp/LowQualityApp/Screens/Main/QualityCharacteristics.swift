@@ -29,7 +29,7 @@ enum QualityCharacteristics: Hashable {
     case appropriatenessRecognizability
     /// Обучаемость
     case learnability
-    /// Эксплуатации пригодность
+    /// Операбельность
     case operability
     /// Защита от ошибок
     case userErrorProtection

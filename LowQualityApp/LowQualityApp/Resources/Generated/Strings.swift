@@ -160,8 +160,16 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "maturity.title", fallback: "Maturity")
   }
   internal enum Operability {
+    /// degree to which a product or system has attributes that make it easy to operate and control
+    internal static let description = Localization.tr("Localizable", "operability.description", fallback: "degree to which a product or system has attributes that make it easy to operate and control")
+    /// Top up or withdraw money
+    internal static let task = Localization.tr("Localizable", "operability.task", fallback: "Top up or withdraw money")
     /// Operability
     internal static let title = Localization.tr("Localizable", "operability.title", fallback: "Operability")
+    internal enum Task {
+      /// In this version of the application, a keyboard does not open automatically and action buttons are too low
+      internal static let hint = Localization.tr("Localizable", "operability.task.hint", fallback: "In this version of the application, a keyboard does not open automatically and action buttons are too low")
+    }
   }
   internal enum Recoverability {
     /// Recoverability
