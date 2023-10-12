@@ -36,6 +36,8 @@ class MBDefaultViewModel: MBViewModel {
     var slimButtons: Bool { false }
     var historyStyle: MBViewModelHistoryStyle { .default }
     
+    var onFatalError: (() -> Void)? = nil
+    
     private let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()
         formatter.currencyCode = "USD"

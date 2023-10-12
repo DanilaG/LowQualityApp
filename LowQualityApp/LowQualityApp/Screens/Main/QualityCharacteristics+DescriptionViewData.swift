@@ -223,6 +223,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .maturity:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Maturity.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBMaturityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Maturity.task,
+                    hint: Localization.Maturity.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

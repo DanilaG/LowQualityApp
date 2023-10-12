@@ -95,6 +95,9 @@
 
 
 "maturity.title" = "Maturity";
+"maturity.description" = "degree to which a system, product or component meets needs for reliability under normal operation";
+"maturity.task" = "Top up your balance three times";
+"maturity.task.hint" = "In this version of the application, a fatal error occurs during the second/third top up";
 
 "availability.title" = "Availability";
 

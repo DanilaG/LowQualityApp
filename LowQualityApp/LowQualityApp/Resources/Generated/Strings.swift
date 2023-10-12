@@ -164,8 +164,16 @@ internal enum Localization {
     }
   }
   internal enum Maturity {
+    /// degree to which a system, product or component meets needs for reliability under normal operation
+    internal static let description = Localization.tr("Localizable", "maturity.description", fallback: "degree to which a system, product or component meets needs for reliability under normal operation")
+    /// Top up your balance three times
+    internal static let task = Localization.tr("Localizable", "maturity.task", fallback: "Top up your balance three times")
     /// Maturity
     internal static let title = Localization.tr("Localizable", "maturity.title", fallback: "Maturity")
+    internal enum Task {
+      /// In this version of the application, a fatal error occurs during the second/third top up
+      internal static let hint = Localization.tr("Localizable", "maturity.task.hint", fallback: "In this version of the application, a fatal error occurs during the second/third top up")
+    }
   }
   internal enum Operability {
     /// degree to which a product or system has attributes that make it easy to operate and control

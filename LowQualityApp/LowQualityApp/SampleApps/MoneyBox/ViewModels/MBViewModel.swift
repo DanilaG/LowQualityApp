@@ -29,6 +29,8 @@ protocol MBViewModel: ObservableObject {
     var slimButtons: Bool { get }
     /// Стиль истории операций
     var historyStyle: MBViewModelHistoryStyle { get }
+    /// Callback вызываемый в случае фатальной ошибке
+    var onFatalError: (() -> Void)? { get set }
     /// Пополнить
     /// - Parameters:
     ///  - sum: сумма пополнения

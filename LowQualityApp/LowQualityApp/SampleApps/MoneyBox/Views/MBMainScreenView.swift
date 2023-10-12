@@ -11,6 +11,8 @@ import SwiftUI
 struct MBMainScreenView<ViewModel: MBViewModel>: View {
     
     private typealias Strings = Localization.SampleApp.MoneyBox
+    
+    @Environment(\.dismiss) var dismiss
         
     @State private var showingSheet: Sheet?
     @StateObject private var viewModel: ViewModel
@@ -33,6 +35,18 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             }
         }
         .navigationTitle(Strings.title)
+        .transaction { transaction in
+            transaction.animation = nil
+        }
+        .onAppear {
+            viewModel.onFatalError = {
+                var transaction = Transaction()
+                transaction.disablesAnimations = true
+                withTransaction(transaction) {
+                    dismiss()
+                }
+            }
+        }
     }
     
     private var launchScreen: some View {
