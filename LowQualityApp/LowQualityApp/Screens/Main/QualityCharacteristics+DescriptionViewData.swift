@@ -238,6 +238,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .availability:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.Availability.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBAvailabilityViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.Availability.task,
+                    hint: Localization.Availability.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

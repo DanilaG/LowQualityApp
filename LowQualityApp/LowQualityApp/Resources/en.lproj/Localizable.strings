@@ -100,6 +100,9 @@
 "maturity.task.hint" = "In this version of the application, a fatal error occurs during the second/third top up";
 
 "availability.title" = "Availability";
+"availability.description" = "degree to which a system, product or component is operational and accessible when required for use";
+"availability.task" = "Top up or withdraw money";
+"availability.task.hint" = "Top up/withdrawal is not available in this version of the application";
 
 "faultTolerance.title" = "Fault tolerance";
 
@@ -121,6 +124,7 @@
 "sampleApp.moneyBox.sumForm.alert.ok" = "Ok";
 "sampleApp.moneyBox.error" = "Error";
 "sampleApp.moneyBox.error.invalidAmount" = "Invalid Amount";
+"sampleApp.moneyBox.error.unavailable" = "The service is temporarily unavailable, try again later";
 "sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "The top up amount must be greater than zero";
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "The withdraw amount must be greater than zero";
 "sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "The withdraw amount must not exceed the amount on the account";

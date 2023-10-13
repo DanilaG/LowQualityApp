@@ -101,6 +101,9 @@
 "maturity.task.hint" = "В данной версии приложения при втором/третьем пополнении происходит падение";
 
 "availability.title" = "Доступность функциональности";
+"availability.description" = "степень, в которой система, продукт или компонент работоспособны и доступны для использования, когда это требуется";
+"availability.task" = "Пополнить или изъять средства";
+"availability.task.hint" = "В данной версии приложения пополнение/изъятие недоступно";
 
 "faultTolerance.title" = "Отказоустойчивость";
 
@@ -122,6 +125,7 @@
 "sampleApp.moneyBox.sumForm.alert.ok" = "Ок";
 "sampleApp.moneyBox.error" = "Ошибка";
 "sampleApp.moneyBox.error.invalidAmount" = "Неверная сумма";
+"sampleApp.moneyBox.error.unavailable" = "Сервис временно недоступен, попробуйте позже";
 "sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "Сумма пополнения должна быть больше нуля";
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "Сумма изъятия должна быть больше нуля";
 "sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "Сумма изъятия должна быть не больше суммы на счёте";

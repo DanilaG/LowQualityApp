@@ -27,6 +27,8 @@ protocol MBViewModel: ObservableObject {
     var openKeyboard: Bool { get }
     /// True если нужны уменьшенные кнопки
     var slimButtons: Bool { get }
+    /// True если блокировать действия пополнения/изъятия
+    var blockActions: Bool { get }
     /// Стиль истории операций
     var historyStyle: MBViewModelHistoryStyle { get }
     /// Callback вызываемый в случае фатальной ошибке
@@ -60,13 +62,15 @@ struct MBTransactionViewModel: Identifiable {
 }
 
 /// View model ошибки валидации
-struct ValidationErrorViewModel {
+typealias ValidationErrorViewModel = ErrorViewModel
+
+/// View model ошибки
+struct ErrorViewModel {
     /// Заголовок
     let title: String
     /// Описание
     let message: String?
 }
-
 
 /// Стиль истории операций
 enum MBViewModelHistoryStyle {

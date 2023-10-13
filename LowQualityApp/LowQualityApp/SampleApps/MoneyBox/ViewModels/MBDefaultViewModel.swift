@@ -34,6 +34,7 @@ class MBDefaultViewModel: MBViewModel {
     var withKeyboardSafeAreaOffset: Bool { false }
     var openKeyboard: Bool { true }
     var slimButtons: Bool { false }
+    var blockActions: Bool { false }
     var historyStyle: MBViewModelHistoryStyle { .default }
     
     var onFatalError: (() -> Void)? = nil

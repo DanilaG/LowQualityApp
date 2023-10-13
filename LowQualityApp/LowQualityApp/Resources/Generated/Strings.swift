@@ -35,8 +35,16 @@ internal enum Localization {
     }
   }
   internal enum Availability {
+    /// degree to which a system, product or component is operational and accessible when required for use
+    internal static let description = Localization.tr("Localizable", "availability.description", fallback: "degree to which a system, product or component is operational and accessible when required for use")
+    /// Top up or withdraw money
+    internal static let task = Localization.tr("Localizable", "availability.task", fallback: "Top up or withdraw money")
     /// Availability
     internal static let title = Localization.tr("Localizable", "availability.title", fallback: "Availability")
+    internal enum Task {
+      /// Top up/withdrawal is not available in this version of the application
+      internal static let hint = Localization.tr("Localizable", "availability.task.hint", fallback: "Top up/withdrawal is not available in this version of the application")
+    }
   }
   internal enum Capacity {
     /// degree to which the maximum limits of a product or system parameter meet requirements
@@ -242,6 +250,8 @@ internal enum Localization {
         internal static let invalidAmount = Localization.tr("Localizable", "sampleApp.moneyBox.error.invalidAmount", fallback: "Invalid Amount")
         /// Failed to get the value
         internal static let stringToDecimal = Localization.tr("Localizable", "sampleApp.moneyBox.error.stringToDecimal", fallback: "Failed to get the value")
+        /// The service is temporarily unavailable, try again later
+        internal static let unavailable = Localization.tr("Localizable", "sampleApp.moneyBox.error.unavailable", fallback: "The service is temporarily unavailable, try again later")
         internal enum TopUp {
           /// The top up amount must be greater than zero
           internal static let lessOrEqualZero = Localization.tr("Localizable", "sampleApp.moneyBox.error.topUp.lessOrEqualZero", fallback: "The top up amount must be greater than zero")

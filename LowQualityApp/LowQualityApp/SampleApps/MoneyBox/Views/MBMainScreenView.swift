@@ -15,6 +15,7 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
     @Environment(\.dismiss) var dismiss
         
     @State private var showingSheet: Sheet?
+    @State private var showingErrorAlert = false
     @StateObject private var viewModel: ViewModel
         
     /// Инициализатор основного экрана приложения "Копилка"
@@ -79,13 +80,25 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                 ButtonWitActionDelay(
                     Strings.TopUp.title,
                     delay: viewModel.actionResponseDelay,
-                    action: { showingSheet = .topUp }
+                    action: {
+                        if viewModel.blockActions {
+                            showingErrorAlert = true
+                        } else {
+                            showingSheet = .topUp
+                        }
+                    }
                 )
                 if !viewModel.withoutWithdraw {
                     ButtonWitActionDelay(
                         Strings.Withdraw.title,
                         delay: viewModel.actionResponseDelay,
-                        action: { showingSheet = .withdraw }
+                        action: {
+                            if viewModel.blockActions {
+                                showingErrorAlert = true
+                            } else {
+                                showingSheet = .withdraw
+                            }
+                        }
                     )
                         .foregroundColor(.red)
                 }
@@ -99,6 +112,9 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                     }
                 }
             }
+        }
+        .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text(Strings.error), message: Text(Strings.Error.unavailable))
         }
         .sheet(item: $showingSheet) { sheet in
             MBSumAndDateForm(
@@ -294,6 +310,12 @@ struct ButtonWitActionDelay: View {
             }
         }
     }
+}
+
+// MARK: - ErrorViewModel + Identifiable
+
+extension ErrorViewModel: Identifiable {
+    var id: String { title + (message ?? "") }
 }
 
 struct MBMainScreenView_Previews: PreviewProvider {
