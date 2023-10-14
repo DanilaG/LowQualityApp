@@ -204,8 +204,16 @@ internal enum Localization {
     }
   }
   internal enum Recoverability {
+    /// degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system
+    internal static let description = Localization.tr("Localizable", "recoverability.description", fallback: "degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system")
+    /// Top up or withdraw funds. Then re-enter the application
+    internal static let task = Localization.tr("Localizable", "recoverability.task", fallback: "Top up or withdraw funds. Then re-enter the application")
     /// Recoverability
     internal static let title = Localization.tr("Localizable", "recoverability.title", fallback: "Recoverability")
+    internal enum Task {
+      /// In this version of the application, after an error, the saved data disappears
+      internal static let hint = Localization.tr("Localizable", "recoverability.task.hint", fallback: "In this version of the application, after an error, the saved data disappears")
+    }
   }
   internal enum ResourceUtilization {
     /// degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements

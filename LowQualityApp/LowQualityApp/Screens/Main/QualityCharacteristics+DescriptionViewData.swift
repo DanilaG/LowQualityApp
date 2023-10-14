@@ -267,17 +267,19 @@ extension QualityCharacteristics {
                     hint: Localization.FaultTolerance.Task.hint
                 )
             )
-            
-        default:
+          
+        case .recoverability:
             return .init(
                 qualityCharacteristic: .init(
-                    title: "Test",
-                    description: Localization.FunctionalCompleteness.description
+                    title: title,
+                    description: Localization.Recoverability.description
                 ),
                 example: .init(
-                    app: QualityCharacteristics.moneyBoxApp(),
-                    task: Localization.FunctionalCompleteness.task,
-                    hint: Localization.FunctionalCompleteness.Task.hint
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBRecoverabilityViewModel(model: MBRecoverabilityModel())
+                    ),
+                    task: Localization.Recoverability.task,
+                    hint: Localization.Recoverability.Task.hint
                 )
             )
         }

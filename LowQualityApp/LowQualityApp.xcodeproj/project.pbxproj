@@ -46,6 +46,8 @@
 		83CC6AF82AA731B60023C38B /* NumberFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AF72AA731B60023C38B /* NumberFormatters.swift */; };
 		83CC6AFF2AA846FB0023C38B /* MBDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6AFE2AA846FB0023C38B /* MBDefaultModel.swift */; };
 		83CC6B012AA84B390023C38B /* MBDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */; };
+		83CD63A62ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD63A52ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift */; };
+		83CD63A82ADADB060074C7D8 /* MBRecoverabilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD63A72ADADB060074C7D8 /* MBRecoverabilityModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		83CC6AF72AA731B60023C38B /* NumberFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatters.swift; sourceTree = "<group>"; };
 		83CC6AFE2AA846FB0023C38B /* MBDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDefaultModel.swift; sourceTree = "<group>"; };
 		83CC6B002AA84B390023C38B /* MBDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDefaultViewModel.swift; sourceTree = "<group>"; };
+		83CD63A52ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRecoverabilityViewModel.swift; sourceTree = "<group>"; };
+		83CD63A72ADADB060074C7D8 /* MBRecoverabilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRecoverabilityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,7 @@
 				83BE342D2AAE1E5D009ECEC8 /* MBResourceUtilizationModel.swift */,
 				838E4F7F2ACB3E150001F9EC /* MBCapacityModel.swift */,
 				8333A91C2AD2BFFF00ABBAFB /* MBUserErrorProtectionModel.swift */,
+				83CD63A72ADADB060074C7D8 /* MBRecoverabilityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				8333A9222AD8633500ABBAFB /* MBMaturityViewModel.swift */,
 				8333A9242AD9A6A800ABBAFB /* MBAvailabilityViewModel.swift */,
 				8333A9262ADACE6C00ABBAFB /* MBFaultToleranceViewModel.swift */,
+				83CD63A52ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 				8314B9CE2AD154660038A65B /* MBInteroperabilityViewModel.swift in Sources */,
 				83CC6AE72AA49B580023C38B /* MBSumAndDateForm.swift in Sources */,
 				83CC6AD32AA30B910023C38B /* DescriptionScreenView.swift in Sources */,
+				83CD63A62ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift in Sources */,
 				83CC6AFF2AA846FB0023C38B /* MBDefaultModel.swift in Sources */,
 				83CC6AE22AA4553C0023C38B /* MBViewModel.swift in Sources */,
 				83CC6B012AA84B390023C38B /* MBDefaultViewModel.swift in Sources */,
@@ -390,6 +397,7 @@
 				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,
 				83BE341B2AABA706009ECEC8 /* MBFunctionalCompletenessViewModel.swift in Sources */,
 				8333A91D2AD2BFFF00ABBAFB /* MBUserErrorProtectionModel.swift in Sources */,
+				83CD63A82ADADB060074C7D8 /* MBRecoverabilityModel.swift in Sources */,
 				83CC6AE02AA447B20023C38B /* MBModel.swift in Sources */,
 				836CE3B32A89582000C4C00A /* Strings.swift in Sources */,
 				83BE341F2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift in Sources */,

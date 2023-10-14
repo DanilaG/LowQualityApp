@@ -110,6 +110,9 @@
 "faultTolerance.task.hint" = "In this version of the application, when an error occurs, the application crashes";
 
 "recoverability.title" = "Recoverability";
+"recoverability.description" = "degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system";
+"recoverability.task" = "Top up or withdraw funds. Then re-enter the application";
+"recoverability.task.hint" = "In this version of the application, after an error, the saved data disappears";
 
 "sampleApp.moneyBox.title" = "MoneyBox";
 "sampleApp.moneyBox.description" = "Savings accounting application";
