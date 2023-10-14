@@ -253,6 +253,21 @@ extension QualityCharacteristics {
                 )
             )
             
+        case .faultTolerance:
+            return .init(
+                qualityCharacteristic: .init(
+                    title: title,
+                    description: Localization.FaultTolerance.description
+                ),
+                example: .init(
+                    app: QualityCharacteristics.moneyBoxApp(
+                        viewModel: MBFaultToleranceViewModel(model: MBModelWithData())
+                    ),
+                    task: Localization.FaultTolerance.task,
+                    hint: Localization.FaultTolerance.Task.hint
+                )
+            )
+            
         default:
             return .init(
                 qualityCharacteristic: .init(

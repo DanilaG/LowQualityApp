@@ -89,8 +89,16 @@ internal enum Localization {
     }
   }
   internal enum FaultTolerance {
+    /// degree to which a system, product or component operates as intended despite the presence of hardware or software faults
+    internal static let description = Localization.tr("Localizable", "faultTolerance.description", fallback: "degree to which a system, product or component operates as intended despite the presence of hardware or software faults")
+    /// Withdraw an amount exceeding the funds in the account
+    internal static let task = Localization.tr("Localizable", "faultTolerance.task", fallback: "Withdraw an amount exceeding the funds in the account")
     /// Fault tolerance
     internal static let title = Localization.tr("Localizable", "faultTolerance.title", fallback: "Fault tolerance")
+    internal enum Task {
+      /// In this version of the application, when an error occurs, the application crashes
+      internal static let hint = Localization.tr("Localizable", "faultTolerance.task.hint", fallback: "In this version of the application, when an error occurs, the application crashes")
+    }
   }
   internal enum FunctionalAppropriateness {
     /// degree to which the functions facilitate the accomplishment of specified tasks and objectives

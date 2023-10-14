@@ -105,6 +105,9 @@
 "availability.task.hint" = "Top up/withdrawal is not available in this version of the application";
 
 "faultTolerance.title" = "Fault tolerance";
+"faultTolerance.description" = "degree to which a system, product or component operates as intended despite the presence of hardware or software faults";
+"faultTolerance.task" = "Withdraw an amount exceeding the funds in the account";
+"faultTolerance.task.hint" = "In this version of the application, when an error occurs, the application crashes";
 
 "recoverability.title" = "Recoverability";
 
