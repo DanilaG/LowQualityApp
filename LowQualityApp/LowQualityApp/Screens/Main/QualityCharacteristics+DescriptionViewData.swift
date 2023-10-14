@@ -297,7 +297,8 @@ extension QualityCharacteristics {
         return .init(
             name: Localization.SampleApp.MoneyBox.title,
             description: Localization.SampleApp.MoneyBox.description,
-            screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel())) }
+            screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel())) },
+            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() }
         )
     }
     
@@ -314,7 +315,12 @@ extension QualityCharacteristics {
                         url: URL(string: "tel:\(Localization.SampleApp.CallTo.MoneyBox.phone)")
                     )
                 ))
-            }
+            },
+            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() }
         )
+    }
+    
+    fileprivate static func standardMoneyBoxScreen() -> AnyView {
+        AnyView(MBMainScreenView(MBDefaultViewModel(model: MBModelWithData())))
     }
 }

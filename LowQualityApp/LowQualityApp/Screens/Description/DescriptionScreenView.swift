@@ -28,6 +28,8 @@ struct DescriptionScreenView: View {
                 let description: String?
                 /// Сборщик экрана тестового приложения
                 let screenFactory: @MainActor () -> AnyView
+                /// Сборщик эталона приложения
+                let standardAppScreenFactory: @MainActor () -> AnyView
             }
             
             /// Приложения
@@ -44,12 +46,19 @@ struct DescriptionScreenView: View {
         let example: Example
     }
     
+    private enum AppVersion: Int, Identifiable {
+        case withDefect
+        case standard
+        
+        var id: Int { rawValue }
+    }
+    
     private typealias Strings = Localization.Description
     
     /// View data для экрана описания
     let viewData: ViewData
 
-    @State private var showingApp = false
+    @State private var showingApp: AppVersion?
     
     var body: some View {
         Form {
@@ -76,20 +85,31 @@ struct DescriptionScreenView: View {
             }
             
             Section(
-                footer: Text(viewData.example.hint)
+                footer: (Text(viewData.example.hint) + Text(". [\(Strings.seeStandard)](standard)"))
+                    .environment(\.openURL, OpenURLAction { _ in
+                        showingApp = .standard
+                        return .handled
+                    })
             ) {
                 HStack {
                     Spacer()
-                    Button(Strings.try, action: { showingApp = true })
+                    Button(Strings.try, action: { showingApp = .withDefect })
                     Spacer()
                 }
             }
             }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(viewData.qualityCharacteristic.title)
-        .fullScreenCover(isPresented: $showingApp) {
-            SampleAppViewWrapper {
-                viewData.example.app.screenFactory()
+        .fullScreenCover(item: $showingApp) {
+            switch $0 {
+            case .withDefect:
+                SampleAppViewWrapper {
+                    viewData.example.app.screenFactory()
+                }
+            case .standard:
+                SampleAppViewWrapper {
+                    viewData.example.app.standardAppScreenFactory()
+                }
             }
         }
     }
@@ -106,7 +126,8 @@ struct DescriptionScreenView_Previews: PreviewProvider {
                 app: .init(
                     name: "Копилка",
                     description: "Приложение для учёта накопленных денег",
-                    screenFactory: { AnyView(Text("Test")) }
+                    screenFactory: { AnyView(Text("Test")) },
+                    standardAppScreenFactory: { AnyView(Text("Test")) }
                 ),
                 task: "Уменьшить баланс накопленных средств в приложении",
                 hint: "В данной версии приложения вы не сможете уменьшить баланс, так как такой функционал отсутсвует"

@@ -20,6 +20,7 @@
 "description.task.hint" = "Follow the steps in order to notice the defect";
 "description.whatIsWrong" = "What's wrong?";
 "description.try" = "Try";
+"description.seeStandard" = "View the standard version";
 
 "functionalCompleteness.title" = "Completeness";
 "functionalCompleteness.description" = "degree to which the set of functions covers all the specified tasks and user objectives";

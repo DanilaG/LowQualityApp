@@ -77,6 +77,8 @@ internal enum Localization {
     internal static let description = Localization.tr("Localizable", "description.description", fallback: "Description")
     /// Example
     internal static let example = Localization.tr("Localizable", "description.example", fallback: "Example")
+    /// View the standard version
+    internal static let seeStandard = Localization.tr("Localizable", "description.seeStandard", fallback: "View the standard version")
     /// Task
     internal static let task = Localization.tr("Localizable", "description.task", fallback: "Task")
     /// Try
