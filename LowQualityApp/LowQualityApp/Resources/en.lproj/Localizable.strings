@@ -12,6 +12,7 @@
 "list.section.compatibility" = "Compatibility";
 "list.section.usability" = "Usability";
 "list.section.reliability" = "Reliability";
+"list.isoHint" = "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was used to classify quality attributes";
 
 "description.description" = "Description";
 "description.example" = "Example";

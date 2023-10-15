@@ -12,6 +12,7 @@
 "list.section.compatibility" = "Совместимость";
 "list.section.usability" = "Удобство использования";
 "list.section.reliability" = "Надежность";
+"list.isoHint" = "Для классификации атрибутов качества использовался стандарт [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3)";
 
 "description.description" = "Описание";
 "description.example" = "Пример";

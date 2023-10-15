@@ -42,6 +42,12 @@ struct MainScreenView: View {
                     makeItem(for: .faultTolerance)
                     makeItem(for: .recoverability)
                 }
+                Section(
+                    footer: Text(
+                        (try? AttributedString(markdown: Strings.isoHint)) ??
+                        AttributedString(Strings.isoHint)
+                    )
+                ) {}
             }
             .navigationTitle(Strings.title)
             .navigationDestination(for: QualityCharacteristics.self) {

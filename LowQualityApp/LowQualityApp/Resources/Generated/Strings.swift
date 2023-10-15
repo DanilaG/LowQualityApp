@@ -163,6 +163,8 @@ internal enum Localization {
     }
   }
   internal enum List {
+    /// The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was used to classify quality attributes
+    internal static let isoHint = Localization.tr("Localizable", "list.isoHint", fallback: "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was used to classify quality attributes")
     /// Localizable.strings
     ///   LowQualityApp
     /// 
