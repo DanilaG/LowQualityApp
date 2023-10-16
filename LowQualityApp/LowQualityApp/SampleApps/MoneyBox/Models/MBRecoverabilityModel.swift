@@ -11,14 +11,7 @@ import Foundation
 final class MBRecoverabilityModel: MBModel {
     
     var sum: Decimal {
-        history.reduce(0, {
-            switch $1.type {
-            case .topUp:
-                return $0 + $1.sum
-            case .withdraw:
-                return $0 - $1.sum
-            }
-        })
+        MBDefaultModel.sum(for: history)
     }
     
     private(set) var history: [MBTransaction] = []

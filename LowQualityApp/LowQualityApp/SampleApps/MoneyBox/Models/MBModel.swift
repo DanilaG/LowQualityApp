@@ -56,5 +56,8 @@ enum MBWithdrawError {
     /// Сумма меньше или равна 0
     case lessOrEqualZero
     /// Больше чем вся сумма
-    case moreThenTotalSum
+    /// Параметры:
+    ///  - дата
+    ///  - допустимая сумма
+    case moreThenTotalSum(Date, Decimal)
 }

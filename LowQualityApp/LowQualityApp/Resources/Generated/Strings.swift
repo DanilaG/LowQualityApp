@@ -279,8 +279,10 @@ internal enum Localization {
         internal enum Withdraw {
           /// The withdraw amount must be greater than zero
           internal static let lessOrEqualZero = Localization.tr("Localizable", "sampleApp.moneyBox.error.withdraw.lessOrEqualZero", fallback: "The withdraw amount must be greater than zero")
-          /// The withdraw amount must not exceed the amount on the account
-          internal static let moreThenTotalSum = Localization.tr("Localizable", "sampleApp.moneyBox.error.withdraw.moreThenTotalSum", fallback: "The withdraw amount must not exceed the amount on the account")
+          /// The withdrawal amount exceeds the invoice amount as of %@. %@ is allowable amount for withdrawal on the chosen date
+          internal static func moreThenTotalSum(_ p1: Any, _ p2: Any) -> String {
+            return Localization.tr("Localizable", "sampleApp.moneyBox.error.withdraw.moreThenTotalSum", String(describing: p1), String(describing: p2), fallback: "The withdrawal amount exceeds the invoice amount as of %@. %@ is allowable amount for withdrawal on the chosen date")
+          }
         }
       }
       internal enum SumForm {

@@ -11,14 +11,7 @@ import Foundation
 class MBDefaultModel: NSObject, MBModel {
     
     var sum: Decimal {
-        history.reduce(0, {
-            switch $1.type {
-            case .topUp:
-                return $0 + $1.sum
-            case .withdraw:
-                return $0 - $1.sum
-            }
-        })
+        MBDefaultModel.sum(for: history)
     }
     
     private(set) var history: [MBTransaction] = []
@@ -30,9 +23,20 @@ class MBDefaultModel: NSObject, MBModel {
     }
     
     func withdraw(sum: Decimal, date: Date) -> MBWithdrawError? {
-        if let error = validateWithdraw(sum: sum) { return error  }
+        if let error = validateWithdraw(sum: sum, date: date) { return error  }
         history.append(.init(type: .withdraw, date: date, sum: sum))
         return nil
+    }
+    
+    static func sum(for history: [MBTransaction]) -> Decimal {
+        history.reduce(0, {
+            switch $1.type {
+            case .topUp:
+                return $0 + $1.sum
+            case .withdraw:
+                return $0 - $1.sum
+            }
+        })
     }
     
     private func validateTopUp(sum: Decimal) -> MBTopUpError? {
@@ -44,14 +48,18 @@ class MBDefaultModel: NSObject, MBModel {
         }
     }
     
-    private func validateWithdraw(sum: Decimal) -> MBWithdrawError? {
+    private func validateWithdraw(sum: Decimal, date: Date) -> MBWithdrawError? {
         switch sum {
         case ...0:
             return .lessOrEqualZero
-        case 0...self.sum:
+        case 0...self.sum(at: date):
             return nil
         default:
-            return .moreThenTotalSum
+            return .moreThenTotalSum(date, self.sum(at: date))
         }
+    }
+    
+    private func sum(at date: Date) -> Decimal {
+        MBDefaultModel.sum(for: history.filter({ $0.date <= date }))
     }
 }

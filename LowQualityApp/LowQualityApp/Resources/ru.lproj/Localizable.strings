@@ -136,7 +136,7 @@
 "sampleApp.moneyBox.error.unavailable" = "Сервис временно недоступен, попробуйте позже";
 "sampleApp.moneyBox.error.topUp.lessOrEqualZero" = "Сумма пополнения должна быть больше нуля";
 "sampleApp.moneyBox.error.withdraw.lessOrEqualZero" = "Сумма изъятия должна быть больше нуля";
-"sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "Сумма изъятия должна быть не больше суммы на счёте";
+"sampleApp.moneyBox.error.withdraw.moreThenTotalSum" = "Сумма изъятия превышает сумму счёта на %@ Допустимая сумма для изъятия на выбранную дату %@";
 "sampleApp.moneyBox.error.stringToDecimal" = "Не удалось получить значение";
 
 "sampleApp.callTo.moneyBox.title" = "Коп Илл-ка";

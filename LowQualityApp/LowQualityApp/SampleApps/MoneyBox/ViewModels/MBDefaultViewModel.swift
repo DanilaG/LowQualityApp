@@ -11,7 +11,7 @@ import Foundation
 class MBDefaultViewModel: MBViewModel {
     
     var sum: String {
-        moneyFormatter.string(for: model.sum) ?? ""
+        MBDefaultViewModel.moneyFormatter.string(for: model.sum) ?? ""
     }
     
     var history: [MBTransactionViewModel] {
@@ -21,8 +21,8 @@ class MBDefaultViewModel: MBViewModel {
                 MBTransactionViewModel(
                     id: ISO8601DateFormatter().string(from: $0.date),
                     type: $0.type.asString,
-                    date: dateFormatter.string(from: $0.date),
-                    sum: moneyFormatter.string(for: $0.sum) ?? ""
+                    date: MBDefaultViewModel.dateFormatter.string(from: $0.date),
+                    sum: MBDefaultViewModel.moneyFormatter.string(for: $0.sum) ?? ""
                 )
             }
     }
@@ -39,14 +39,14 @@ class MBDefaultViewModel: MBViewModel {
     
     var onFatalError: (() -> Void)? = nil
     
-    private let moneyFormatter = {
+    fileprivate static let moneyFormatter = {
         let formatter = NumberFormatters.MoneyOutput()
         formatter.currencyCode = "USD"
         formatter.currencySymbol = "$"
         return formatter
     }()
     
-    private let dateFormatter = {
+    fileprivate static let dateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -107,8 +107,14 @@ extension MBWithdrawError: LocalizedError {
         switch self {
         case .lessOrEqualZero:
             return .init(title: Strings.invalidAmount, message: Strings.Withdraw.lessOrEqualZero)
-        case .moreThenTotalSum:
-            return .init(title: Strings.invalidAmount, message: Strings.Withdraw.moreThenTotalSum)
+        case .moreThenTotalSum(let date, let sum):
+            return .init(
+                title: Strings.invalidAmount,
+                message: Strings.Withdraw.moreThenTotalSum(
+                    MBDefaultViewModel.dateFormatter.string(for: date) ?? "",
+                    MBDefaultViewModel.moneyFormatter.string(for: sum) ?? ""
+                )
+            )
         }
     }
 }
