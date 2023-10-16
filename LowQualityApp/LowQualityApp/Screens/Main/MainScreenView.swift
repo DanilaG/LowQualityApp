@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import YandexMobileMetrica
 
 /// Главный экран приложения
 struct MainScreenView: View {
@@ -47,6 +48,10 @@ struct MainScreenView: View {
                         (try? AttributedString(markdown: Strings.isoHint)) ??
                         AttributedString(Strings.isoHint)
                     )
+                    .environment(\.openURL, OpenURLAction { url in
+                        YMMYandexMetrica.reportEvent("open_ISO")
+                        return .systemAction(url)
+                    })
                 ) {}
             }
             .navigationTitle(Strings.title)

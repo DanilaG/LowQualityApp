@@ -15,3 +15,5 @@ build/
 DerivedData/
 xcuserdata/
 xcuserdata/**/*
+
+**/YMetricaInfo.plist

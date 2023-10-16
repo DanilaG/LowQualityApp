@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import YandexMobileMetrica
 
 /// Экран описания характеристики качества
 struct DescriptionScreenView: View {
@@ -17,6 +18,8 @@ struct DescriptionScreenView: View {
             let title: String
             /// Описание характеристики качества
             let description: String
+            /// Название для метрики
+            let metricaTitle: String
         }
         /// Описание примера
         struct Example {
@@ -30,6 +33,8 @@ struct DescriptionScreenView: View {
                 let screenFactory: @MainActor () -> AnyView
                 /// Сборщик эталона приложения
                 let standardAppScreenFactory: @MainActor () -> AnyView
+                /// Название для метрики
+                let metricaName: String
             }
             
             /// Приложения
@@ -88,12 +93,22 @@ struct DescriptionScreenView: View {
                 footer: (Text(viewData.example.hint) + Text(". [\(Strings.seeStandard)](standard)"))
                     .environment(\.openURL, OpenURLAction { _ in
                         showingApp = .standard
+                        YMMYandexMetrica.reportEvent("open_standard_example", parameters: [
+                            "app": viewData.example.app.metricaName,
+                            "quality_characteristic": viewData.qualityCharacteristic.metricaTitle,
+                        ])
                         return .handled
                     })
             ) {
                 HStack {
                     Spacer()
-                    Button(Strings.try, action: { showingApp = .withDefect })
+                    Button(Strings.try, action: {
+                        showingApp = .withDefect
+                        YMMYandexMetrica.reportEvent("open_with_defect_example", parameters: [
+                            "app": viewData.example.app.metricaName,
+                            "quality_characteristic": viewData.qualityCharacteristic.metricaTitle,
+                        ])
+                    })
                     Spacer()
                 }
             }
@@ -112,6 +127,11 @@ struct DescriptionScreenView: View {
                 }
             }
         }
+        .onAppear {
+            YMMYandexMetrica.reportEvent("open_description", parameters: [
+                "quality_characteristic": viewData.qualityCharacteristic.metricaTitle,
+            ])
+        }
     }
 }
 
@@ -120,14 +140,16 @@ struct DescriptionScreenView_Previews: PreviewProvider {
         DescriptionScreenView(viewData: .init(
             qualityCharacteristic: .init(
                 title: "Test",
-                description: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use."
+                description: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use.",
+                metricaTitle: "test"
             ),
             example: .init(
                 app: .init(
                     name: "Копилка",
                     description: "Приложение для учёта накопленных денег",
                     screenFactory: { AnyView(Text("Test")) },
-                    standardAppScreenFactory: { AnyView(Text("Test")) }
+                    standardAppScreenFactory: { AnyView(Text("Test")) },
+                    metricaName: "test"
                 ),
                 task: "Уменьшить баланс накопленных средств в приложении",
                 hint: "В данной версии приложения вы не сможете уменьшить баланс, так как такой функционал отсутсвует"

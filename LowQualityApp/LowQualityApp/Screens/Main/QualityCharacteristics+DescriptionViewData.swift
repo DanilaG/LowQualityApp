@@ -16,7 +16,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.FunctionalCompleteness.description
+                    description: Localization.FunctionalCompleteness.description,
+                    metricaTitle: "functional_completeness"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -31,7 +32,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.FunctionalCorrectness.description
+                    description: Localization.FunctionalCorrectness.description,
+                    metricaTitle: "functional_correctness"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -46,7 +48,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.FunctionalAppropriateness.description
+                    description: Localization.FunctionalAppropriateness.description,
+                    metricaTitle: "functional_appropriateness"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -64,7 +67,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.TimeBehaviour.description
+                    description: Localization.TimeBehaviour.description,
+                    metricaTitle: "time_behaviour"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -79,7 +83,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.ResourceUtilization.description
+                    description: Localization.ResourceUtilization.description,
+                    metricaTitle: "resource_utilization"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -94,7 +99,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Capacity.description
+                    description: Localization.Capacity.description,
+                    metricaTitle: "capacity"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -109,7 +115,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.CoExistence.description
+                    description: Localization.CoExistence.description,
+                    metricaTitle: "co-existence"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -124,7 +131,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Interoperability.description
+                    description: Localization.Interoperability.description,
+                    metricaTitle: "interoperability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -139,7 +147,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.AppropriatenessRecognizability.description
+                    description: Localization.AppropriatenessRecognizability.description,
+                    metricaTitle: "appropriateness_recognizability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.callToApp(),
@@ -152,7 +161,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Learnability.description
+                    description: Localization.Learnability.description,
+                    metricaTitle: "learnability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -167,7 +177,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Operability.description
+                    description: Localization.Operability.description,
+                    metricaTitle: "operability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -182,7 +193,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.UserErrorProtection.description
+                    description: Localization.UserErrorProtection.description,
+                    metricaTitle: "user_error_protection"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -197,7 +209,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.UserInterfaceAesthetics.description
+                    description: Localization.UserInterfaceAesthetics.description,
+                    metricaTitle: "user_interface_aesthetics"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -212,7 +225,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Accessibility.description
+                    description: Localization.Accessibility.description,
+                    metricaTitle: "accessibility"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -227,7 +241,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Maturity.description
+                    description: Localization.Maturity.description,
+                    metricaTitle: "maturity"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -242,7 +257,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Availability.description
+                    description: Localization.Availability.description,
+                    metricaTitle: "availability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -257,7 +273,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.FaultTolerance.description
+                    description: Localization.FaultTolerance.description,
+                    metricaTitle: "fault_tolerance"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -272,7 +289,8 @@ extension QualityCharacteristics {
             return .init(
                 qualityCharacteristic: .init(
                     title: title,
-                    description: Localization.Recoverability.description
+                    description: Localization.Recoverability.description,
+                    metricaTitle: "recoverability"
                 ),
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
@@ -298,7 +316,8 @@ extension QualityCharacteristics {
             name: Localization.SampleApp.MoneyBox.title,
             description: Localization.SampleApp.MoneyBox.description,
             screenFactory: { @MainActor in AnyView(MBMainScreenView(viewModel())) },
-            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() }
+            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() },
+            metricaName: "money_box"
         )
     }
     
@@ -316,7 +335,8 @@ extension QualityCharacteristics {
                     )
                 ))
             },
-            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() }
+            standardAppScreenFactory: { @MainActor in standardMoneyBoxScreen() },
+            metricaName: "call_to"
         )
     }
     
