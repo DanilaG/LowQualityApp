@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/danila/Documents/Programming/LowQualityApp/LowQualityApp/BugHub.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

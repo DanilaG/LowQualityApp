@@ -51,6 +51,7 @@
 		83DEE4382ADDA8460098A755 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; productRef = 83DEE4372ADDA8460098A755 /* YandexMobileMetrica */; };
 		83DEE43A2ADDA8460098A755 /* YandexMobileMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 83DEE4392ADDA8460098A755 /* YandexMobileMetricaCrashes */; };
 		83DEE43D2ADDA9FA0098A755 /* YMetricaInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83DEE43C2ADDA9FA0098A755 /* YMetricaInfo.plist */; };
+		83DEE43F2AE2E8E10098A755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DEE43E2AE2E8E10098A755 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		83CD63A52ADAD8A00074C7D8 /* MBRecoverabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRecoverabilityViewModel.swift; sourceTree = "<group>"; };
 		83CD63A72ADADB060074C7D8 /* MBRecoverabilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRecoverabilityModel.swift; sourceTree = "<group>"; };
 		83DEE43C2ADDA9FA0098A755 /* YMetricaInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = YMetricaInfo.plist; sourceTree = "<group>"; };
+		83DEE43E2AE2E8E10098A755 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				83CC6AD82AA42C8E0023C38B /* Description */,
 				83CC6AD72AA42C830023C38B /* Main */,
+				83DEE43E2AE2E8E10098A755 /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				83DEE43D2ADDA9FA0098A755 /* YMetricaInfo.plist in Resources */,
 				836CE3AC2A89546000C4C00A /* Localizable.strings in Resources */,
+				83DEE43F2AE2E8E10098A755 /* LaunchScreen.storyboard in Resources */,
 				836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -554,6 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -580,6 +586,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -587,7 +594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = DG.BugHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -615,6 +622,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -622,7 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = DG.BugHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
