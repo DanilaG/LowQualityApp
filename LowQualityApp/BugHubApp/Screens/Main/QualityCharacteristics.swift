@@ -9,17 +9,17 @@ import Foundation
 
 /// Пример нарушения quality characteristics
 enum QualityCharacteristics: Hashable {
-    /// Завершенность
+    /// Полнота
     case functionalCompleteness
     /// Корректность
     case functionalCorrectness
-    /// Уместность
+    /// Целесообразность
     case functionalAppropriateness
-    /// Производительность
+    /// Временные характеристики
     case timeBehaviour
-    /// Потребляемость ресурсов
+    /// Использование ресурсов
     case resourceUtilization
-    /// Ёмкость
+    /// Потенциальные возможности
     case capacity
     /// Сосуществование
     case coExistence
@@ -27,13 +27,13 @@ enum QualityCharacteristics: Hashable {
     case interoperability
     /// Узнаваемость назначения
     case appropriatenessRecognizability
-    /// Обучаемость
+    /// Изучаемость
     case learnability
     /// Операбельность
     case operability
-    /// Защита от ошибок
+    /// Защищенность от ошибки пользователя
     case userErrorProtection
-    /// Эстетичность
+    /// Эстетика пользовательского интерфейса
     case userInterfaceAesthetics
     /// Доступность интерфейса
     case accessibility
