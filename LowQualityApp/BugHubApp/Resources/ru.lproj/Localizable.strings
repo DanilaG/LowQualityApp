@@ -24,6 +24,7 @@
 
 "functionalCompleteness.title" = "Полнота";
 "functionalCompleteness.description" = "степень покрытия совокупностью функций всех определенных задач и целей пользователя";
+"functionalCompleteness.task" = "Уменьшите сумму сбережений";
 "functionalCompleteness.task.hint" = "В данной версии приложения, функция уменьшения баланса недоступна из-за нереализованности данного функционала";
 
 "functionalCorrectness.title" = "Корректность";
