@@ -49,6 +49,8 @@ struct DescriptionScreenView: View {
         let qualityCharacteristic: QualityCharacteristic
         /// Описание примера
         let example: Example
+        /// Deep link для открытия
+        let deepLink: URL?
     }
     
     private enum AppVersion: Int, Identifiable {
@@ -115,6 +117,13 @@ struct DescriptionScreenView: View {
             }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(viewData.qualityCharacteristic.title)
+        .toolbar {
+            if let deepLink = viewData.deepLink {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ShareLink(item: deepLink)
+                }
+            }
+        }
         .fullScreenCover(item: $showingApp) {
             switch $0 {
             case .withDefect:
@@ -153,7 +162,8 @@ struct DescriptionScreenView_Previews: PreviewProvider {
                 ),
                 task: "Уменьшить баланс накопленных средств в приложении",
                 hint: "В данной версии приложения вы не сможете уменьшить баланс, так как такой функционал отсутсвует"
-            )
+            ),
+            deepLink: nil
         ))
     }
 }

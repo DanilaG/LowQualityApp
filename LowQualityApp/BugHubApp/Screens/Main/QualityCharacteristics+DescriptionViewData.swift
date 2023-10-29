@@ -25,7 +25,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.FunctionalCompleteness.task,
                     hint: Localization.FunctionalCompleteness.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .functionalCorrectness:
@@ -41,7 +42,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.FunctionalCorrectness.task,
                     hint: Localization.FunctionalCorrectness.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
            
         case .functionalAppropriateness:
@@ -60,7 +62,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.FunctionalAppropriateness.task,
                     hint: Localization.FunctionalAppropriateness.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .timeBehaviour:
@@ -76,7 +79,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.TimeBehaviour.task,
                     hint: Localization.TimeBehaviour.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .resourceUtilization:
@@ -92,7 +96,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.ResourceUtilization.task,
                     hint: Localization.ResourceUtilization.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .capacity:
@@ -108,7 +113,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Capacity.task,
                     hint: Localization.Capacity.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .coExistence:
@@ -124,7 +130,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.CoExistence.task,
                     hint: Localization.CoExistence.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
 
         case .interoperability:
@@ -140,7 +147,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Interoperability.task,
                     hint: Localization.Interoperability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .appropriatenessRecognizability:
@@ -154,7 +162,8 @@ extension QualityCharacteristics {
                     app: QualityCharacteristics.callToApp(),
                     task: Localization.AppropriatenessRecognizability.task,
                     hint: Localization.AppropriatenessRecognizability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .learnability:
@@ -170,7 +179,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Learnability.task,
                     hint: Localization.Learnability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .operability:
@@ -186,7 +196,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Operability.task,
                     hint: Localization.Operability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .userErrorProtection:
@@ -202,7 +213,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.UserErrorProtection.task,
                     hint: Localization.UserErrorProtection.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .userInterfaceAesthetics:
@@ -218,7 +230,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.UserInterfaceAesthetics.task,
                     hint: Localization.UserInterfaceAesthetics.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .accessibility:
@@ -234,7 +247,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Accessibility.task,
                     hint: Localization.Accessibility.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .maturity:
@@ -250,7 +264,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Maturity.task,
                     hint: Localization.Maturity.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .availability:
@@ -266,7 +281,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Availability.task,
                     hint: Localization.Availability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
             
         case .faultTolerance:
@@ -282,7 +298,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.FaultTolerance.task,
                     hint: Localization.FaultTolerance.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
           
         case .recoverability:
@@ -298,7 +315,8 @@ extension QualityCharacteristics {
                     ),
                     task: Localization.Recoverability.task,
                     hint: Localization.Recoverability.Task.hint
-                )
+                ),
+                deepLink: makeDeeplink()
             )
         }
     }
