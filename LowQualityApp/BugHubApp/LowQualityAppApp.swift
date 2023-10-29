@@ -5,6 +5,8 @@
 //  Created by Danila on 13.08.2023.
 //
 
+import FirebaseCore
+import FirebaseDynamicLinks
 import SwiftUI
 import YandexMobileMetrica
 
@@ -25,6 +27,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         setUpYandexMetrica()
+        FirebaseApp.configure()
         return true
     }
     

@@ -10,10 +10,11 @@ import YandexMobileMetrica
 
 /// Главный экран приложения
 struct MainScreenView: View {
+    @State private var navigationPath = NavigationPath()
     private typealias Strings = Localization.List
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             Form {
                 Section(Strings.Section.functionalSuitability) {
                     makeItem(for: .functionalCompleteness)
@@ -57,6 +58,11 @@ struct MainScreenView: View {
             .navigationTitle(Strings.title)
             .navigationDestination(for: QualityCharacteristics.self) {
                 DescriptionScreenView(viewData: $0.descriptionViewData)
+            }
+            .onOpenURL { url in
+                guard let characteristic = QualityCharacteristics(from: url) else { return }
+                NavigationUtil.popToRootView()
+                navigationPath.append(characteristic)
             }
         }
     }

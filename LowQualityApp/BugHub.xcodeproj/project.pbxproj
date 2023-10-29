@@ -18,6 +18,10 @@
 		8333A9232AD8633500ABBAFB /* MBMaturityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8333A9222AD8633500ABBAFB /* MBMaturityViewModel.swift */; };
 		8333A9252AD9A6A800ABBAFB /* MBAvailabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8333A9242AD9A6A800ABBAFB /* MBAvailabilityViewModel.swift */; };
 		8333A9272ADACE6C00ABBAFB /* MBFaultToleranceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8333A9262ADACE6C00ABBAFB /* MBFaultToleranceViewModel.swift */; };
+		833FC7F12AED240D006BB295 /* QualityCharacteristics+DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833FC7F02AED240D006BB295 /* QualityCharacteristics+DeepLinks.swift */; };
+		833FC7F32AEE4CFF006BB295 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833FC7F22AEE4CFF006BB295 /* NavigationUtil.swift */; };
+		8369AFFA2AE565F100914E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8369AFF92AE565F100914E53 /* GoogleService-Info.plist */; };
+		8369AFFD2AE5671200914E53 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 8369AFFC2AE5671200914E53 /* FirebaseDynamicLinks */; };
 		836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE3982A89496900C4C00A /* LowQualityAppApp.swift */; };
 		836CE39B2A89496900C4C00A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CE39A2A89496900C4C00A /* MainScreenView.swift */; };
 		836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836CE39C2A89496E00C4C00A /* Assets.xcassets */; };
@@ -66,6 +70,11 @@
 		8333A9222AD8633500ABBAFB /* MBMaturityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMaturityViewModel.swift; sourceTree = "<group>"; };
 		8333A9242AD9A6A800ABBAFB /* MBAvailabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAvailabilityViewModel.swift; sourceTree = "<group>"; };
 		8333A9262ADACE6C00ABBAFB /* MBFaultToleranceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBFaultToleranceViewModel.swift; sourceTree = "<group>"; };
+		833FC7F02AED240D006BB295 /* QualityCharacteristics+DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityCharacteristics+DeepLinks.swift"; sourceTree = "<group>"; };
+		833FC7F22AEE4CFF006BB295 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		8369AFF92AE565F100914E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8369AFFE2AE56A0100914E53 /* BugHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BugHub.entitlements; sourceTree = "<group>"; };
+		8369AFFF2AE56A8300914E53 /* BugHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BugHub-Info.plist"; sourceTree = "<group>"; };
 		836CE3952A89496900C4C00A /* BugHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836CE3982A89496900C4C00A /* LowQualityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowQualityAppApp.swift; sourceTree = "<group>"; };
 		836CE39A2A89496900C4C00A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 			files = (
 				83DEE4382ADDA8460098A755 /* YandexMobileMetrica in Frameworks */,
 				83DEE43A2ADDA8460098A755 /* YandexMobileMetricaCrashes in Frameworks */,
+				8369AFFD2AE5671200914E53 /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +136,8 @@
 		836CE38C2A89496900C4C00A = {
 			isa = PBXGroup;
 			children = (
+				8369AFFF2AE56A8300914E53 /* BugHub-Info.plist */,
+				8369AFFE2AE56A0100914E53 /* BugHub.entitlements */,
 				836CE3972A89496900C4C00A /* BugHubApp */,
 				836CE3962A89496900C4C00A /* Products */,
 			);
@@ -202,6 +214,7 @@
 				836CE3A62A894E8300C4C00A /* QualityCharacteristics.swift */,
 				836CE39A2A89496900C4C00A /* MainScreenView.swift */,
 				83CC6AD92AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift */,
+				833FC7F02AED240D006BB295 /* QualityCharacteristics+DeepLinks.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				83CC6AF72AA731B60023C38B /* NumberFormatters.swift */,
+				833FC7F22AEE4CFF006BB295 /* NavigationUtil.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,6 +326,7 @@
 		83DEE43B2ADDA9B80098A755 /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				8369AFF92AE565F100914E53 /* GoogleService-Info.plist */,
 				83DEE43C2ADDA9FA0098A755 /* YMetricaInfo.plist */,
 			);
 			path = Info;
@@ -336,6 +351,7 @@
 			packageProductDependencies = (
 				83DEE4372ADDA8460098A755 /* YandexMobileMetrica */,
 				83DEE4392ADDA8460098A755 /* YandexMobileMetricaCrashes */,
+				8369AFFC2AE5671200914E53 /* FirebaseDynamicLinks */,
 			);
 			productName = LowQualityApp;
 			productReference = 836CE3952A89496900C4C00A /* BugHub.app */;
@@ -368,6 +384,7 @@
 			mainGroup = 836CE38C2A89496900C4C00A;
 			packageReferences = (
 				83DEE4362ADDA8460098A755 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
+				8369AFFB2AE5671200914E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 836CE3962A89496900C4C00A /* Products */;
 			projectDirPath = "";
@@ -385,6 +402,7 @@
 			files = (
 				83DEE43D2ADDA9FA0098A755 /* YMetricaInfo.plist in Resources */,
 				836CE3AC2A89546000C4C00A /* Localizable.strings in Resources */,
+				8369AFFA2AE565F100914E53 /* GoogleService-Info.plist in Resources */,
 				83DEE43F2AE2E8E10098A755 /* LaunchScreen.storyboard in Resources */,
 				836CE39D2A89496E00C4C00A /* Assets.xcassets in Resources */,
 			);
@@ -419,6 +437,7 @@
 				8333A9252AD9A6A800ABBAFB /* MBAvailabilityViewModel.swift in Sources */,
 				836CE3A72A894E8300C4C00A /* QualityCharacteristics.swift in Sources */,
 				8314B9D12AD16CC50038A65B /* CallToScreenView.swift in Sources */,
+				833FC7F12AED240D006BB295 /* QualityCharacteristics+DeepLinks.swift in Sources */,
 				83CC6AF32AA72C920023C38B /* MBDateInputCell.swift in Sources */,
 				8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */,
 				83CC6ADA2AA42D2C0023C38B /* QualityCharacteristics+DescriptionViewData.swift in Sources */,
@@ -427,6 +446,7 @@
 				83CD63A82ADADB060074C7D8 /* MBRecoverabilityModel.swift in Sources */,
 				83CC6AE02AA447B20023C38B /* MBModel.swift in Sources */,
 				836CE3B32A89582000C4C00A /* Strings.swift in Sources */,
+				833FC7F32AEE4CFF006BB295 /* NavigationUtil.swift in Sources */,
 				83BE341F2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift in Sources */,
 				83CC6AE42AA4649A0023C38B /* MBModelWithData.swift in Sources */,
 				83BE341D2AAC64C6009ECEC8 /* MBFunctionalCorrectnessModel.swift in Sources */,
@@ -575,12 +595,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BugHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 3TNZ35SGHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BugHub-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To demonstrate useless use";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To demonstrate useless use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -611,12 +633,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BugHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 3TNZ35SGHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BugHub-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To demonstrate useless use";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To demonstrate useless use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -666,6 +690,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8369AFFB2AE5671200914E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		83DEE4362ADDA8460098A755 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yandexmobile/metrica-sdk-ios";
@@ -677,6 +709,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8369AFFC2AE5671200914E53 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8369AFFB2AE5671200914E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
 		83DEE4372ADDA8460098A755 /* YandexMobileMetrica */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 83DEE4362ADDA8460098A755 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;

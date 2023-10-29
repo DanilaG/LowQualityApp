@@ -8,7 +8,7 @@
 import Foundation
 
 /// Пример нарушения quality characteristics
-enum QualityCharacteristics: Hashable {
+enum QualityCharacteristics: CaseIterable, Hashable {
     /// Полнота
     case functionalCompleteness
     /// Корректность

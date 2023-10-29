@@ -17,3 +17,4 @@ xcuserdata/
 xcuserdata/**/*
 
 **/YMetricaInfo.plist
+**/GoogleService-Info.plist
