@@ -74,6 +74,9 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                     Spacer()
                 }
             }
+                // SwiftUI дважды вызывает init sheet если его навешать на форму
+                // поэтому он внутри
+                .sheet(item: $showingSheet) { data in makeSheet(data) }
                 .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 .listRowBackground(Color.clear)
             Section(header: Text(Strings.actions)) {
@@ -115,24 +118,6 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
         }
         .alert(isPresented: $showingErrorAlert) {
             Alert(title: Text(Strings.error), message: Text(Strings.Error.unavailable))
-        }
-        .sheet(item: $showingSheet) { sheet in
-            MBSumAndDateForm(
-                viewData: .init(
-                    title: sheet.title,
-                    hint: sheet.hint,
-                    actionTitle: sheet.actionTitle
-                ),
-                badQualityConfiguration: .init(
-                    actionDelay: { viewModel.actionResponseDelay },
-                    buttonAndKeyboardCoExistingFailure: viewModel.withKeyboardSafeAreaOffset,
-                    allowAutoKeyboardOpen: viewModel.openKeyboard,
-                    slimButton: viewModel.slimButtons
-                ),
-                action: { sheet.action(for: viewModel, with: $0) }
-            )
-                .ignoresSafeArea()
-                .interactiveDismissDisabled()
         }
     }
     
@@ -209,6 +194,25 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                 .fontWeight(.bold)
             Spacer()
         }
+    }
+    
+    private func makeSheet(_ sheet: Sheet) -> some View {
+        MBSumAndDateForm(
+            viewData: .init(
+                title: sheet.title,
+                hint: sheet.hint,
+                actionTitle: sheet.actionTitle
+            ),
+            badQualityConfiguration: .init(
+                actionDelay: { viewModel.actionResponseDelay },
+                buttonAndKeyboardCoExistingFailure: viewModel.withKeyboardSafeAreaOffset,
+                allowAutoKeyboardOpen: viewModel.openKeyboard,
+                slimButton: viewModel.slimButtons
+            ),
+            action: { sheet.action(for: viewModel, with: $0) }
+        )
+            .ignoresSafeArea()
+            .interactiveDismissDisabled()
     }
 }
 
