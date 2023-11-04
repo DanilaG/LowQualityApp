@@ -147,20 +147,21 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
     private func historyItem(for item: MBTransactionViewModel) -> some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(item.type)
+                Text(item.type.asString)
                 Text(item.date)
                     .foregroundColor(Color(UIColor.secondaryLabel))
             }
             Spacer()
             Text(item.sum)
                 .font(.title2)
+                .foregroundColor(item.type == .topUp ? .green : .red)
         }
     }
     
     private func noAccessibleHistoryItem(for item: MBTransactionViewModel) -> some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(item.type)
+                Text(item.type.asString)
                 Text(item.date)
                     .fontWeight(.ultraLight)
                     .foregroundColor(Color(UIColor.quaternaryLabel))
@@ -178,7 +179,7 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             VStack(alignment: .leading) {
                 HStack {
                     Spacer()
-                    Text(item.type)
+                    Text(item.type.asString)
                         .fontWeight(.bold)
                     Spacer()
                     Spacer()
@@ -325,5 +326,19 @@ extension ErrorViewModel: Identifiable {
 struct MBMainScreenView_Previews: PreviewProvider {
     static var previews: some View {
         MBMainScreenView(MBDefaultViewModel(model: MBModelWithData()))
+    }
+}
+
+// MARK: - MBTransaction.`Type` + asString
+
+fileprivate extension MBTransactionViewModel.`Type` {
+    /// Представление типа в строке
+    var asString: String {
+        switch self {
+        case .topUp:
+            return Localization.SampleApp.MoneyBox.TopUp.title
+        case .withdraw:
+            return Localization.SampleApp.MoneyBox.Withdraw.title
+        }
     }
 }

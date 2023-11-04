@@ -20,7 +20,7 @@ class MBDefaultViewModel: MBViewModel {
             .map {
                 MBTransactionViewModel(
                     id: ISO8601DateFormatter().string(from: $0.date),
-                    type: $0.type.asString,
+                    type: $0.type.asViewModel,
                     date: MBDefaultViewModel.dateFormatter.string(from: $0.date),
                     sum: MBDefaultViewModel.moneyFormatter.string(for: $0.sum) ?? ""
                 )
@@ -119,16 +119,16 @@ extension MBWithdrawError: LocalizedError {
     }
 }
 
-// MARK: - MBTransaction.`Type` + asString
+// MARK: - MBTransaction.`Type` + asViewModel
 
 fileprivate extension MBTransaction.`Type` {
-    /// Представление типа в строке
-    var asString: String {
+    /// Представление типа в view model
+    var asViewModel: MBTransactionViewModel.`Type` {
         switch self {
         case .topUp:
-            return Localization.SampleApp.MoneyBox.TopUp.title
+            return .topUp
         case .withdraw:
-            return Localization.SampleApp.MoneyBox.Withdraw.title
+            return .withdraw
         }
     }
 }

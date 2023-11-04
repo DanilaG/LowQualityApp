@@ -51,10 +51,18 @@ protocol MBViewModel: ObservableObject {
 
 /// View model транзакций для приложения "Копилка"
 struct MBTransactionViewModel: Identifiable {
+    /// Тип транзакции
+    enum `Type` {
+        /// Пополнение
+        case topUp
+        /// Изъятие
+        case withdraw
+    }
+    
     /// Индетификатор
     let id: String
     /// Тип транзакции
-    let type: String
+    let type: `Type`
     /// Дата
     let date: String
     /// Сумма
