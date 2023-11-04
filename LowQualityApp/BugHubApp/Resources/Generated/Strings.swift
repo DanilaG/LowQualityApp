@@ -11,162 +11,184 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Localization {
   internal enum Accessibility {
+    /// You have decided to analyze your income and determine the date of the largest deposit
+    internal static let context = Localization.tr("Localizable", "accessibility.context", fallback: "You have decided to analyze your income and determine the date of the largest deposit")
+    /// The date and amount in the history of operations in the application are challenging to read due to the insufficient contrast with the background, causing significant difficulties for individuals with visual impairments
+    internal static let defect = Localization.tr("Localizable", "accessibility.defect", fallback: "The date and amount in the history of operations in the application are challenging to read due to the insufficient contrast with the background, causing significant difficulties for individuals with visual impairments")
     /// degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use
     internal static let description = Localization.tr("Localizable", "accessibility.description", fallback: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use")
-    /// Find out the date of the initial deposit
-    internal static let task = Localization.tr("Localizable", "accessibility.task", fallback: "Find out the date of the initial deposit")
+    /// Identify the date with the highest amount of fund replenishment
+    internal static let task = Localization.tr("Localizable", "accessibility.task", fallback: "Identify the date with the highest amount of fund replenishment")
     /// Accessibility
     internal static let title = Localization.tr("Localizable", "accessibility.title", fallback: "Accessibility")
-    internal enum Task {
-      /// In this version of the application, some of the text in the history section is not clearly visible
-      internal static let hint = Localization.tr("Localizable", "accessibility.task.hint", fallback: "In this version of the application, some of the text in the history section is not clearly visible")
-    }
   }
   internal enum AppropriatenessRecognizability {
+    /// You have recently installed a new app on your mobile phone called "MoneyBox" and now you are ready to launch it
+    internal static let context = Localization.tr("Localizable", "appropriatenessRecognizability.context", fallback: "You have recently installed a new app on your mobile phone called \"MoneyBox\" and now you are ready to launch it")
+    /// Despite its name, this application simplifies the process of dialing phone numbers for emergency services
+    internal static let defect = Localization.tr("Localizable", "appropriatenessRecognizability.defect", fallback: "Despite its name, this application simplifies the process of dialing phone numbers for emergency services")
     /// degree to which users can recognize whether a product or system is appropriate for their needs
     internal static let description = Localization.tr("Localizable", "appropriatenessRecognizability.description", fallback: "degree to which users can recognize whether a product or system is appropriate for their needs")
     /// Guess the functionality of the "MoneyBox" app based on its name, and then give it a try to explore its features
     internal static let task = Localization.tr("Localizable", "appropriatenessRecognizability.task", fallback: "Guess the functionality of the \"MoneyBox\" app based on its name, and then give it a try to explore its features")
     /// Appropriateness recognizability
     internal static let title = Localization.tr("Localizable", "appropriatenessRecognizability.title", fallback: "Appropriateness recognizability")
-    internal enum Task {
-      /// Despite its name, this application simplifies the process of dialing phone numbers for emergency services
-      internal static let hint = Localization.tr("Localizable", "appropriatenessRecognizability.task.hint", fallback: "Despite its name, this application simplifies the process of dialing phone numbers for emergency services")
-    }
   }
   internal enum Availability {
+    /// After receiving your salary, you want to reflect it in the financial control application
+    internal static let context = Localization.tr("Localizable", "availability.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
+    /// The functionality for top-up and withdrawal are unavailable in the application
+    internal static let defect = Localization.tr("Localizable", "availability.defect", fallback: "The functionality for top-up and withdrawal are unavailable in the application")
     /// degree to which a system, product or component is operational and accessible when required for use
     internal static let description = Localization.tr("Localizable", "availability.description", fallback: "degree to which a system, product or component is operational and accessible when required for use")
-    /// Top up or withdraw funds
-    internal static let task = Localization.tr("Localizable", "availability.task", fallback: "Top up or withdraw funds")
+    /// Top up funds
+    internal static let task = Localization.tr("Localizable", "availability.task", fallback: "Top up funds")
     /// Availability
     internal static let title = Localization.tr("Localizable", "availability.title", fallback: "Availability")
-    internal enum Task {
-      /// In this version of the application, the functionality for top-up and withdrawal is unavailable
-      internal static let hint = Localization.tr("Localizable", "availability.task.hint", fallback: "In this version of the application, the functionality for top-up and withdrawal is unavailable")
-    }
   }
   internal enum Capacity {
+    /// You have been using the same financial control application for quite some time and now you are curious to know when you first added an entry to it
+    internal static let context = Localization.tr("Localizable", "capacity.context", fallback: "You have been using the same financial control application for quite some time and now you are curious to know when you first added an entry to it")
+    /// The application experiences issues with smooth scrolling of the history due to the large number of entries
+    internal static let defect = Localization.tr("Localizable", "capacity.defect", fallback: "The application experiences issues with smooth scrolling of the history due to the large number of entries")
     /// degree to which the maximum limits of a product or system parameter meet requirements
     internal static let description = Localization.tr("Localizable", "capacity.description", fallback: "degree to which the maximum limits of a product or system parameter meet requirements")
     /// Find out the date of the initial deposit
     internal static let task = Localization.tr("Localizable", "capacity.task", fallback: "Find out the date of the initial deposit")
     /// Capacity
     internal static let title = Localization.tr("Localizable", "capacity.title", fallback: "Capacity")
-    internal enum Task {
-      /// In this version of the application, there are jerky movements when scrolling through the history due to the large number of entries
-      internal static let hint = Localization.tr("Localizable", "capacity.task.hint", fallback: "In this version of the application, there are jerky movements when scrolling through the history due to the large number of entries")
-    }
   }
   internal enum CoExistence {
+    /// After receiving your salary, you want to reflect it in the financial control application
+    internal static let context = Localization.tr("Localizable", "coExistence.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
+    /// When entering the amount, the top-up button is partially obscured by the keyboard
+    internal static let defect = Localization.tr("Localizable", "coExistence.defect", fallback: "When entering the amount, the top-up button is partially obscured by the keyboard")
     /// degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product
     internal static let description = Localization.tr("Localizable", "coExistence.description", fallback: "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product")
-    /// Top up or withdraw funds
-    internal static let task = Localization.tr("Localizable", "coExistence.task", fallback: "Top up or withdraw funds")
+    /// Top up funds
+    internal static let task = Localization.tr("Localizable", "coExistence.task", fallback: "Top up funds")
     /// Co-existence
     internal static let title = Localization.tr("Localizable", "coExistence.title", fallback: "Co-existence")
-    internal enum Task {
-      /// In this version of the application, a button overlaps the keyboard when entering the amount
-      internal static let hint = Localization.tr("Localizable", "coExistence.task.hint", fallback: "In this version of the application, a button overlaps the keyboard when entering the amount")
-    }
   }
   internal enum Description {
-    /// Application
-    internal static let application = Localization.tr("Localizable", "description.application", fallback: "Application")
     /// Description
     internal static let description = Localization.tr("Localizable", "description.description", fallback: "Description")
-    /// Example
-    internal static let example = Localization.tr("Localizable", "description.example", fallback: "Example")
-    /// View the standard version
-    internal static let seeStandard = Localization.tr("Localizable", "description.seeStandard", fallback: "View the standard version")
-    /// Task
-    internal static let task = Localization.tr("Localizable", "description.task", fallback: "Task")
-    /// Try
-    internal static let `try` = Localization.tr("Localizable", "description.try", fallback: "Try")
-    internal enum Task {
-      /// Complete the designated task to identify the defect
-      internal static let hint = Localization.tr("Localizable", "description.task.hint", fallback: "Complete the designated task to identify the defect")
+    internal enum Example {
+      /// Example of Violation
+      internal static let button = Localization.tr("Localizable", "description.example.button", fallback: "Example of Violation")
+      /// Context
+      internal static let context = Localization.tr("Localizable", "description.example.context", fallback: "Context")
+      /// Defect
+      internal static let defect = Localization.tr("Localizable", "description.example.defect", fallback: "Defect")
+      /// Task
+      internal static let task = Localization.tr("Localizable", "description.example.task", fallback: "Task")
+      /// Example
+      internal static let title = Localization.tr("Localizable", "description.example.title", fallback: "Example")
+      /// Try
+      internal static let `try` = Localization.tr("Localizable", "description.example.try", fallback: "Try")
+      internal enum Button {
+        /// Explore the example of a quality attribute violation to enhance your understanding of its value
+        internal static let hint = Localization.tr("Localizable", "description.example.button.hint", fallback: "Explore the example of a quality attribute violation to enhance your understanding of its value")
+      }
+      internal enum Defect {
+        /// The defect demonstrates a violation of the quality attribute "%@" in the given context
+        internal static func hint(_ p1: Any) -> String {
+          return Localization.tr("Localizable", "description.example.defect.hint", String(describing: p1), fallback: "The defect demonstrates a violation of the quality attribute \"%@\" in the given context")
+        }
+      }
+      internal enum Task {
+        /// Complete the designated task to identify the defect
+        internal static let hint = Localization.tr("Localizable", "description.example.task.hint", fallback: "Complete the designated task to identify the defect")
+      }
+      internal enum Try {
+        /// If needed, refer to the [standard application version](standard_app)
+        internal static let hint = Localization.tr("Localizable", "description.example.try.hint", fallback: "If needed, refer to the [standard application version](standard_app)")
+      }
     }
   }
   internal enum FaultTolerance {
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "faultTolerance.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// In the application, when an error occurs, it crashes
+    internal static let defect = Localization.tr("Localizable", "faultTolerance.defect", fallback: "In the application, when an error occurs, it crashes")
     /// degree to which a system, product or component operates as intended despite the presence of hardware or software faults
     internal static let description = Localization.tr("Localizable", "faultTolerance.description", fallback: "degree to which a system, product or component operates as intended despite the presence of hardware or software faults")
     /// Withdraw an amount exceeding the available funds
     internal static let task = Localization.tr("Localizable", "faultTolerance.task", fallback: "Withdraw an amount exceeding the available funds")
     /// Fault tolerance
     internal static let title = Localization.tr("Localizable", "faultTolerance.title", fallback: "Fault tolerance")
-    internal enum Task {
-      /// In this version of the application, if an error occurs, the application crashes
-      internal static let hint = Localization.tr("Localizable", "faultTolerance.task.hint", fallback: "In this version of the application, if an error occurs, the application crashes")
-    }
   }
   internal enum FunctionalAppropriateness {
+    /// You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history
+    internal static let context = Localization.tr("Localizable", "functionalAppropriateness.context", fallback: "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history")
+    /// In the application, the total savings amount is calculated in yuan, although all other amounts are displayed in dollars. This feature may be beneficial to only a select number of users, as the appropriateness of this functionality for most users will be limited
+    internal static let defect = Localization.tr("Localizable", "functionalAppropriateness.defect", fallback: "In the application, the total savings amount is calculated in yuan, although all other amounts are displayed in dollars. This feature may be beneficial to only a select number of users, as the appropriateness of this functionality for most users will be limited")
     /// degree to which the functions facilitate the accomplishment of specified tasks and objectives
     internal static let description = Localization.tr("Localizable", "functionalAppropriateness.description", fallback: "degree to which the functions facilitate the accomplishment of specified tasks and objectives")
-    /// Verify the history of operations with the total amount of savings
-    internal static let task = Localization.tr("Localizable", "functionalAppropriateness.task", fallback: "Verify the history of operations with the total amount of savings")
+    /// View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application
+    internal static let task = Localization.tr("Localizable", "functionalAppropriateness.task", fallback: "View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application")
     /// Appropriateness
     internal static let title = Localization.tr("Localizable", "functionalAppropriateness.title", fallback: "Appropriateness")
-    internal enum Task {
-      /// In this version of the application, the total amount of savings is calculated in yuan. While this functionality may be highly valuable to a select few users, its appropriateness may be limited for the majority of users
-      internal static let hint = Localization.tr("Localizable", "functionalAppropriateness.task.hint", fallback: "In this version of the application, the total amount of savings is calculated in yuan. While this functionality may be highly valuable to a select few users, its appropriateness may be limited for the majority of users")
-    }
   }
   internal enum FunctionalCompleteness {
+    /// After making a purchase, you want to record it in the financial control application
+    internal static let context = Localization.tr("Localizable", "functionalCompleteness.context", fallback: "After making a purchase, you want to record it in the financial control application")
+    /// The app does not have a function to reduce the balance; you can only increase the balance
+    internal static let defect = Localization.tr("Localizable", "functionalCompleteness.defect", fallback: "The app does not have a function to reduce the balance; you can only increase the balance")
     /// degree to which the set of functions covers all the specified tasks and user objectives
     internal static let description = Localization.tr("Localizable", "functionalCompleteness.description", fallback: "degree to which the set of functions covers all the specified tasks and user objectives")
     /// Reduce the amount of savings
     internal static let task = Localization.tr("Localizable", "functionalCompleteness.task", fallback: "Reduce the amount of savings")
     /// Completeness
     internal static let title = Localization.tr("Localizable", "functionalCompleteness.title", fallback: "Completeness")
-    internal enum Task {
-      /// The balance reduction function is currently unavailable in this version of the application as this functionality has not been implemented
-      internal static let hint = Localization.tr("Localizable", "functionalCompleteness.task.hint", fallback: "The balance reduction function is currently unavailable in this version of the application as this functionality has not been implemented")
-    }
   }
   internal enum FunctionalCorrectness {
+    /// You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history
+    internal static let context = Localization.tr("Localizable", "functionalCorrectness.context", fallback: "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history")
+    /// There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount
+    internal static let defect = Localization.tr("Localizable", "functionalCorrectness.defect", fallback: "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount")
     /// degree to which a product or system provides the correct results with the needed degree of precision
     internal static let description = Localization.tr("Localizable", "functionalCorrectness.description", fallback: "degree to which a product or system provides the correct results with the needed degree of precision")
-    /// Verify the history of operations with the total amount of savings
-    internal static let task = Localization.tr("Localizable", "functionalCorrectness.task", fallback: "Verify the history of operations with the total amount of savings")
+    /// View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application
+    internal static let task = Localization.tr("Localizable", "functionalCorrectness.task", fallback: "View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application")
     /// Correctness
     internal static let title = Localization.tr("Localizable", "functionalCorrectness.title", fallback: "Correctness")
-    internal enum Task {
-      /// In this version of the application, there is an error in calculating the total amount of savings
-      internal static let hint = Localization.tr("Localizable", "functionalCorrectness.task.hint", fallback: "In this version of the application, there is an error in calculating the total amount of savings")
-    }
+  }
+  internal enum Helpers {
+    /// Localizable.strings
+    ///   BugHub
+    /// 
+    ///   Created by Danila on 13.08.2023.
+    internal static let done = Localization.tr("Localizable", "helpers.done", fallback: "Done")
   }
   internal enum Interoperability {
+    /// After receiving your salary, you want to reflect it in the financial control application
+    internal static let context = Localization.tr("Localizable", "interoperability.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
+    /// After making a top-up, the amount will be updated, but the "History" section will not reflect this change
+    internal static let defect = Localization.tr("Localizable", "interoperability.defect", fallback: "After making a top-up, the amount will be updated, but the \"History\" section will not reflect this change")
     /// degree to which two or more systems, products or components can exchange information and use the information that has been exchanged
     internal static let description = Localization.tr("Localizable", "interoperability.description", fallback: "degree to which two or more systems, products or components can exchange information and use the information that has been exchanged")
-    /// Top up or withdraw funds
-    internal static let task = Localization.tr("Localizable", "interoperability.task", fallback: "Top up or withdraw funds")
+    /// Top up funds and verify results
+    internal static let task = Localization.tr("Localizable", "interoperability.task", fallback: "Top up funds and verify results")
     /// Interoperability
     internal static let title = Localization.tr("Localizable", "interoperability.title", fallback: "Interoperability")
-    internal enum Task {
-      /// In this version of the application, after a top-up or withdrawal, the amount will be updated, but the "History" section will remain unchanged
-      internal static let hint = Localization.tr("Localizable", "interoperability.task.hint", fallback: "In this version of the application, after a top-up or withdrawal, the amount will be updated, but the \"History\" section will remain unchanged")
-    }
   }
   internal enum Learnability {
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "learnability.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence
+    internal static let defect = Localization.tr("Localizable", "learnability.defect", fallback: "If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence")
     /// degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use
     internal static let description = Localization.tr("Localizable", "learnability.description", fallback: "degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use")
     /// Withdraw an amount exceeding the available funds
     internal static let task = Localization.tr("Localizable", "learnability.task", fallback: "Withdraw an amount exceeding the available funds")
     /// Learnability
     internal static let title = Localization.tr("Localizable", "learnability.title", fallback: "Learnability")
-    internal enum Task {
-      /// In this version of the application, there is no description provided for withdrawal or top-up errors
-      internal static let hint = Localization.tr("Localizable", "learnability.task.hint", fallback: "In this version of the application, there is no description provided for withdrawal or top-up errors")
-    }
   }
   internal enum List {
     /// The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes
     internal static let isoHint = Localization.tr("Localizable", "list.isoHint", fallback: "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes")
-    /// Localizable.strings
-    ///   BugHub
-    /// 
-    ///   Created by Danila on 13.08.2023.
+    /// Attributes
     internal static let title = Localization.tr("Localizable", "list.title", fallback: "Attributes")
     internal enum Section {
       /// Compatibility
@@ -182,52 +204,52 @@ internal enum Localization {
     }
   }
   internal enum Maturity {
+    /// Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application
+    internal static let context = Localization.tr("Localizable", "maturity.context", fallback: "Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application")
+    /// The application encounters a critical error during the second or third top up or withdrawal process
+    internal static let defect = Localization.tr("Localizable", "maturity.defect", fallback: "The application encounters a critical error during the second or third top up or withdrawal process")
     /// degree to which a system, product or component meets needs for reliability under normal operation
     internal static let description = Localization.tr("Localizable", "maturity.description", fallback: "degree to which a system, product or component meets needs for reliability under normal operation")
-    /// Top up your balance three times
-    internal static let task = Localization.tr("Localizable", "maturity.task", fallback: "Top up your balance three times")
+    /// Top up or decrease your balance 4 times
+    internal static let task = Localization.tr("Localizable", "maturity.task", fallback: "Top up or decrease your balance 4 times")
     /// Maturity
     internal static let title = Localization.tr("Localizable", "maturity.title", fallback: "Maturity")
-    internal enum Task {
-      /// In this version of the application, a fatal error occurs when attempting the second or third top-up
-      internal static let hint = Localization.tr("Localizable", "maturity.task.hint", fallback: "In this version of the application, a fatal error occurs when attempting the second or third top-up")
-    }
   }
   internal enum Operability {
+    /// After receiving your salary, you want to reflect it in the financial control application
+    internal static let context = Localization.tr("Localizable", "operability.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
+    /// The application does not automatically open the keyboard for entering amounts, while the confirmation button appears excessively narrow
+    internal static let defect = Localization.tr("Localizable", "operability.defect", fallback: "The application does not automatically open the keyboard for entering amounts, while the confirmation button appears excessively narrow")
     /// degree to which a product or system has attributes that make it easy to operate and control
     internal static let description = Localization.tr("Localizable", "operability.description", fallback: "degree to which a product or system has attributes that make it easy to operate and control")
-    /// Top up or withdraw funds
-    internal static let task = Localization.tr("Localizable", "operability.task", fallback: "Top up or withdraw funds")
+    /// Top up funds
+    internal static let task = Localization.tr("Localizable", "operability.task", fallback: "Top up funds")
     /// Operability
     internal static let title = Localization.tr("Localizable", "operability.title", fallback: "Operability")
-    internal enum Task {
-      /// In this version of the application, the keyboard does not open automatically, and the action buttons are positioned too low
-      internal static let hint = Localization.tr("Localizable", "operability.task.hint", fallback: "In this version of the application, the keyboard does not open automatically, and the action buttons are positioned too low")
-    }
   }
   internal enum Recoverability {
+    /// While using the financial control application, it unexpectedly terminated. Now you're attempting to restart the app
+    internal static let context = Localization.tr("Localizable", "recoverability.context", fallback: "While using the financial control application, it unexpectedly terminated. Now you're attempting to restart the app")
+    /// When the application crashes, data loss occurs
+    internal static let defect = Localization.tr("Localizable", "recoverability.defect", fallback: "When the application crashes, data loss occurs")
     /// degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system
     internal static let description = Localization.tr("Localizable", "recoverability.description", fallback: "degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system")
-    /// Top up or withdraw funds. Then re-enter the application
-    internal static let task = Localization.tr("Localizable", "recoverability.task", fallback: "Top up or withdraw funds. Then re-enter the application")
+    /// Top up funds. Then re-enter the application
+    internal static let task = Localization.tr("Localizable", "recoverability.task", fallback: "Top up funds. Then re-enter the application")
     /// Recoverability
     internal static let title = Localization.tr("Localizable", "recoverability.title", fallback: "Recoverability")
-    internal enum Task {
-      /// In this version of the application, if an fatal error occurs, the saved data is lost.
-      internal static let hint = Localization.tr("Localizable", "recoverability.task.hint", fallback: "In this version of the application, if an fatal error occurs, the saved data is lost.")
-    }
   }
   internal enum ResourceUtilization {
+    /// Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application
+    internal static let context = Localization.tr("Localizable", "resourceUtilization.context", fallback: "Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application")
+    /// The application collects unnecessary information about the device's geo-location. Additionally, it performs unnecessary calculations during use, which can result in device heating
+    internal static let defect = Localization.tr("Localizable", "resourceUtilization.defect", fallback: "The application collects unnecessary information about the device's geo-location. Additionally, it performs unnecessary calculations during use, which can result in device heating")
     /// degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements
     internal static let description = Localization.tr("Localizable", "resourceUtilization.description", fallback: "degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements")
     /// Use the app for 5 minutes
     internal static let task = Localization.tr("Localizable", "resourceUtilization.task", fallback: "Use the app for 5 minutes")
     /// Resource utilization
     internal static let title = Localization.tr("Localizable", "resourceUtilization.title", fallback: "Resource utilization")
-    internal enum Task {
-      /// In this version of the application, location information will be collected. Additionally, excessive calculations are performed, which may result in device heating
-      internal static let hint = Localization.tr("Localizable", "resourceUtilization.task.hint", fallback: "In this version of the application, location information will be collected. Additionally, excessive calculations are performed, which may result in device heating")
-    }
   }
   internal enum SampleApp {
     internal enum CallTo {
@@ -308,40 +330,40 @@ internal enum Localization {
     }
   }
   internal enum TimeBehaviour {
+    /// After receiving your salary, you want to reflect it in the financial control application
+    internal static let context = Localization.tr("Localizable", "timeBehaviour.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
+    /// The application has an excessive loading time, and there is a noticeable delay when processing clicks on certain buttons
+    internal static let defect = Localization.tr("Localizable", "timeBehaviour.defect", fallback: "The application has an excessive loading time, and there is a noticeable delay when processing clicks on certain buttons")
     /// degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements
     internal static let description = Localization.tr("Localizable", "timeBehaviour.description", fallback: "degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements")
-    /// Top up or withdraw funds
-    internal static let task = Localization.tr("Localizable", "timeBehaviour.task", fallback: "Top up or withdraw funds")
+    /// Top up funds
+    internal static let task = Localization.tr("Localizable", "timeBehaviour.task", fallback: "Top up funds")
     /// Time behaviour
     internal static let title = Localization.tr("Localizable", "timeBehaviour.title", fallback: "Time behaviour")
-    internal enum Task {
-      /// In this version of the application, it experience a delay in the initial screen loading time, as well as a processing delay when tapping certain buttons.
-      internal static let hint = Localization.tr("Localizable", "timeBehaviour.task.hint", fallback: "In this version of the application, it experience a delay in the initial screen loading time, as well as a processing delay when tapping certain buttons.")
-    }
   }
   internal enum UserErrorProtection {
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "userErrorProtection.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// The application permits users to get a negative balance
+    internal static let defect = Localization.tr("Localizable", "userErrorProtection.defect", fallback: "The application permits users to get a negative balance")
     /// degree to which a system protects users against making errors
     internal static let description = Localization.tr("Localizable", "userErrorProtection.description", fallback: "degree to which a system protects users against making errors")
     /// Withdraw an amount exceeding the available funds
     internal static let task = Localization.tr("Localizable", "userErrorProtection.task", fallback: "Withdraw an amount exceeding the available funds")
     /// User error protection
     internal static let title = Localization.tr("Localizable", "userErrorProtection.title", fallback: "User error protection")
-    internal enum Task {
-      /// In this version of the application, you have the ability to withdraw funds that exceed your budget
-      internal static let hint = Localization.tr("Localizable", "userErrorProtection.task.hint", fallback: "In this version of the application, you have the ability to withdraw funds that exceed your budget")
-    }
   }
   internal enum UserInterfaceAesthetics {
+    /// You have decided to analyze your income and determine the date of the largest deposit
+    internal static let context = Localization.tr("Localizable", "userInterfaceAesthetics.context", fallback: "You have decided to analyze your income and determine the date of the largest deposit")
+    /// The application is experiencing issues related to margin and font formatting in the operation history
+    internal static let defect = Localization.tr("Localizable", "userInterfaceAesthetics.defect", fallback: "The application is experiencing issues related to margin and font formatting in the operation history")
     /// degree to which a user interface enables pleasing and satisfying interaction for the user
     internal static let description = Localization.tr("Localizable", "userInterfaceAesthetics.description", fallback: "degree to which a user interface enables pleasing and satisfying interaction for the user")
-    /// Find out the date of the initial deposit
-    internal static let task = Localization.tr("Localizable", "userInterfaceAesthetics.task", fallback: "Find out the date of the initial deposit")
+    /// Identify the date with the highest amount of fund replenishment
+    internal static let task = Localization.tr("Localizable", "userInterfaceAesthetics.task", fallback: "Identify the date with the highest amount of fund replenishment")
     /// User interface aesthetics
     internal static let title = Localization.tr("Localizable", "userInterfaceAesthetics.title", fallback: "User interface aesthetics")
-    internal enum Task {
-      /// In this version of the application, there are issues with margins and fonts in the operation history
-      internal static let hint = Localization.tr("Localizable", "userInterfaceAesthetics.task.hint", fallback: "In this version of the application, there are issues with margins and fonts in the operation history")
-    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -1,5 +1,5 @@
 //
-//  SampleAppViewWrapper.swift
+//  ExampleAppViewWrapper.swift
 //  BugHub
 //
 //  Created by Danila on 03.09.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Обёртка над view демонстрационных приложений
-struct SampleAppViewWrapper<Content: View>: View  {
+struct ExampleAppViewWrapper<Content: View>: View  {
     @Environment(\.dismiss) var dismiss
     
     let content: @MainActor () -> Content
@@ -29,9 +29,9 @@ struct SampleAppViewWrapper<Content: View>: View  {
     }
 }
 
-struct SampleAppViewWrapper_Previews: PreviewProvider {
+struct ExampleAppViewWrapper_Previews: PreviewProvider {
     static var previews: some View {
-        SampleAppViewWrapper {
+        ExampleAppViewWrapper {
             Text("123")
         }
     }

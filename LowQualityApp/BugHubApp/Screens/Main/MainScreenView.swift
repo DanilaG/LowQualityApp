@@ -57,7 +57,10 @@ struct MainScreenView: View {
             }
             .navigationTitle(Strings.title)
             .navigationDestination(for: QualityCharacteristics.self) {
-                DescriptionScreenView(viewData: $0.descriptionViewData)
+                DescriptionScreenView(
+                    viewData: $0.descriptionViewData,
+                    metricaData: $0.metricaData
+                )
             }
             .onOpenURL { url in
                 guard let characteristic = QualityCharacteristics(from: url) else { return }

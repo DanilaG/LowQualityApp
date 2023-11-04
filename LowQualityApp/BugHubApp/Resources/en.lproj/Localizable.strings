@@ -6,6 +6,8 @@
   
 */
 
+"helpers.done" = "Done";
+
 "list.title" = "Attributes";
 "list.section.functionalSuitability" = "Functional suitability";
 "list.section.performanceEfficiency" = "Performance efficiency";
@@ -15,106 +17,128 @@
 "list.isoHint" = "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes";
 
 "description.description" = "Description";
-"description.example" = "Example";
-"description.application" = "Application";
-"description.task" = "Task";
-"description.task.hint" = "Complete the designated task to identify the defect";
-"description.try" = "Try";
-"description.seeStandard" = "View the standard version";
+"description.example.button" = "Example of Violation";
+"description.example.button.hint" = "Explore the example of a quality attribute violation to enhance your understanding of its value";
+
+"description.example.title" = "Example";
+"description.example.context" = "Context";
+"description.example.task" = "Task";
+"description.example.task.hint" = "Complete the designated task to identify the defect";
+"description.example.defect" = "Defect";
+"description.example.defect.hint" = "The defect demonstrates a violation of the quality attribute \"%@\" in the given context";
+"description.example.try" = "Try";
+"description.example.try.hint" = "If needed, refer to the [standard application version](standard_app)";
 
 "functionalCompleteness.title" = "Completeness";
 "functionalCompleteness.description" = "degree to which the set of functions covers all the specified tasks and user objectives";
+"functionalCompleteness.context" = "After making a purchase, you want to record it in the financial control application";
 "functionalCompleteness.task" = "Reduce the amount of savings";
-"functionalCompleteness.task.hint" = "The balance reduction function is currently unavailable in this version of the application as this functionality has not been implemented";
+"functionalCompleteness.defect" = "The app does not have a function to reduce the balance; you can only increase the balance";
 
 "functionalCorrectness.title" = "Correctness";
 "functionalCorrectness.description" = "degree to which a product or system provides the correct results with the needed degree of precision";
-"functionalCorrectness.task" = "Verify the history of operations with the total amount of savings";
-"functionalCorrectness.task.hint" = "In this version of the application, there is an error in calculating the total amount of savings";
+"functionalCorrectness.context" = "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history";
+"functionalCorrectness.task" = "View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application";
+"functionalCorrectness.defect" = "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount";
 
 "functionalAppropriateness.title" = "Appropriateness";
 "functionalAppropriateness.description" = "degree to which the functions facilitate the accomplishment of specified tasks and objectives";
-"functionalAppropriateness.task" = "Verify the history of operations with the total amount of savings";
-"functionalAppropriateness.task.hint" = "In this version of the application, the total amount of savings is calculated in yuan. While this functionality may be highly valuable to a select few users, its appropriateness may be limited for the majority of users";
+"functionalAppropriateness.context" = "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history";
+"functionalAppropriateness.task" = "View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application";
+"functionalAppropriateness.defect" = "In the application, the total savings amount is calculated in yuan, although all other amounts are displayed in dollars. This feature may be beneficial to only a select number of users, as the appropriateness of this functionality for most users will be limited";
 
 
 "timeBehaviour.title" = "Time behaviour";
 "timeBehaviour.description" = "degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements";
-"timeBehaviour.task" = "Top up or withdraw funds";
-"timeBehaviour.task.hint" = "In this version of the application, it experience a delay in the initial screen loading time, as well as a processing delay when tapping certain buttons.";
+"timeBehaviour.context" = "After receiving your salary, you want to reflect it in the financial control application";
+"timeBehaviour.task" = "Top up funds";
+"timeBehaviour.defect" = "The application has an excessive loading time, and there is a noticeable delay when processing clicks on certain buttons";
 
 "resourceUtilization.title" = "Resource utilization";
 "resourceUtilization.description" = "degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements";
+"resourceUtilization.context" = "Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application";
 "resourceUtilization.task" = "Use the app for 5 minutes";
-"resourceUtilization.task.hint" = "In this version of the application, location information will be collected. Additionally, excessive calculations are performed, which may result in device heating";
+"resourceUtilization.defect" = "The application collects unnecessary information about the device's geo-location. Additionally, it performs unnecessary calculations during use, which can result in device heating";
 
 "capacity.title" = "Capacity";
 "capacity.description" = "degree to which the maximum limits of a product or system parameter meet requirements";
+"capacity.context" = "You have been using the same financial control application for quite some time and now you are curious to know when you first added an entry to it";
 "capacity.task" = "Find out the date of the initial deposit";
-"capacity.task.hint" = "In this version of the application, there are jerky movements when scrolling through the history due to the large number of entries";
+"capacity.defect" = "The application experiences issues with smooth scrolling of the history due to the large number of entries";
 
 
 "coExistence.title" = "Co-existence";
 "coExistence.description" = "degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product";
-"coExistence.task" = "Top up or withdraw funds";
-"coExistence.task.hint" = "In this version of the application, a button overlaps the keyboard when entering the amount";
+"coExistence.context" = "After receiving your salary, you want to reflect it in the financial control application";
+"coExistence.task" = "Top up funds";
+"coExistence.defect" = "When entering the amount, the top-up button is partially obscured by the keyboard";
 
 "interoperability.title" = "Interoperability";
 "interoperability.description" = "degree to which two or more systems, products or components can exchange information and use the information that has been exchanged";
-"interoperability.task" = "Top up or withdraw funds";
-"interoperability.task.hint" = "In this version of the application, after a top-up or withdrawal, the amount will be updated, but the \"History\" section will remain unchanged";
-
+"interoperability.context" = "After receiving your salary, you want to reflect it in the financial control application";
+"interoperability.task" = "Top up funds and verify results";
+"interoperability.defect" = "After making a top-up, the amount will be updated, but the \"History\" section will not reflect this change";
 
 "appropriatenessRecognizability.title" = "Appropriateness recognizability";
 "appropriatenessRecognizability.description" = "degree to which users can recognize whether a product or system is appropriate for their needs";
+"appropriatenessRecognizability.context" = "You have recently installed a new app on your mobile phone called \"MoneyBox\" and now you are ready to launch it";
 "appropriatenessRecognizability.task" = "Guess the functionality of the \"MoneyBox\" app based on its name, and then give it a try to explore its features";
-"appropriatenessRecognizability.task.hint" = "Despite its name, this application simplifies the process of dialing phone numbers for emergency services";
+"appropriatenessRecognizability.defect" = "Despite its name, this application simplifies the process of dialing phone numbers for emergency services";
 
 "learnability.title" = "Learnability";
 "learnability.description" = "degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use";
+"learnability.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
 "learnability.task" = "Withdraw an amount exceeding the available funds";
-"learnability.task.hint" = "In this version of the application, there is no description provided for withdrawal or top-up errors";
+"learnability.defect" = "If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence";
 
 "operability.title" = "Operability";
 "operability.description" = "degree to which a product or system has attributes that make it easy to operate and control";
-"operability.task" = "Top up or withdraw funds";
-"operability.task.hint" = "In this version of the application, the keyboard does not open automatically, and the action buttons are positioned too low";
+"operability.context" = "After receiving your salary, you want to reflect it in the financial control application";
+"operability.task" = "Top up funds";
+"operability.defect" = "The application does not automatically open the keyboard for entering amounts, while the confirmation button appears excessively narrow";
 
 "userErrorProtection.title" = "User error protection";
 "userErrorProtection.description" = "degree to which a system protects users against making errors";
+"userErrorProtection.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
 "userErrorProtection.task" = "Withdraw an amount exceeding the available funds";
-"userErrorProtection.task.hint" = "In this version of the application, you have the ability to withdraw funds that exceed your budget";
+"userErrorProtection.defect" = "The application permits users to get a negative balance";
 
 "userInterfaceAesthetics.title" = "User interface aesthetics";
 "userInterfaceAesthetics.description" = "degree to which a user interface enables pleasing and satisfying interaction for the user";
-"userInterfaceAesthetics.task" = "Find out the date of the initial deposit";
-"userInterfaceAesthetics.task.hint" = "In this version of the application, there are issues with margins and fonts in the operation history";
+"userInterfaceAesthetics.context" = "You have decided to analyze your income and determine the date of the largest deposit";
+"userInterfaceAesthetics.task" = "Identify the date with the highest amount of fund replenishment";
+"userInterfaceAesthetics.defect" = "The application is experiencing issues related to margin and font formatting in the operation history";
 
 "accessibility.title" = "Accessibility";
 "accessibility.description" = "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use";
-"accessibility.task" = "Find out the date of the initial deposit";
-"accessibility.task.hint" = "In this version of the application, some of the text in the history section is not clearly visible";
+"accessibility.context" = "You have decided to analyze your income and determine the date of the largest deposit";
+"accessibility.task" = "Identify the date with the highest amount of fund replenishment";
+"accessibility.defect" = "The date and amount in the history of operations in the application are challenging to read due to the insufficient contrast with the background, causing significant difficulties for individuals with visual impairments";
 
 
 "maturity.title" = "Maturity";
 "maturity.description" = "degree to which a system, product or component meets needs for reliability under normal operation";
-"maturity.task" = "Top up your balance three times";
-"maturity.task.hint" = "In this version of the application, a fatal error occurs when attempting the second or third top-up";
+"maturity.context" = "Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application";
+"maturity.task" = "Top up or decrease your balance 4 times";
+"maturity.defect" = "The application encounters a critical error during the second or third top up or withdrawal process";
 
 "availability.title" = "Availability";
 "availability.description" = "degree to which a system, product or component is operational and accessible when required for use";
-"availability.task" = "Top up or withdraw funds";
-"availability.task.hint" = "In this version of the application, the functionality for top-up and withdrawal is unavailable";
+"availability.context" = "After receiving your salary, you want to reflect it in the financial control application";
+"availability.task" = "Top up funds";
+"availability.defect" = "The functionality for top-up and withdrawal are unavailable in the application";
 
 "faultTolerance.title" = "Fault tolerance";
 "faultTolerance.description" = "degree to which a system, product or component operates as intended despite the presence of hardware or software faults";
+"faultTolerance.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
 "faultTolerance.task" = "Withdraw an amount exceeding the available funds";
-"faultTolerance.task.hint" = "In this version of the application, if an error occurs, the application crashes";
+"faultTolerance.defect" = "In the application, when an error occurs, it crashes";
 
 "recoverability.title" = "Recoverability";
 "recoverability.description" = "degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system";
-"recoverability.task" = "Top up or withdraw funds. Then re-enter the application";
-"recoverability.task.hint" = "In this version of the application, if an fatal error occurs, the saved data is lost.";
+"recoverability.context" = "While using the financial control application, it unexpectedly terminated. Now you're attempting to restart the app";
+"recoverability.task" = "Top up funds. Then re-enter the application";
+"recoverability.defect" = "When the application crashes, data loss occurs";
 
 "sampleApp.moneyBox.title" = "MoneyBox";
 "sampleApp.moneyBox.description" = "Savings accounting application";
