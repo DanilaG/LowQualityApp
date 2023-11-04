@@ -80,6 +80,8 @@ internal enum Localization {
       internal static let context = Localization.tr("Localizable", "description.example.context", fallback: "Context")
       /// Defect
       internal static let defect = Localization.tr("Localizable", "description.example.defect", fallback: "Defect")
+      /// Done
+      internal static let done = Localization.tr("Localizable", "description.example.done", fallback: "Done")
       /// Task
       internal static let task = Localization.tr("Localizable", "description.example.task", fallback: "Task")
       /// Example
@@ -154,13 +156,6 @@ internal enum Localization {
     /// Correctness
     internal static let title = Localization.tr("Localizable", "functionalCorrectness.title", fallback: "Correctness")
   }
-  internal enum Helpers {
-    /// Localizable.strings
-    ///   BugHub
-    /// 
-    ///   Created by Danila on 13.08.2023.
-    internal static let done = Localization.tr("Localizable", "helpers.done", fallback: "Done")
-  }
   internal enum Interoperability {
     /// After receiving your salary, you want to reflect it in the financial control application
     internal static let context = Localization.tr("Localizable", "interoperability.context", fallback: "After receiving your salary, you want to reflect it in the financial control application")
@@ -188,7 +183,10 @@ internal enum Localization {
   internal enum List {
     /// The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes
     internal static let isoHint = Localization.tr("Localizable", "list.isoHint", fallback: "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes")
-    /// Attributes
+    /// Localizable.strings
+    ///   BugHub
+    /// 
+    ///   Created by Danila on 13.08.2023.
     internal static let title = Localization.tr("Localizable", "list.title", fallback: "Attributes")
     internal enum Section {
       /// Compatibility

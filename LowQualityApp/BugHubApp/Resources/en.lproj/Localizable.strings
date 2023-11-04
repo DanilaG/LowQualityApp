@@ -6,8 +6,6 @@
   
 */
 
-"helpers.done" = "Done";
-
 "list.title" = "Attributes";
 "list.section.functionalSuitability" = "Functional suitability";
 "list.section.performanceEfficiency" = "Performance efficiency";
@@ -28,6 +26,7 @@
 "description.example.defect.hint" = "The defect demonstrates a violation of the quality attribute \"%@\" in the given context";
 "description.example.try" = "Try";
 "description.example.try.hint" = "If needed, refer to the [standard application version](standard_app)";
+"description.example.done" = "Done";
 
 "functionalCompleteness.title" = "Completeness";
 "functionalCompleteness.description" = "degree to which the set of functions covers all the specified tasks and user objectives";

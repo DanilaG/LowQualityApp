@@ -93,6 +93,7 @@ struct SampleDescriptionScreenView: View {
                             "open_with_defect_example",
                             parameters: [
                                 "quality_characteristic": metricaData.qualityCharacteristicName,
+                                "source": "main_button"
                             ]
                         )
                     })
@@ -103,8 +104,20 @@ struct SampleDescriptionScreenView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Strings.title)
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(Strings.done) { dismiss() }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(Localization.Helpers.done) { dismiss() }
+                Button(Strings.try) {
+                    showingApp = .withDefect
+                    YMMYandexMetrica.reportEvent(
+                        "open_with_defect_example",
+                        parameters: [
+                            "quality_characteristic": metricaData.qualityCharacteristicName,
+                            "source": "nav_button"
+                        ]
+                    )
+                }
             }
         }
         .fullScreenCover(item: $showingApp) {

@@ -6,8 +6,6 @@
   
 */
 
-"helpers.done" = "Готово";
-
 "list.title" = "Атрибуты";
 "list.section.functionalSuitability" = "Функциональная пригодность";
 "list.section.performanceEfficiency" = "Уровень производительности";
@@ -26,8 +24,9 @@
 "description.example.task.hint" = "Выполните указанную задачу, чтобы обнаружить дефект";
 "description.example.defect" = "Дефект";
 "description.example.defect.hint" = "Дефект демонстрирует нарушение атрибута качества «%@» в данном контексте";
-"description.example.try" = "Попробовать";
+"description.example.try" = "Испытать";
 "description.example.try.hint" = "При необходимости обратитесь к [эталонной реализации](standard_app)";
+"description.example.done" = "Отменить";
 
 "functionalCompleteness.title" = "Полнота";
 "functionalCompleteness.description" = "степень покрытия совокупностью функций всех определенных задач и целей пользователя";
