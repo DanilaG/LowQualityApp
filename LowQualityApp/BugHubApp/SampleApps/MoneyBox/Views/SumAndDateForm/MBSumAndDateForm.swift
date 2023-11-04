@@ -156,7 +156,7 @@ final class MBSumAndDateFormViewController: UIViewController {
         super.viewDidLoad()
         
         title = viewData.title
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .cancel, target: self, action: #selector(dismissForm)
         )
         view.backgroundColor = UIColor.systemGroupedBackground

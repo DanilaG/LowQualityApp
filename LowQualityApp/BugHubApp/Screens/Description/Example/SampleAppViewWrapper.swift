@@ -18,7 +18,7 @@ struct ExampleAppViewWrapper<Content: View>: View  {
             content()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         Button(
                             action: { dismiss() },
                             label: { Image(systemName: "xmark.circle") }
