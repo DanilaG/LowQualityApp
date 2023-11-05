@@ -70,6 +70,8 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
                         Text(viewModel.sum)
                             .font(.largeTitle)
                             .foregroundColor(Color(UIColor.label))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.01)
                     }
                     Spacer()
                 }
@@ -154,6 +156,8 @@ struct MBMainScreenView<ViewModel: MBViewModel>: View {
             Spacer()
             Text(item.sum)
                 .font(.title2)
+                .lineLimit(1)
+                .minimumScaleFactor(0.01)
                 .foregroundColor(item.type == .topUp ? .green : .red)
         }
     }
