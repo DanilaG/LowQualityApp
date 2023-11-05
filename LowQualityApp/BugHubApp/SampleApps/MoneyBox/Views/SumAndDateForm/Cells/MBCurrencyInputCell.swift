@@ -86,6 +86,8 @@ final class MBCurrencyInputCell: UITableViewCell {
     }
     
     private func formateInput(_ input: String?) -> String? {
+        let maxNumberLength = 9
+        
         guard let input else { return nil }
         var number: NSNumber!
         var amountWithPrefix = input
@@ -98,7 +100,7 @@ final class MBCurrencyInputCell: UITableViewCell {
             withTemplate: ""
         )
     
-        let double = (amountWithPrefix as NSString).doubleValue
+        let double = (amountWithPrefix.prefix(maxNumberLength) as NSString).doubleValue
         number = NSNumber(value: (double / 100))
     
         guard number != 0 as NSNumber else {
