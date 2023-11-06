@@ -38,7 +38,7 @@
 "functionalCorrectness.description" = "degree to which a product or system provides the correct results with the needed degree of precision";
 "functionalCorrectness.context" = "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history";
 "functionalCorrectness.task" = "View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application";
-"functionalCorrectness.defect" = "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount";
+"functionalCorrectness.defect" = "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $\U00A03\U00A0000, the balance reflects a significantly lower mount";
 
 "functionalAppropriateness.title" = "Appropriateness";
 "functionalAppropriateness.description" = "degree to which the functions facilitate the accomplishment of specified tasks and objectives";
@@ -86,7 +86,7 @@
 
 "learnability.title" = "Learnability";
 "learnability.description" = "degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use";
-"learnability.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
+"learnability.context" = "You have incurred expenses amounting to $\U00A010\U00A0000 and now want to reflect these costs within the financial control application";
 "learnability.task" = "Withdraw an amount exceeding the available funds";
 "learnability.defect" = "If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence";
 
@@ -98,7 +98,7 @@
 
 "userErrorProtection.title" = "User error protection";
 "userErrorProtection.description" = "degree to which a system protects users against making errors";
-"userErrorProtection.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
+"userErrorProtection.context" = "You have incurred expenses amounting to $\U00A010\U00A0000 and now want to reflect these costs within the financial control application";
 "userErrorProtection.task" = "Withdraw an amount exceeding the available funds";
 "userErrorProtection.defect" = "The application permits users to get a negative balance";
 
@@ -118,7 +118,7 @@
 "maturity.title" = "Maturity";
 "maturity.description" = "degree to which a system, product or component meets needs for reliability under normal operation";
 "maturity.context" = "Upon returning from vacation, you have made the decision to record all your expenses during that period in the financial control application";
-"maturity.task" = "Top up or decrease your balance 4 times";
+"maturity.task" = "Top up or decrease your balance 4\U00A0times";
 "maturity.defect" = "The application encounters a critical error during the second or third top up or withdrawal process";
 
 "availability.title" = "Availability";
@@ -129,7 +129,7 @@
 
 "faultTolerance.title" = "Fault tolerance";
 "faultTolerance.description" = "degree to which a system, product or component operates as intended despite the presence of hardware or software faults";
-"faultTolerance.context" = "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application";
+"faultTolerance.context" = "You have incurred expenses amounting to $\U00A010\U00A0000 and now want to reflect these costs within the financial control application";
 "faultTolerance.task" = "Withdraw an amount exceeding the available funds";
 "faultTolerance.defect" = "In the application, when an error occurs, it crashes";
 
