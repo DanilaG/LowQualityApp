@@ -47,6 +47,94 @@ enum QualityCharacteristics: CaseIterable, Hashable {
     case recoverability
 }
 
+// MARK: - relationships
+
+extension QualityCharacteristics {
+    /// Усиливая данные атрибут усиливают и связанные с ним атрибуты
+    var positiveRelationships: Set<QualityCharacteristics> {
+        switch self {
+        case .functionalCompleteness:
+            return [.appropriatenessRecognizability, .learnability]
+        case .functionalCorrectness:
+            return [.maturity, .availability]
+        case .functionalAppropriateness:
+            return [.appropriatenessRecognizability, .learnability]
+        case .timeBehaviour:
+            return [.capacity, .operability]
+        case .resourceUtilization:
+            return [.timeBehaviour, .capacity, .coExistence, .availability]
+        case .capacity:
+            return [.maturity, .availability]
+        case .coExistence:
+            return [.functionalCorrectness, .maturity, .availability]
+        case .interoperability:
+            return [.functionalCorrectness, .coExistence, .maturity, .faultTolerance]
+        case .appropriatenessRecognizability:
+            return [.functionalAppropriateness, .learnability]
+        case .learnability:
+            return [.appropriatenessRecognizability]
+        case .operability:
+            return [.learnability, .userErrorProtection]
+        case .userErrorProtection:
+            return [.functionalCorrectness, .maturity]
+        case .userInterfaceAesthetics:
+            return []
+        case .accessibility:
+            return [.operability]
+        case .maturity:
+            return [.functionalCorrectness, .learnability, .availability, .faultTolerance]
+        case .availability:
+            return [.maturity, .faultTolerance]
+        case .faultTolerance:
+            return [.learnability, .maturity, .availability]
+        case .recoverability:
+            return [.availability]
+        }
+    }
+    
+    /// Усиливая данные атрибут, ослабляются из данного списка
+    var negativeRelationships: Set<QualityCharacteristics> {
+        switch self {
+        case .functionalCompleteness:
+            return []
+        case .functionalCorrectness:
+            return []
+        case .functionalAppropriateness:
+            return []
+        case .timeBehaviour:
+            return [.functionalCorrectness, .resourceUtilization, .maturity, .faultTolerance]
+        case .resourceUtilization:
+            return [.functionalCorrectness]
+        case .capacity:
+            return []
+        case .coExistence:
+            return []
+        case .interoperability:
+            return [.timeBehaviour, .capacity]
+        case .appropriatenessRecognizability:
+            return []
+        case .learnability:
+            return [.resourceUtilization, .userErrorProtection]
+        case .operability:
+            return [.resourceUtilization]
+        case .userErrorProtection:
+            return [.timeBehaviour]
+        case .userInterfaceAesthetics:
+            return [.resourceUtilization, .capacity]
+        case .accessibility:
+            return [.timeBehaviour, .resourceUtilization, .capacity]
+        case .maturity:
+            return []
+        case .availability:
+            return []
+        case .faultTolerance:
+            return [.timeBehaviour, .resourceUtilization]
+        case .recoverability:
+            return [.timeBehaviour, .resourceUtilization]
+        }
+    }
+}
+
 // MARK: - titles
 
 extension QualityCharacteristics {

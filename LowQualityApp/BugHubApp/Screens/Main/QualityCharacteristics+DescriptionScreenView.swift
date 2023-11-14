@@ -13,11 +13,7 @@ extension QualityCharacteristics {
         switch self {
             
         case .functionalCompleteness:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.FunctionalCompleteness.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBFunctionalCompletenessViewModel(model: MBModelWithData())
@@ -25,16 +21,11 @@ extension QualityCharacteristics {
                     context: Localization.FunctionalCompleteness.context,
                     task: Localization.FunctionalCompleteness.task,
                     defect: Localization.FunctionalCompleteness.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .functionalCorrectness:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.FunctionalCorrectness.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         model: MBFunctionalCorrectnessModel()
@@ -42,16 +33,11 @@ extension QualityCharacteristics {
                     context: Localization.FunctionalCorrectness.context,
                     task: Localization.FunctionalCorrectness.task,
                     defect: Localization.FunctionalCorrectness.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
            
         case .functionalAppropriateness:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.FunctionalAppropriateness.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBFunctionalAppropriatenessViewModel(
@@ -62,16 +48,11 @@ extension QualityCharacteristics {
                     context: Localization.FunctionalAppropriateness.context,
                     task: Localization.FunctionalAppropriateness.task,
                     defect: Localization.FunctionalAppropriateness.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .timeBehaviour:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.TimeBehaviour.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBTimeBehaviourViewModel(model: MBModelWithData())
@@ -79,16 +60,11 @@ extension QualityCharacteristics {
                     context: Localization.TimeBehaviour.context,
                     task: Localization.TimeBehaviour.task,
                     defect: Localization.TimeBehaviour.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .resourceUtilization:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.ResourceUtilization.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         model: MBResourceUtilizationModel()
@@ -96,16 +72,11 @@ extension QualityCharacteristics {
                     context: Localization.ResourceUtilization.context,
                     task: Localization.ResourceUtilization.task,
                     defect: Localization.ResourceUtilization.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .capacity:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Capacity.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBCapacityViewModel(model: MBCapacityModel())
@@ -113,16 +84,11 @@ extension QualityCharacteristics {
                     context: Localization.Capacity.context,
                     task: Localization.Capacity.task,
                     defect: Localization.Capacity.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .coExistence:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.CoExistence.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBCoExistenceViewModel(model: MBModelWithData())
@@ -130,16 +96,11 @@ extension QualityCharacteristics {
                     context: Localization.CoExistence.context,
                     task: Localization.CoExistence.task,
                     defect: Localization.CoExistence.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
 
         case .interoperability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Interoperability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBInteroperabilityViewModel(model: MBModelWithData())
@@ -147,31 +108,21 @@ extension QualityCharacteristics {
                     context: Localization.Interoperability.context,
                     task: Localization.Interoperability.task,
                     defect: Localization.Interoperability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .appropriatenessRecognizability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.AppropriatenessRecognizability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.callToApp(),
                     context: Localization.AppropriatenessRecognizability.context,
                     task: Localization.AppropriatenessRecognizability.task,
                     defect: Localization.AppropriatenessRecognizability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .learnability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Learnability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBLearnabilityViewModel(model: MBModelWithData())
@@ -179,16 +130,11 @@ extension QualityCharacteristics {
                     context: Localization.Learnability.context,
                     task: Localization.Learnability.task,
                     defect: Localization.Learnability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .operability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Operability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBOperabilityViewModel(model: MBModelWithData())
@@ -196,16 +142,11 @@ extension QualityCharacteristics {
                     context: Localization.Operability.context,
                     task: Localization.Operability.task,
                     defect: Localization.Operability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .userErrorProtection:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.UserErrorProtection.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         model: MBUserErrorProtectionModel()
@@ -213,16 +154,11 @@ extension QualityCharacteristics {
                     context: Localization.UserErrorProtection.context,
                     task: Localization.UserErrorProtection.task,
                     defect: Localization.UserErrorProtection.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .userInterfaceAesthetics:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.UserInterfaceAesthetics.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBUserInterfaceAestheticsViewModel(model: MBModelWithData())
@@ -230,16 +166,11 @@ extension QualityCharacteristics {
                     context: Localization.UserInterfaceAesthetics.context,
                     task: Localization.UserInterfaceAesthetics.task,
                     defect: Localization.UserInterfaceAesthetics.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .accessibility:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Accessibility.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBAccessibilityViewModel(model: MBModelWithData())
@@ -247,16 +178,11 @@ extension QualityCharacteristics {
                     context: Localization.Accessibility.context,
                     task: Localization.Accessibility.task,
                     defect: Localization.Accessibility.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .maturity:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Maturity.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBMaturityViewModel(model: MBModelWithData())
@@ -264,16 +190,11 @@ extension QualityCharacteristics {
                     context: Localization.Maturity.context,
                     task: Localization.Maturity.task,
                     defect: Localization.Maturity.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .availability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Availability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBAvailabilityViewModel(model: MBModelWithData())
@@ -281,16 +202,11 @@ extension QualityCharacteristics {
                     context: Localization.Availability.context,
                     task: Localization.Availability.task,
                     defect: Localization.Availability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
             
         case .faultTolerance:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.FaultTolerance.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBFaultToleranceViewModel(model: MBModelWithData())
@@ -298,16 +214,11 @@ extension QualityCharacteristics {
                     context: Localization.FaultTolerance.context,
                     task: Localization.FaultTolerance.task,
                     defect: Localization.FaultTolerance.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
           
         case .recoverability:
-            return .init(
-                qualityCharacteristic: .init(
-                    title: title,
-                    description: Localization.Recoverability.description
-                ),
+            return makeViewData(
                 example: .init(
                     app: QualityCharacteristics.moneyBoxApp(
                         viewModel: MBRecoverabilityViewModel(model: MBRecoverabilityModel())
@@ -315,10 +226,36 @@ extension QualityCharacteristics {
                     context: Localization.Recoverability.context,
                     task: Localization.Recoverability.task,
                     defect: Localization.Recoverability.defect
-                ),
-                deepLink: makeDeeplink()
+                )
             )
         }
+    }
+    
+    fileprivate func makeViewData(
+        example: DescriptionScreenView.ViewData.Example
+    ) -> DescriptionScreenView.ViewData {
+        return .init(
+            qualityCharacteristic: .init(
+                title: title,
+                description: description,
+                positiveRelationships: QualityCharacteristics.allCases.compactMap({
+                    positiveRelationships.contains($0) ? .init(
+                        title: $0.title,
+                        metricName: $0.metricaData.qualityCharacteristicName,
+                        description: $0.description
+                    ) : nil
+                }),
+                negativeRelationships: QualityCharacteristics.allCases.compactMap({
+                    negativeRelationships.contains($0) ? .init(
+                        title: $0.title,
+                        metricName: $0.metricaData.qualityCharacteristicName,
+                        description: $0.description
+                    ) : nil
+                })
+            ),
+            example: example,
+            deepLink: makeDeeplink()
+        )
     }
     
     fileprivate static func moneyBoxApp(
@@ -396,6 +333,49 @@ extension QualityCharacteristics {
             return .init(qualityCharacteristicName: "fault_tolerance")
         case .recoverability:
             return .init(qualityCharacteristicName: "recoverability")
+        }
+    }
+}
+
+private extension QualityCharacteristics {
+    var description: String {
+        switch self {
+        case .functionalCompleteness:
+            return Localization.FunctionalCompleteness.description
+        case .functionalCorrectness:
+            return Localization.FunctionalCorrectness.description
+        case .functionalAppropriateness:
+            return Localization.FunctionalAppropriateness.description
+        case .timeBehaviour:
+            return Localization.TimeBehaviour.description
+        case .resourceUtilization:
+            return Localization.ResourceUtilization.description
+        case .capacity:
+            return Localization.Capacity.description
+        case .coExistence:
+            return Localization.CoExistence.description
+        case .interoperability:
+            return Localization.Interoperability.description
+        case .appropriatenessRecognizability:
+            return Localization.AppropriatenessRecognizability.description
+        case .learnability:
+            return Localization.Learnability.description
+        case .operability:
+            return Localization.Operability.description
+        case .userErrorProtection:
+            return Localization.UserErrorProtection.description
+        case .userInterfaceAesthetics:
+            return Localization.UserInterfaceAesthetics.description
+        case .accessibility:
+            return Localization.Accessibility.description
+        case .maturity:
+            return Localization.Maturity.description
+        case .availability:
+            return Localization.Availability.description
+        case .faultTolerance:
+            return Localization.FaultTolerance.description
+        case .recoverability:
+            return Localization.Recoverability.description
         }
     }
 }

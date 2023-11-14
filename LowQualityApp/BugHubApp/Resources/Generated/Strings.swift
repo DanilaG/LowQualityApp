@@ -107,10 +107,28 @@ internal enum Localization {
         internal static let hint = Localization.tr("Localizable", "description.example.try.hint", fallback: "If needed, refer to the [standard application version](standard_app)")
       }
     }
+    internal enum Relationships {
+      /// Negatively affects
+      internal static let negative = Localization.tr("Localizable", "description.relationships.negative", fallback: "Negatively affects")
+      /// Positively affects
+      internal static let positive = Localization.tr("Localizable", "description.relationships.positive", fallback: "Positively affects")
+      internal enum Negative {
+        /// Improving the «%@» often negatively affects the listed attributes
+        internal static func hint(_ p1: Any) -> String {
+          return Localization.tr("Localizable", "description.relationships.negative.hint", String(describing: p1), fallback: "Improving the «%@» often negatively affects the listed attributes")
+        }
+      }
+      internal enum Positive {
+        /// Improving the «%@» often has a positive effect on the listed attributes
+        internal static func hint(_ p1: Any) -> String {
+          return Localization.tr("Localizable", "description.relationships.positive.hint", String(describing: p1), fallback: "Improving the «%@» often has a positive effect on the listed attributes")
+        }
+      }
+    }
   }
   internal enum FaultTolerance {
-    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
-    internal static let context = Localization.tr("Localizable", "faultTolerance.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "faultTolerance.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
     /// In the application, when an error occurs, it crashes
     internal static let defect = Localization.tr("Localizable", "faultTolerance.defect", fallback: "In the application, when an error occurs, it crashes")
     /// degree to which a system, product or component operates as intended despite the presence of hardware or software faults
@@ -147,8 +165,8 @@ internal enum Localization {
   internal enum FunctionalCorrectness {
     /// You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history
     internal static let context = Localization.tr("Localizable", "functionalCorrectness.context", fallback: "You have noticed that the amount of your savings is not matching the balance in the application. As a result, you have decided to verify the balance by reviewing the transaction history")
-    /// There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount
-    internal static let defect = Localization.tr("Localizable", "functionalCorrectness.defect", fallback: "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount")
+    /// There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount
+    internal static let defect = Localization.tr("Localizable", "functionalCorrectness.defect", fallback: "There is an error in the application's calculation of the total savings amount. Despite making two deposits totaling $ 3 000, the balance reflects a significantly lower mount")
     /// degree to which a product or system provides the correct results with the needed degree of precision
     internal static let description = Localization.tr("Localizable", "functionalCorrectness.description", fallback: "degree to which a product or system provides the correct results with the needed degree of precision")
     /// View the transaction history and calculate your savings, then comparing the outcome with the savings displayed in the application
@@ -169,8 +187,8 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "interoperability.title", fallback: "Interoperability")
   }
   internal enum Learnability {
-    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
-    internal static let context = Localization.tr("Localizable", "learnability.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "learnability.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
     /// If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence
     internal static let defect = Localization.tr("Localizable", "learnability.defect", fallback: "If you attempt to withdraw an amount greater than the funds available in your account, the application will display an error message without providing an explanation for the occurrence")
     /// degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use
@@ -208,8 +226,8 @@ internal enum Localization {
     internal static let defect = Localization.tr("Localizable", "maturity.defect", fallback: "The application encounters a critical error during the second or third top up or withdrawal process")
     /// degree to which a system, product or component meets needs for reliability under normal operation
     internal static let description = Localization.tr("Localizable", "maturity.description", fallback: "degree to which a system, product or component meets needs for reliability under normal operation")
-    /// Top up or decrease your balance 4 times
-    internal static let task = Localization.tr("Localizable", "maturity.task", fallback: "Top up or decrease your balance 4 times")
+    /// Top up or decrease your balance 4 times
+    internal static let task = Localization.tr("Localizable", "maturity.task", fallback: "Top up or decrease your balance 4 times")
     /// Maturity
     internal static let title = Localization.tr("Localizable", "maturity.title", fallback: "Maturity")
   }
@@ -340,8 +358,8 @@ internal enum Localization {
     internal static let title = Localization.tr("Localizable", "timeBehaviour.title", fallback: "Time behaviour")
   }
   internal enum UserErrorProtection {
-    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
-    internal static let context = Localization.tr("Localizable", "userErrorProtection.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
+    /// You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application
+    internal static let context = Localization.tr("Localizable", "userErrorProtection.context", fallback: "You have incurred expenses amounting to $ 10 000 and now want to reflect these costs within the financial control application")
     /// The application permits users to get a negative balance
     internal static let defect = Localization.tr("Localizable", "userErrorProtection.defect", fallback: "The application permits users to get a negative balance")
     /// degree to which a system protects users against making errors

@@ -14,10 +14,24 @@ struct DescriptionScreenView: View {
     struct ViewData {
         /// Описание характеристики качества
         struct QualityCharacteristic {
+            /// Атрибут с которым есть взаимоотношения
+            struct RelatedAttribute {
+                /// Заголовок
+                let title: String
+                /// Название в метрике
+                let metricName: String
+                /// Описание
+                let description: String
+            }
+            
             /// Заголовок характеристики качества
             let title: String
             /// Описание характеристики качества
             let description: String
+            /// Оказывает позитивный эффект на данные атрибуты
+            let positiveRelationships: [RelatedAttribute]
+            /// Оказывает негативный эффект на данные атрибуты
+            let negativeRelationships: [RelatedAttribute]
         }
         /// Описание примера
         struct Example {
@@ -76,6 +90,48 @@ struct DescriptionScreenView: View {
                     Spacer()
                 }
             }
+            
+            if !viewData.qualityCharacteristic.positiveRelationships.isEmpty {
+                Section(
+                    header: Text(Strings.Relationships.positive),
+                    footer: Text(Strings.Relationships.Positive.hint(viewData.qualityCharacteristic.title))
+                ) {
+                    ForEach(viewData.qualityCharacteristic.positiveRelationships, id: \.title) { item in
+                        AttributeItemView(
+                            viewData: .init(
+                                title: item.title,
+                                description: item.description
+                            ),
+                            metricData: .init(
+                                fromQualityCharacteristic: metricaData.qualityCharacteristicName,
+                                forQualityCharacteristic: item.metricName
+                            )
+                        )
+                    }
+                }
+                
+            }
+            
+            if !viewData.qualityCharacteristic.negativeRelationships.isEmpty {
+                Section(
+                    header: Text(Strings.Relationships.negative),
+                    footer: Text(Strings.Relationships.Negative.hint(viewData.qualityCharacteristic.title))
+                ) {
+                    ForEach(viewData.qualityCharacteristic.negativeRelationships, id: \.title) { item in
+                        AttributeItemView(
+                            viewData: .init(
+                                title: item.title,
+                                description: item.description
+                            ),
+                            metricData: .init(
+                                fromQualityCharacteristic: metricaData.qualityCharacteristicName,
+                                forQualityCharacteristic: item.metricName
+                            )
+                        )
+                    }
+                }
+                
+            }
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(viewData.qualityCharacteristic.title)
@@ -108,7 +164,9 @@ struct DescriptionScreenView_Previews: PreviewProvider {
             viewData: .init(
                 qualityCharacteristic: .init(
                     title: "Test",
-                    description: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use."
+                    description: "degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use.",
+                    positiveRelationships: [],
+                    negativeRelationships: []
                 ),
                 example: .init(
                     app: .init(

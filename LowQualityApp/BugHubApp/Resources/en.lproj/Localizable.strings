@@ -15,6 +15,10 @@
 "list.isoHint" = "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes";
 
 "description.description" = "Description";
+"description.relationships.positive" = "Positively affects";
+"description.relationships.positive.hint" = "Improving the «%@» often has a positive effect on the listed attributes";
+"description.relationships.negative" = "Negatively affects";
+"description.relationships.negative.hint" = "Improving the «%@» often negatively affects the listed attributes";
 "description.example.button" = "Example of Violation";
 "description.example.button.hint" = "Explore the example of a quality attribute violation to enhance your understanding of its value";
 

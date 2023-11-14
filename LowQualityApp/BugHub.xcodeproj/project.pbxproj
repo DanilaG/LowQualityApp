@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830BDB342B0119040050A4AF /* DescriptionScreenView.AttributeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BDB332B0119040050A4AF /* DescriptionScreenView.AttributeItemView.swift */; };
 		8314B9CC2AD082E70038A65B /* MBCoExistenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */; };
 		8314B9CE2AD154660038A65B /* MBInteroperabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */; };
 		8314B9D12AD16CC50038A65B /* CallToScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314B9D02AD16CC50038A65B /* CallToScreenView.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830BDB332B0119040050A4AF /* DescriptionScreenView.AttributeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreenView.AttributeItemView.swift; sourceTree = "<group>"; };
 		8314B9CB2AD082E70038A65B /* MBCoExistenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCoExistenceViewModel.swift; sourceTree = "<group>"; };
 		8314B9CD2AD154650038A65B /* MBInteroperabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInteroperabilityViewModel.swift; sourceTree = "<group>"; };
 		8314B9D02AD16CC50038A65B /* CallToScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToScreenView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				833FC7F42AEEC81E006BB295 /* Example */,
 				83CC6AD22AA30B910023C38B /* DescriptionScreenView.swift */,
 				833FC7F72AF02337006BB295 /* DescriptionScreenView+SampleDescriptionScreenView.swift */,
+				830BDB332B0119040050A4AF /* DescriptionScreenView.AttributeItemView.swift */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				836CE3B32A89582000C4C00A /* Strings.swift in Sources */,
 				833FC7F32AEE4CFF006BB295 /* NavigationUtil.swift in Sources */,
 				83BE341F2AAC7079009ECEC8 /* MBFunctionalAppropriatenessViewModel.swift in Sources */,
+				830BDB342B0119040050A4AF /* DescriptionScreenView.AttributeItemView.swift in Sources */,
 				83CC6AE42AA4649A0023C38B /* MBModelWithData.swift in Sources */,
 				83BE341D2AAC64C6009ECEC8 /* MBFunctionalCorrectnessModel.swift in Sources */,
 				836CE3992A89496900C4C00A /* LowQualityAppApp.swift in Sources */,
