@@ -228,11 +228,14 @@ extension QualityCharacteristics {
                     defect: Localization.Recoverability.defect
                 )
             )
+            
+        case .confidentiality:
+            return makeViewData(example: nil)
         }
     }
     
     fileprivate func makeViewData(
-        example: DescriptionScreenView.ViewData.Example
+        example: DescriptionScreenView.ViewData.Example?
     ) -> DescriptionScreenView.ViewData {
         return .init(
             qualityCharacteristic: .init(
@@ -333,6 +336,8 @@ extension QualityCharacteristics {
             return .init(qualityCharacteristicName: "fault_tolerance")
         case .recoverability:
             return .init(qualityCharacteristicName: "recoverability")
+        case .confidentiality:
+            return .init(qualityCharacteristicName: "confidentiality")
         }
     }
 }
@@ -376,6 +381,8 @@ private extension QualityCharacteristics {
             return Localization.FaultTolerance.description
         case .recoverability:
             return Localization.Recoverability.description
+        case .confidentiality:
+            return Localization.Confidentiality.description
         }
     }
 }

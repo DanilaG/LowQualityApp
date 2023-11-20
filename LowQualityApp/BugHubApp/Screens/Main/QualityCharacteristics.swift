@@ -45,6 +45,8 @@ enum QualityCharacteristics: CaseIterable, Hashable {
     case faultTolerance
     /// Восстанавливаемость
     case recoverability
+    /// Конфиденциальность
+    case confidentiality
 }
 
 // MARK: - relationships
@@ -89,6 +91,8 @@ extension QualityCharacteristics {
             return [.learnability, .maturity, .availability]
         case .recoverability:
             return [.availability]
+        case .confidentiality:
+            return []
         }
     }
     
@@ -131,6 +135,8 @@ extension QualityCharacteristics {
             return [.timeBehaviour, .resourceUtilization]
         case .recoverability:
             return [.timeBehaviour, .resourceUtilization]
+        case .confidentiality:
+            return [.timeBehaviour, .interoperability, .operability, .availability, .recoverability]
         }
     }
 }
@@ -177,6 +183,8 @@ extension QualityCharacteristics {
             return Localization.FaultTolerance.title
         case .recoverability:
             return Localization.Recoverability.title
+        case .confidentiality:
+            return Localization.Confidentiality.title
         }
     }
 }

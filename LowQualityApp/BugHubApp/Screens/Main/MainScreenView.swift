@@ -44,6 +44,9 @@ struct MainScreenView: View {
                     makeItem(for: .faultTolerance)
                     makeItem(for: .recoverability)
                 }
+                Section(Strings.Section.security) {
+                    makeItem(for: .confidentiality)
+                }
                 Section(
                     footer: Text(
                         (try? AttributedString(markdown: Strings.isoHint)) ??

@@ -54,7 +54,7 @@ struct DescriptionScreenView: View {
         /// Описание характеристики качества
         let qualityCharacteristic: QualityCharacteristic
         /// Описание примера
-        let example: Example
+        let example: Example?
         /// Deep link для открытия
         let deepLink: URL?
     }
@@ -71,7 +71,7 @@ struct DescriptionScreenView: View {
     /// Данные для метрики
     let metricaData: MetricaData
 
-    @State private var showingExample: Bool = false
+    @State private var showExample: SampleDescriptionScreenView.ViewData?
     
     var body: some View {
         Form {
@@ -79,15 +79,17 @@ struct DescriptionScreenView: View {
                 Text("**\(viewData.qualityCharacteristic.title)** - \(viewData.qualityCharacteristic.description)")
             }
             
-            Section(
-                footer: Text(Strings.Example.Button.hint)
-            ) {
-                HStack {
-                    Spacer()
-                    Button(Strings.Example.button, action: {
-                        showingExample = true
-                    })
-                    Spacer()
+            if let example = SampleDescriptionScreenView.ViewData.make(from: viewData) {
+                Section(
+                    footer: Text(Strings.Example.Button.hint)
+                ) {
+                    HStack {
+                        Spacer()
+                        Button(Strings.Example.button, action: {
+                            showExample = example
+                        })
+                        Spacer()
+                    }
                 }
             }
             
@@ -142,10 +144,10 @@ struct DescriptionScreenView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingExample) {
+        .sheet(item: $showExample) { viewData in
             NavigationStack {
                 SampleDescriptionScreenView(
-                    viewData: .make(from: viewData),
+                    viewData: viewData,
                     metricaData: .make(from: metricaData)
                 )
             }
@@ -183,4 +185,8 @@ struct DescriptionScreenView_Previews: PreviewProvider {
             )
         )
     }
+}
+
+extension SampleDescriptionScreenView.ViewData: Identifiable {
+    var id: String { attributeTitle }
 }

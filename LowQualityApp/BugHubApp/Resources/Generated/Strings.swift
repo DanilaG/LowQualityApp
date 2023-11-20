@@ -70,6 +70,12 @@ internal enum Localization {
     /// Co-existence
     internal static let title = Localization.tr("Localizable", "coExistence.title", fallback: "Co-existence")
   }
+  internal enum Confidentiality {
+    /// degree to which a product or system ensures that data are accessible only to those authorized to have access
+    internal static let description = Localization.tr("Localizable", "confidentiality.description", fallback: "degree to which a product or system ensures that data are accessible only to those authorized to have access")
+    /// Confidentiality
+    internal static let title = Localization.tr("Localizable", "confidentiality.title", fallback: "Confidentiality")
+  }
   internal enum Description {
     /// Description
     internal static let description = Localization.tr("Localizable", "description.description", fallback: "Description")
@@ -215,6 +221,8 @@ internal enum Localization {
       internal static let performanceEfficiency = Localization.tr("Localizable", "list.section.performanceEfficiency", fallback: "Performance efficiency")
       /// Reliability
       internal static let reliability = Localization.tr("Localizable", "list.section.reliability", fallback: "Reliability")
+      /// Security
+      internal static let security = Localization.tr("Localizable", "list.section.security", fallback: "Security")
       /// Usability
       internal static let usability = Localization.tr("Localizable", "list.section.usability", fallback: "Usability")
     }

@@ -12,6 +12,7 @@
 "list.section.compatibility" = "Compatibility";
 "list.section.usability" = "Usability";
 "list.section.reliability" = "Reliability";
+"list.section.security" = "Security";
 "list.isoHint" = "The [ISO 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?start=3) standard was utilized for the classification of quality attributes";
 
 "description.description" = "Description";
@@ -142,6 +143,11 @@
 "recoverability.context" = "While using the financial control application, it unexpectedly terminated. Now you're attempting to restart the app";
 "recoverability.task" = "Top up funds. Then re-enter the application";
 "recoverability.defect" = "When the application crashes, data loss occurs";
+
+
+"confidentiality.title" = "Confidentiality";
+"confidentiality.description" = "degree to which a product or system ensures that data are accessible only to those authorized to have access";
+
 
 "sampleApp.moneyBox.title" = "MoneyBox";
 "sampleApp.moneyBox.description" = "Savings accounting application";

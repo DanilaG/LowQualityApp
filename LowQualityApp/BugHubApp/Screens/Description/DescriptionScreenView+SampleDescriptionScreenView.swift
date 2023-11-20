@@ -11,14 +11,15 @@ extension SampleDescriptionScreenView.ViewData {
     /// Адаптер view данных экрана атрибута в экран примера
     /// - Parameter viewData: данные для отображения экрана описания
     /// - Returns: данные для отображения экрана примера
-    static func make(from viewData: DescriptionScreenView.ViewData) -> Self {
+    static func make(from viewData: DescriptionScreenView.ViewData) -> Self? {
+        guard let example = viewData.example else { return nil }
         return .init(
             attributeTitle: viewData.qualityCharacteristic.title,
-            context: viewData.example.context,
-            task: viewData.example.task,
-            defect: viewData.example.defect,
-            defectScreenFactory: viewData.example.app.defectScreenFactory,
-            standardAppScreenFactory: viewData.example.app.standardAppScreenFactory
+            context: example.context,
+            task: example.task,
+            defect: example.defect,
+            defectScreenFactory: example.app.defectScreenFactory,
+            standardAppScreenFactory: example.app.standardAppScreenFactory
         )
     }
 }

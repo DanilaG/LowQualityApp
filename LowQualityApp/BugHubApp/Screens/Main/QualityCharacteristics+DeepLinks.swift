@@ -49,6 +49,8 @@ extension QualityCharacteristics {
             return "fault-tolerance"
         case .recoverability:
             return "recoverability"
+        case .confidentiality:
+            return "confidentiality"
         }
     }
     
